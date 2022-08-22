@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+
+
+/* #header */
+#header {
+    width: 100%; 
+    height: 380px; 
+    position: relative;
+    background-image: url("../../images/main/head.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* #main */
+/* .main_title */
+#main .main_title {text-align: center; height: 90px; font-family: Gaegu; font-size: 2em;font-weight: bold; color:#fff;
+display: flex; align-items: center; justify-content: center;}
+#main .main_title span {font-family: Gaegu; background-image: none;}
+
+/* custom_content */
+#main .custom_content {padding-bottom: 20px;}
+/* type */
+#main .custom_content .type {display: flex; flex-wrap: wrap; padding: 25px 0; font-size: 1.35em;}
+#main .custom_content .type .filter {cursor: pointer; margin-right: 20px; margin-bottom: 10px; color:#fff; padding: 5px 10px; background-color: #1b191a; border-radius: 10px; transition: all .5s ease;}
+#main .custom_content .type .filter:hover {color: #4758fc;}
+#main .custom_content .type .filter.active {color: #4758fc;}
+/* item_area */
+#main .custom_content .item_area {display: flex; flex-direction: row; flex-wrap: wrap;}
+#main .custom_content .item_area .item {width: 23%; min-height: 50px; margin: 0 2% 2% 0;  background: #202020;}
+#main .custom_content .item_area .item .thumbnail {position: relative; width: 100%; height: 154px; background-color: rgba(255, 255, 255, 0.1);
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;}
+#main .custom_content .item_area .item .title {position: relative; padding: 25px; color:#fff; font-size: 1.35em; z-index: 1; text-align: center;}
+#main .custom_content .item_area .item .title::before {content:''; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; background-color: #4758fc; z-index: -1; transition: all .5s ease;}
+#main .custom_content .item_area .item:hover .title::before {height: 100%;}
+
+
+@media(max-width:960px){
+    /* #header */
+    #header {height: 300px;}
+
+    /* #main */
+    /* item_area */
+    #main .custom_content .item_area .item {width: 31.5%; margin: 0 1.5% 1.5% 0;}
+}
+
+@media(max-width:580px){
+    /* #header */
+    #header {height: 200px;}
+
+    /* #main */
+    #main .custom_content .type {justify-content: center;}
+    /* item_area */
+    #main .custom_content .item_area .item {width: 48%; margin: 0 2% 2% 0;}
+}

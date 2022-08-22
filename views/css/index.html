@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- search engine -->
+  <meta name="author" content="jjgodcom">
+  <meta name="description" content="jjgodcom의 프론트 백앤드 정보 정리 사이트 입니다.">
+  <meta name="keywords" content="웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, jjgodcom, publisher, css3, html, markup, design">
+  <meta name="subject" content="jjgodcom의 프론트 백앤드 정보 정리 사이트 입니다.">
+  <title>CSS</title>
+
+  <!-- web_font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gaegu:300,400,700" rel="stylesheet">
+  <!-- ico -->
+  <link rel="apple-touch-icon" sizes="57x57" href="../../resources/ico/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../../resources/ico/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../../resources/ico/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../resources/ico/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../../resources/ico/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../../resources/ico/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../../resources/ico/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../../resources/ico/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../resources/ico/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="../../resources/ico/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../resources/ico/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../../resources/ico/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../resources/ico/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <!-- css -->
+  <link rel="stylesheet" href="../../resources/css/global/reset.css">
+  <link rel="stylesheet" href="../../resources/css/views/theme.css">
+  <link rel="stylesheet" href="../../resources/css/views/css/style.css">
+  <!-- js -->
+  <script src="../../resources/js/jquery-3.1.0.min.js"></script>
+  <script src="../../resources/js/global.js"></script>
+  <script src="../../resources/js/random_rgba.js"></script>
+  <!-- prism -->
+  <link rel="stylesheet" href="../../resources/css/global/prism.css">
+  <script src="../../resources/js/prism.js"></script>
+
+  <!-- hmlt5 support -->
+	<!--[if lt IE 9]><script src="assets/js/html5shiv.js"></script><![endif]-->
+	
+	<!-- IE6,7 support -->
+	<!--[if lte IE 7]><link rel="stylesheet" href="comm/css/ie7.css" type="text/css" ><![endif]-->
+	<!--[if IE 8]><link rel="stylesheet" href="comm/css/ie8.css" type="text/css" ><![endif]-->
+	
+	<!--[if lte IE 6]>
+	<p style="font-size: 12px; color: #fff; background: #2885b0; padding:5px 0; margin: 0; text-align: center">
+	사용하고 계신 브라우저는 최신 웹 브라우저가 아닙니다. 업그레이드를 하거나 다른 최신 브라우저 사용을 권장합니다.
+	<a href="http://www.microsoft.com/korea/ie" target="_blank" >업그레이드,</a>
+	<a href="http://www.mozilla.or.kr/ko/" target="_blank">파이어폭스,</a> 
+	<a href="http://kr.opera.com/download/" target="_blank">오페라,</a>,
+	<a href="http://support.apple.com/kb/DL1531?viewlocale=ko_KR&locale=ko_KR" target="_blank">사파리,</a>
+	<a href="http://www.google.com/chrome?hl=ko" target="_blank">크롬</a></p>
+	<![endif]-->
+  
+</head>
+<body>
+  <!-- top_nav -->
+  <nav id="top_nav">
+    <div class="container">
+      <a class="logo" href="http://jjgodcom.com/">
+        <img src="../../resources/images/global/logo.png" alt="logo" title="title">
+      </a>
+      <a class="gitHub" target="_blank" href="https://github.com/jjgodcom">GitHub</a>
+    </div>
+  </nav>
+  <!-- //nav -->
+  <!-- header -->
+  <header id="header">
+    <div class="container">
+      <h1>CSS Reference v1.0</h1>
+      <a href="http://jjgodcom.com/">jjgodcom.com</a>
+    </div>
+  </header>
+  <!-- //header -->
+  <!-- main -->
+  <main id="main">
+    <div class="container">
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">CSS</h2>
+        <p class="lead">CSS(Cascading Style Sheets)은 MTML을 꾸며주는 스타일 시트 입니다. 즉 웹 페이지를 꾸미고 디자인을 작업을 도와주는 언어입니다.</p>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">선언 방법 및 주석</h2>
+        <pre class="line-numbers"><code class="language-css">
+/* 선택자{ 속성:값; }  */
+div { color:red; }
+        </code>
+        </pre>
+        <h3 class="section_mid_title">내장 선언</h3>
+        <p class="lead"><code class="code">&lt;style&gt;&lt;/style&gt;</code> 태그로 스타일을 작성하는 방식</p>
+        <pre class="line-numbers"><code class="language-html">
+&lt;style&gt;
+  div {color:red;}
+&lt;/style&gt;
+        </code>
+        </pre>
+        <h3 class="section_mid_title">인라인 선언</h3>
+        <p class="lead">요소의 style 속성에 직접 스타일을 작성하는 방식</p>
+        <pre class="line-numbers"><code class="language-html">
+&lt;div style="color: red;"&gt;안뇽&lt;/div&gt;
+        </code>
+        </pre>
+        <h3 class="section_mid_title">@import 방식</h3>
+        <p class="lead">CSS의 @import 규칙으로 CSS 문서 안에서 또 다른 CSS 문서를 가져와 연결하는 방식</p>
+        <pre class="line-numbers"><code class="language-css">
+@import url("경로");
+        </code>
+        </pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">선택자 우선순위</h2>
+        <p class="lead">우선순위란, 같은 요소가 여러 선언의 대상이 된 경우 어떤 선언의 CSS속성을 우선 적용할지 결정하는 방법</p>
+        <h3 class="section_mid_title">선택자 적용 순서</h3>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:15%"></col>
+            <col style="width:15%"></col>
+            <col style="width:50%"></col>
+            <col style="width:20%"></col>
+          </colgroup>
+					<thead>
+						<tr>
+              <th>우선순위</th>
+							<th>예시</th>
+							<th>설명</th>
+							<th>점수</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+              <td><code class="code">!impottant;</code></td>
+              <td>css 값 뒤에 선언</td>
+              <td>99999</td>
+						</tr>
+            <tr>
+							<td>2</td>
+              <td><code class="code">style=”color:red”</code></td>
+              <td>인라인 선언</td>
+              <td>1000</td>
+						</tr>
+            <tr>
+							<td>3</td>
+              <td><code class="code">#id</code></td>
+              <td>ID 선택자</td>
+              <td>100</td>
+						</tr>
+            <tr>
+							<td>4</td>
+              <td><code class="code">.class</code></td>
+              <td>Class 선택자</td>
+              <td>10</td>
+						</tr>
+            <tr>
+							<td>5</td>
+              <td><code class="code">tag</code></td>
+              <td>태그 선택자</td>
+              <td>1</td>
+						</tr>
+            <tr>
+							<td>6</td>
+              <td><code class="code">*</code></td>
+              <td>전체 선택자</td>
+              <td>0</td>
+						</tr>
+            <tr>
+							<td>7</td>
+              <td><code class="code">body</code></td>
+              <td>상속 안됨</td>
+              <td>-</td>
+						</tr>
+					</tbody>
+				</table>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">기본 선택자</h2>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:20%"></col>
+            <col style="width:20%"></col>
+            <col style="width:60%"></col>
+          </colgroup>
+					<thead>
+						<tr>
+              <th>종류</th>
+							<th>예시</th>
+							<th>설명</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>전체 선택자</td>
+              <td><code class="code">*</code></td>
+              <td>전체 를 선택합니다.</td>
+						</tr>
+            <tr>
+							<td>태그 선택자</td>
+              <td><code class="code">li</code></td>
+							<td>기본 태그를 선택합니다.</td>
+						</tr>
+            <tr>
+							<td>클래스 선택자</td>
+              <td><code class="code">.class</code></td>
+							<td>클래스 태그를 선택합니다.</td>
+						</tr>
+            <tr>
+							<td>아이디 선택자</td>
+              <td><code class="code">#id</code></td>
+							<td>아이디 태그를 선택합니다.</td>
+						</tr>
+					</tbody>
+				</table>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">복합 선택자</h2>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:20%"></col>
+            <col style="width:20%"></col>
+            <col style="width:60%"></col>
+          </colgroup>
+					<thead>
+						<tr>
+              <th>종류</th>
+							<th>예시</th>
+							<th>설명</th>
+						</tr>
+					</thead>
+					<tbody>
+            <tr>
+							<td>그룹 선택자</td>
+              <td><code class="code">#id, .class, li</code></td>
+							<td>여러가지 태그를 선택합니다.</td>
+						</tr>
+            <tr>
+							<td>일치 선택자</td>
+              <td><code class="code">li.class</code></td>
+							<td>태그 이름과 클래스 이름이 동시에 만족하는 요소를 선택합니다.</td>
+						</tr>
+            <tr>
+							<td>자식 선택자</td>
+              <td><code class="code">li &gt; .class</code></td>
+							<td>자식(하위) 태그만 선택합니다.(자손은 포함안됨).</td>
+						</tr>
+            <tr>
+							<td>하위(후손) 선택자</td>
+              <td><code class="code">li .class</code></td>
+							<td>하위(후손) 선택자</td>
+						</tr>
+            <tr>
+							<td>인접 형제 선택자</td>
+              <td><code class="code">.class + li</code></td>
+							<td>자식 태그 다음 형제 태그 <span style="color: #d9730d;">하나</span>만 선택합니다.</td>
+						</tr>
+            <tr>
+							<td>일반 형제 선택자</td>
+              <td><code class="code">.class ~ li</code></td>
+							<td>자식 태그 다음 <span style="color: #d9730d;">모든</span> 형제 태그를 선택합니다.</td>
+						</tr>
+					</tbody>
+				</table>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">속성 선택자</h2>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:20%"></col>
+            <col style="width:20%"></col>
+            <col style="width:60%"></col>
+          </colgroup>
+					<thead>
+						<tr>
+              <th>종류</th>
+							<th>예시</th>
+							<th>설명</th>
+						</tr>
+					</thead>
+					<tbody>
+            <tr>
+							<td>ATTR</td>
+              <td><code class="code">[type]</code></td>
+							<td>속성 type을 포함한 요소 선택</td>
+						</tr>
+            <tr>
+							<td>ATTR=VALUE</td>
+              <td><code class="code">[type="password"]</code></td>
+							<td>속성 type을 포함하고 값이 password인 요소 선택</td>
+						</tr>
+					</tbody>
+				</table>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">가상 클래스 선택자</h2>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:20%"></col>
+            <col style="width:20%"></col>
+            <col style="width:60%"></col>
+          </colgroup>
+					<thead>
+						<tr>
+              <th>종류</th>
+							<th>예시</th>
+							<th>설명</th>
+						</tr>
+					</thead>
+					<tbody>
+            <tr>
+							<td>HOVER</td>
+              <td><code class="code">:hover</code></td>
+							<td>마우스 커서가 <span style="color: #d9730d;">올라가</span> 있는 동안 선택.</td>
+						</tr>
+            <tr>
+							<td>ACTIVE</td>
+              <td><code class="code">:active</code></td>
+							<td>마우스 커서가 <span style="color: #d9730d;">클릭하고 있는 동안</span> 선택.</td>
+						</tr>
+            <tr>
+							<td>FOCUS</td>
+              <td><code class="code">:focus</code></td>
+							<td>사용자가 정보를 입력하는 태그<code class="code">&lt;input&gt;</code>에 주로 사용됨</td>
+						</tr>
+            <tr>
+							<td>FIRST CHILD</td>
+              <td><code class="code">:first-child</code></td>
+							<td>선택자 <span style="color: #d9730d;">형제 요소중 첫째</span>를 선택.</td>
+						</tr>
+            <tr>
+							<td>LAST CHILD</td>
+              <td><code class="code">:last-child</code></td>
+							<td>선택자 <span style="color: #d9730d;">형제 요소중 막내</span>를 선택.</td>
+						</tr>
+            <tr>
+							<td>NTH CHILD</td>
+              <td><code class="code">:nth-child(n)</code></td>
+							<td>선택자 <span style="color: #d9730d;">형제 요소중 (n)째</span>를 선택.</td>
+						</tr>
+            <tr>
+							<td></td>
+              <td><code class="code">:nth-child(2n+1)</code></td>
+							<td>홀수 번째 요소 선택</td>
+						</tr>
+            <tr>
+							<td>NOT</td>
+              <td><code class="code">:not(selector)</code></td>
+							<td>selector를 <span style="color: #d9730d;">제외한</span> 요소를 모두 선택.</td>
+						</tr>
+					</tbody>
+				</table>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">가상 요소 선택자</h2>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:20%"></col>
+            <col style="width:20%"></col>
+            <col style="width:60%"></col>
+          </colgroup>
+					<thead>
+						<tr>
+              <th>종류</th>
+							<th>예시</th>
+							<th>설명</th>
+						</tr>
+					</thead>
+					<tbody>
+            <tr>
+							<td>BEFORE</td>
+              <td><code class="code">::before</code></td>
+							<td>선택자 요소 <span style="color: #d9730d;">내부 앞</span>에 내용을 삽입 (인라인 요소)</td>
+						</tr>
+            <tr>
+							<td>AFTER</td>
+              <td><code class="code">::after</code></td>
+							<td>선택자 요소 <span style="color: #d9730d;">내부 뒤</span>에 내용을 삽입 (인라인 요소)</td>
+						</tr>
+					</tbody>
+				</table>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">CSS 속성</h2>
+        <ul class="small">
+          <li>인라인 요소 : 포함한 콘텐츠 크기만큼 자동으로 줄어듬</li>
+          <li>블럭 요소 : 부모 요소의 크기만큼 자동으로 늘어남</li>
+        </ul>
+        <h3 class="section_mid_title">CSS 단위</h3>
+        <ul class="small">
+          <li>px : 픽셀</li>
+          <li>% : 상대적 백분율</li>
+          <li>em : 요소의 글꼴 크기</li>
+          <li>rem : 루트 요소(html)의 글꼴 크기</li>
+          <li>vw : 뷰포트 가로 너비의 백분율</li>
+          <li>vh : 뷰포트 세로 너비의 백분율</li>
+        </ul>
+        <h3 class="section_mid_title">너비(width, height)</h3>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:20%"></col>
+            <col style="width:80%"></col>
+          </colgroup>
+					<thead>
+						<tr>
+              <th>Attribute</th>
+							<th>설명</th>
+						</tr>
+					</thead>
+					<tbody>
+            <tr>
+							<td>width</td>
+              <td>가로 길이 설정, 바깥쪽부터 기준</td>
+						</tr>
+            <tr>
+							<td>height</td>
+              <td>세로 길이 설정, 높이값, 안쪽 컨텐츠에 의해 정해짐</td>
+						</tr>
+            <tr>
+							<td>max-whidth</td>
+              <td>요소가 커질수 있는 <span style="color: #d9730d;">최대</span> 가로 너비</td>
+						</tr>
+            <tr>
+							<td>max-height</td>
+              <td>요소가 커질수 있는 <span style="color: #d9730d;">최대</span> 세로 너비</td>
+						</tr>
+            <tr>
+							<td>min-whidth</td>
+              <td>요소가 커질수 있는 <span style="color: #d9730d;">최소</span> 가로 너비</td>
+						</tr>
+            <tr>
+							<td>min-height</td>
+              <td>요소가 커질수 있는 <span style="color: #d9730d;">최소</span> 세로 너비</td>
+						</tr>
+					</tbody>
+				</table>
+        <h3 class="section_mid_title">외부 여백(margin)</h3>
+        <ul class="small">
+          <li>음수를 사용 가능</li>
+          <li>auto 사용시 가운데 정렬 가능</li>
+        </ul>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:20%"></col>
+            <col style="width:80%"></col>
+          </colgroup>
+					<thead>
+						<tr>
+              <th>Attribute</th>
+							<th>설명</th>
+						</tr>
+					</thead>
+					<tbody>
+            <tr>
+							<td>margin</td>
+              <td>요소의 바깥쪽 여백을 설정합니다</td>
+						</tr>
+            <tr>
+							<td>margin-top</td>
+              <td>요소의 바깥쪽 위쪽 여백을 설정합니다</td>
+						</tr>
+            <tr>
+							<td>margin-right</td>
+              <td>요소의 바깥쪽 오른쪽 여백을 설정합니다</td>
+						</tr>
+            <tr>
+							<td>margin-bottom</td>
+              <td>요소의 바깥쪽 아래쪽 여백을 설정합니다</td>
+						</tr>
+            <tr>
+							<td>margin-left</td>
+              <td>요소의 바깥쪽 왼쪽 여백을 설정합니다</td>
+						</tr>
+					</tbody>
+				</table>
+        <pre class="line-numbers"><code class="language-css">
+/* 자동값, 기본값 */  
+margin : auto;
+
+/* 위쪽/왼쪽/오른쪽/아래쪽 */  
+margin : 10px;
+
+/* 위쪽/아래, 왼쪽/오른쪽 */  
+margin : 10px 11px;
+
+/* 위쪽, 왼쪽/오른쪽, 아래쪽 */  
+margin : 10px 11px 12px;
+
+/* 위쪽, 오른쪽 아래쪽 왼쪽 */  
+margin : 10px 11px 12px 13p;
+
+/* 블록구조를 가운데 정렬할 때 사용함 */  
+margin : 0 auto;
+        </code>
+        </pre>
+        <h3 class="section_mid_title">내부 여백(padding)</h3>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:20%"></col>
+            <col style="width:80%"></col>
+          </colgroup>
+					<thead>
+						<tr>
+              <th>Attribute</th>
+							<th>설명</th>
+						</tr>
+					</thead>
+					<tbody>
+            <tr>
+							<td>padding</td>
+              <td>해당 요소의 내부 여백을 한꺼번에 지정합니다</td>
+						</tr>
+            <tr>
+							<td>padding-top</td>
+              <td>해당 요소의 내부 상단 여백을 지정합니다</td>
+						</tr>
+            <tr>
+							<td>padding-right</td>
+              <td>해당 요소의 내부 오른쪽 여백을 지정합니다</td>
+						</tr>
+            <tr>
+							<td>padding-bottom</td>
+              <td>해당 요소의 내부 하단 여백을 지정합니다</td>
+						</tr>
+            <tr>
+							<td>padding-left</td>
+              <td>해당 요소의 내부 왼쪽 여백을 지정합니다</td>
+						</tr>
+					</tbody>
+				</table>
+        <pre class="line-numbers"><code class="language-css">
+/* 위쪽/왼쪽/오른쪽/아래쪽 */  
+padding : 10px;
+
+/* 위쪽/아래, 왼쪽/오른쪽 */  
+padding : 10px 11px;
+
+/* 위쪽, 왼쪽/오른쪽, 아래쪽 */  
+padding : 10px 11px 12px;
+
+/* 위쪽, 오른쪽 아래쪽 왼쪽 */  
+padding : 10px 11px 12px 13p;
+        </code>
+        </pre>
+        <h3 class="section_mid_title">테두리 선(border)</h3>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:20%"></col>
+            <col style="width:80%"></col>
+          </colgroup>
+					<thead>
+						<tr>
+              <th>Attribute</th>
+							<th>설명</th>
+						</tr>
+					</thead>
+					<tbody>
+            <tr>
+							<td style="color: #d9730d;">border</td>
+              <td>요소의 테두리 선을 지정하는 단축 속성</td>
+						</tr>
+            <tr>
+							<td>border-top</td>
+              <td>요소의 테두리 상단 선을 지정</td>
+						</tr>
+            <tr>
+							<td>border-right</td>
+              <td>요소의 테두리 오른쪽 선을 지정</td>
+						</tr>
+            <tr>
+							<td>border-bottom</td>
+              <td>요소의 테두리 하단 선을 지정</td>
+						</tr>
+            <tr>
+							<td>border-left</td>
+              <td>요소의 테두리 왼쪽 선을 지정</td>
+						</tr>
+            <tr>
+							<td style="color: #d9730d;">border-width</td>
+              <td>요소의 테두리 선의 두께</td>
+						</tr>
+            <tr>
+							<td>border-top-width</td>
+              <td>요소의 테두리 선의 두께</td>
+						</tr>
+            <tr>
+							<td>border-right-width</td>
+              <td>요소의 테두리 선의 두께</td>
+						</tr>
+            <tr>
+							<td>border-bottom-width</td>
+              <td>요소의 테두리 선의 두께</td>
+						</tr>
+            <tr>
+							<td>border-right-width</td>
+              <td>요소의 테두리 선의 두께</td>
+						</tr>
+            <tr>
+							<td><a href="#border_style">border-style</a></td>
+              <td>지정된 요소의 테두리 스타일을 지정</td>
+						</tr>
+            <tr>
+							<td>border-top-style</td>
+              <td>지정된 요소의 상단 부분의 테두리 스타일을 지정</td>
+						</tr>
+            <tr>
+							<td>border-right-style</td>
+              <td>지정된 요소의 오른쪽 부분의 테두리 스타일을 지정</td>
+						</tr>
+            <tr>
+							<td>border-bottom-style</td>
+              <td>지정된 요소의 하단 부분의 테두리 스타일을 지정</td>
+						</tr>
+            <tr>
+							<td>border-left-style</td>
+              <td>지정된 요소의 왼쪽 부분의 테두리 스타일을 지정</td>
+						</tr>
+            <tr>
+							<td style="color: #d9730d;">border-color</td>
+              <td>요소의 테두리 색상을 지정</td>
+						</tr>
+            <tr>
+							<td>border-top-color</td>
+              <td>지정된 요소의 상단 부분의 테두리 색상을 지정</td>
+						</tr>
+            <tr>
+							<td>border-right-color</td>
+              <td>지정된 요소의 오른쪽 부분의 테두리 색상을 지정</td>
+						</tr>
+            <tr>
+							<td>border-bottom-color</td>
+              <td>지정된 요소의 하단 부분의 테두리 색상을 지정</td>
+						</tr>
+            <tr>
+							<td>border-left-color</td>
+              <td>지정된 요소의 왼쪽 부분의 테두리 색상을 지정</td>
+						</tr>
+					</tbody>
+				</table>
+        <pre class="line-numbers"><code class="language-css">
+/* border 작성방법 */
+/* border: 선-두께 선-종류 선-색상 */
+/* border: border-width border-style border-color */
+border: 4px solid #ccc;
+
+/* border-width 의 작성 방법 */
+border-width: 1px;
+border-width: 1px 2px;
+border-width: 1px 2px 3px;
+border-width: 1px 2px 3px 4px;
+
+/* 자주쓰는 border-style */
+border-style: none;
+border-style: solid;
+border-style: dashed;
+border-style: dotted;
+
+/* border-color 의 작성 방법 */
+border-color: red;
+border-color: red #ccc;
+border-color: red #ccc #123;
+border-color: red blue orange yellow;
+        </code>
+        </pre>
+        <p id="border_style" class="lead">다양한 border-style 속성</p>
+        <ul class="small">
+          <li style="margin: 3px;">border-style: none;</li>
+          <li style="margin: 3px;">border-style: hidden;</li>
+          <li style="border-style: solid; margin: 3px;">border-style: solid;</li>
+          <li style="border-style: dashed; margin: 3px;">border-style: dashed;</li>
+          <li style="border-style: dotted; margin: 3px;">border-style: dotted;</li>
+          <li style="border-style: double; margin: 3px;">border-style: double;</li>
+          <li style="border-style: groove; margin: 3px;">border-style: groove;</li>
+          <li style="border-style: ridge; margin: 3px;">border-style: ridge;</li>
+          <li style="border-style: inset; margin: 3px;">border-style: inset;</li>
+          <li style="border-style: outset; margin: 3px;">border-style: outset;</li>
+          <li style="border-style: dashed double dotted inset; margin: 3px;">border-style: dashed double dotted inset;</li>
+        </ul>
+        <h3 class="section_mid_title">모서리 둥글게(border-radius)</h3>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:20%"></col>
+            <col style="width:80%"></col>
+          </colgroup>
+					<thead>
+						<tr>
+              <th>Attribute</th>
+							<th>설명</th>
+						</tr>
+					</thead>
+					<tbody>
+            <tr>
+							<td>border-radius</td>
+              <td>요소의 모서리를 둥글게 깍음</td>
+						</tr>
+					</tbody>
+				</table>
+        <div class="animation_area">
+          <div class="animation_box radius">
+            <div class="radius01">radius01</div>
+          </div>
+          <div class="animation_box radius">
+            <div class="radius02">radius02</div>
+          </div>
+          <div class="animation_box radius">
+            <div class="radius03">radius03</div>
+          </div>
+          <div class="animation_box radius">
+            <div class="radius04">radius04</div>
+          </div>
+          <div class="animation_box radius">
+            <div class="radius05">radius05</div>
+          </div>
+          <div class="animation_box radius">
+            <div class="radius06">radius06</div>
+          </div>
+          <div class="animation_box radius">
+            <div class="radius07">radius07</div>
+          </div>
+          <div class="animation_box radius">
+            <div class="radius08">radius08</div>
+          </div>
+          <div class="animation_box radius">
+            <div class="radius09">radius09</div>
+          </div>
+          <div class="animation_box radius">
+            <div class="radius10">radius10</div>
+          </div>
+          <div class="animation_box radius">
+            <div class="radius11">radius11</div>
+          </div>
+          <div class="animation_box radius">
+            <div class="radius12">radius12</div>
+          </div>
+          <div class="animation_box radius">
+            <div class="radius13">radius13</div>
+          </div>
+          <div class="animation_box radius">
+            <div class="radius14">radius14</div>
+          </div>
+          <div class="animation_box radius">
+            <div class="radius15">radius15</div>
+          </div>
+        </div>
+        <h3 class="section_mid_title">box-shadow</h3>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:20%"></col>
+            <col style="width:80%"></col>
+          </colgroup>
+					<thead>
+						<tr>
+              <th>Property</th>
+							<th>설명</th>
+						</tr>
+					</thead>
+					<tbody>
+            <tr>
+							<td>h-shadow</td>
+              <td>그림자의 수평(X)축 거리를 나타냅니다.</td>
+						</tr>
+            <tr>
+							<td>v-shadow</td>
+              <td>그림자의 수평(Y)축 거리를 나타냅니다.</td>
+						</tr>
+            <tr>
+							<td>blur</td>
+              <td>그림자의 흐림정도를 나타냅니다.</td>
+						</tr>
+            <tr>
+							<td>spread</td>
+              <td>그림자의 거리를 나타냅니다.</td>
+						</tr>
+            <tr>
+							<td>color</td>
+              <td>그림자의 색을 나타냅니다.</td>
+						</tr>
+            <tr>
+							<td>inset</td>
+              <td>그림자의 요소 내부를 나타냅니다.</td>
+						</tr>
+					</tbody>
+				</table>
+        <div class="animation_area">
+          <div class="animation_box shadow">
+            <div>shadow01</div>
+          </div>
+          <div class="animation_box shadow">
+            <div>shadow02</div>
+          </div>
+          <div class="animation_box shadow">
+            <div>shadow03</div>
+          </div>
+          <div class="animation_box shadow">
+            <div>shadow04</div>
+          </div>
+          <div class="animation_box shadow">
+            <div>shadow05</div>
+          </div>
+          <div class="animation_box shadow">
+            <div>shadow06</div>
+          </div>
+          <div class="animation_box shadow">
+            <div>shadow07</div>
+          </div>
+        </div>
+        <h3 class="section_mid_title">크기 계산(box-sizing)</h3>
+        <p class="lead">요소의 크기 계산 기준을 지정</p>
+        <ul class="small">
+          <li><code class="code">content-box</code> : 요소의 내용(content)으로 크기 계산 (기본값)</li>
+          <li><code class="code">border-box</code> : 요소의 내용 + padding + border로 크기 계산</li>
+        </ul>
+        <h3 class="section_mid_title">넘침 제어(overflow) </h3>
+        <p class="lead">요소의 크기 이상으로 내용이 넘쳤을 떄, 보여짐을 제어하는 단축 속성</p>
+        <ul class="small">
+          <li><code class="code">visible</code> : 넘친 내용을 그대로 보여줌 (기본값)</li>
+          <li><code class="code">hidden</code>: 넘친 내용을 잘라냄</li>
+          <li><code class="code">scroll</code> : 넘친 내용을 잘라냄, 스크롤바 생성</li>
+          <li><code class="code">auto</code> : 넘친 내용이 있는 경우에만 잘라내고 스크롤바 생성</li>
+        </ul>
+        <img class="custom_img" src="../../resources/images/views/css/overflow.png" alt="overflow" title="overflow">
+        <h3 class="section_mid_title">출력 특성(display)</h3>
+        <p class="lead">요소의 화면 출력(보여짐) 특성</p>
+        <ul class="small">
+          <li><code class="code">block</code> : 상자 요소</li>
+          <li><code class="code">inline</code> : 글자 요소</li>
+          <li><code class="code">inline-block</code> : 글자 + 상자 요소</li>
+          <li><code class="code">flex</code> : 플렉스 박스 (1차원 레이아웃)</li>
+          <li><code class="code">grid</code> : 그리드(2차원 레이아웃)</li>
+          <li><code class="code">none</code> : 보여짐 특성 없음, 화면에서 사라짐</li>
+        </ul>
+        <h3 class="section_mid_title">투명도(opacity)</h3>
+        <p class="lead">요소의 투명도 지정</p>
+        <ul class="small">
+          <li><code class="code">value</code> : 0~1 / 0.5(50%)</li>
+        </ul>
+        <h3 class="section_mid_title">글꼴</h3>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:20%"></col>
+            <col style="width:80%"></col>
+          </colgroup>
+					<thead>
+						<tr>
+              <th>Attribute</th>
+							<th>설명</th>
+						</tr>
+					</thead>
+					<tbody>
+            <tr>
+							<td><a href="#font_style">font-style</a></td>
+              <td>글자의 기울기</td>
+						</tr>
+            <tr>
+							<td><a href="#font_weight">font-weight</a></td>
+              <td>글자의 두께</td>
+						</tr>
+            <tr>
+							<td>font-size</td>
+              <td>글자의 크기</td>
+						</tr>
+            <tr>
+							<td>font-family</td>
+              <td>글꼴(서체) 지정</td>
+						</tr>
+					</tbody>
+				</table>
+        <p id="font_style">font-style</p>
+        <ul class="small">
+          <li><code class="code">normal</code> : 기울기 없음</li>
+          <li style="font-style: italic;"><code class="code">italic</code> : 이텔릭체</li>
+          <li style="font-style: oblique;"><code class="code">oblique</code> : 기울어진 글자</li>
+        </ul>
+        <p id="font_weight">font-weight</p>
+        <ul class="small">
+          <li><code class="code">normal, 400</code> : 기본 두께</li>
+          <li style="font-weight: bold;"><code class="code">blod, 700</code> : 두껍게</li>
+          <li style="font-weight: 100;"><code class="code">100 ~ 900</code> : 100단위의 숫자 9개</li>
+        </ul>
+        <h3 class="section_mid_title">문자</h3>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:20%"></col>
+            <col style="width:80%"></col>
+          </colgroup>
+					<thead>
+						<tr>
+              <th>Attribute</th>
+							<th>설명</th>
+						</tr>
+					</thead>
+					<tbody>
+            <tr>
+							<td>color</td>
+              <td>글자의 색상</td>
+						</tr>
+            <tr>
+							<td><a href="#text_align">text-align</a></td>
+              <td>글자의 정렬 방식</td>
+						</tr>
+            <tr>
+							<td><a href="#text_decoration">text-decoration</a></td>
+              <td>문자의 장식(선)</td>
+						</tr>
+            <tr>
+							<td>text-indent</td>
+              <td>문자의 첫 줄의 들여쓰기</td>
+						</tr>
+					</tbody>
+				</table>
+        <p id="text_align">text-align</p>
+        <ul class="small">
+          <li style="text-align: left;"><code class="code">left</code> : 왼쪽 정렬</li>
+          <li style="text-align: right;"><code class="code">right</code> : 오른쪽 정렬</li>
+          <li style="text-align: center;"><code class="code">center</code> : 가운데 정렬</li>
+        </ul>
+        <p id="text_decoration">text-decoration</p>
+        <ul class="small">
+          <li><code class="code">none</code> : 장식 없음</li>
+          <li style="text-decoration: underline;"><code class="code">underline</code> : 밑줄</li>
+          <li style="text-decoration: line-through;"><code class="code">line-through</code> : 중앙 선</li>
+        </ul>
+        <h3 class="section_mid_title">배경</h3>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:20%"></col>
+            <col style="width:80%"></col>
+          </colgroup>
+					<thead>
+						<tr>
+              <th>Attribute</th>
+							<th>설명</th>
+						</tr>
+					</thead>
+					<tbody>
+            <tr>
+							<td style="color: #d9730d;">background</td>
+              <td>배경 단축형</td>
+						</tr>
+            <tr>
+							<td>background-color</td>
+              <td>요소의 배경 색상</td>
+						</tr>
+            <tr>
+							<td>background-image</td>
+              <td>요소의 배경 이미지 삽입</td>
+						</tr>
+            <tr>
+							<td><a href="#background_repeat">background-repeat</a></td>
+              <td>요소의 배경 이미지 반복</td>
+						</tr>
+            <tr>
+							<td>background-position</td>
+              <td>요소의 배경 이미지 위치</td>
+						</tr>
+            <tr>
+							<td><a href="#background_size">background-size</a></td>
+              <td>요소의 배경 이미지 크기</td>
+						</tr>
+            <tr>
+							<td><a href="#background_attachment">background-attachment</a></td>
+              <td>요소의 배경 이미지 스크롤 특성</td>
+						</tr>
+					</tbody>
+				</table>
+        <p id="background_repeat">background-repeat</p>
+        <ul class="small">
+          <li><code class="code">repeat</code> : 이미지를 수직, 수평 반복</li>
+          <li><code class="code">repeat-x</code> : 이미지를 수평 반복</li>
+          <li><code class="code">repeat-y</code> : 이미지를 수직 반복</li>
+          <li><code class="code">no-repeat</code> : 반복 없음</li>
+        </ul>
+        <p id="background_size">background-size</p>
+        <ul class="small">
+          <li><code class="code">auto</code> : 이미지의 실제 크기</li>
+          <li><code class="code">cover</code> : 비율을 유지, 요소의 더 넓은 너비에 맞춤</li>
+          <li><code class="code">contain </code> : 비율을 유지, 요소의 더 짧은 너비에 맞춤</li>
+        </ul>
+        <p id="background_attachment">background-attachment</p>
+        <ul class="small">
+          <li><code class="code">scroll</code> : 이미지가 요소를 따라서 같이 스크롤</li>
+          <li><code class="code">fixed</code> : 이미지가 뷰포트에 고정, 스크롤 X</li>
+          <li><code class="code">local</code> : 요소 내 스크롤 시 이미지가 같이 스크롤</li>
+        </ul>
+        <h3 class="section_mid_title">이미지 스프라이트</h3>
+        <ul class="small">
+          <li>이미지 스프라이트는 단일 이미지에 들어있는 이미지 모음입니다.</li>
+          <li>이미지 스프라이트를 사용하면 서버에 요청 수를 줄이고 대역폭도 절약할 수 있습니다.</li>
+          <li>여러개의 이미지를 따로 두고 코딩하는게 아니라 하나의 png 파일에 모아서 코딩하는 방식입니다.</li>
+          <li><code class="code">background-position</code> 을 이용해서 배경의 위치를 조절해 주는 방법입니다.</li>
+        </ul>
+        <div>
+          <img class="custom_img" src="../../resources/images/views/css/imgsp01.gif" alt="이미지 스프라이트" title="이미지 스프라이트">
+          <img class="custom_img" src="../../resources/images/views/css/imgsp02.gif" alt="이미지 스프라이트" title="이미지 스프라이트">
+          <img class="custom_img" src="../../resources/images/views/css/imgsp03.gif" alt="이미지 스프라이트" title="이미지 스프라이트">
+        </div>
+        <h3 class="section_mid_title">Background Gradient</h3>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:20%"></col>
+            <col style="width:40%"></col>
+            <col style="width:40%"></col>
+          </colgroup>
+					<thead>
+						<tr>
+              <th>Property</th>
+							<th>설명</th>
+              <th>sample</th>
+						</tr>
+					</thead>
+					<tbody>
+            <tr>
+							<td style="color: #d9730d;">linear-gradient</td>
+              <td>선형 그라데이션 백그라운을 설정합니다.</td>
+              <td><code class="code">background: linear-gradient();	</code></td>
+						</tr>
+            <tr>
+							<td style="color: #d9730d;">radial-gradient</td>
+              <td>원형 그라데이션 백그라운을 설정합니다.</td>
+              <td><code class="code">background: radial-gradient();	</code></td>
+						</tr>
+					</tbody>
+				</table>
+        <div class="animation_area">
+          <div class="animation_box gradient">
+            <div class="gradient01">gradient01</div>
+          </div>
+          <div class="animation_box gradient">
+            <div class="gradient02">gradient02</div>
+          </div>
+          <div class="animation_box gradient">
+            <div class="gradient03">gradient02</div>
+          </div>
+          <div class="animation_box gradient">
+            <div class="gradient04">gradient04</div>
+          </div>
+          <div class="animation_box gradient">
+            <div class="gradient05">gradient05</div>
+          </div>
+          <div class="animation_box gradient">
+            <div class="gradient06">gradient05</div>
+          </div>
+        </div>
+        <h3 class="section_mid_title">배치</h3>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:20%"></col>
+            <col style="width:80%"></col>
+          </colgroup>
+					<thead>
+						<tr>
+              <th>Attribute</th>
+							<th>설명</th>
+						</tr>
+					</thead>
+					<tbody>
+            <tr>
+							<td><a href="#position">position</a></td>
+              <td>요소의 위치 지정 기준</td>
+						</tr>
+            <tr>
+							<td>top, bottom, left, right</td>
+              <td>요소의 각 방향별 거리 지정</td>
+						</tr>
+            <tr>
+							<td>z-index</td>
+              <td>요소의 쌓임 순서를 지정</td>
+						</tr>
+					</tbody>
+				</table>
+        <p id="position">position</p>
+        <ul class="small">
+          <li><code class="code">static</code> : 기준 없음</li>
+          <li><code class="code">relative</code> : 요소 자신을 기준</li>
+          <li><code class="code">absolute</code> : 위치 상 부모 요소를 기준</li>
+          <li><code class="code">fixed</code> : 뷰포트(브라우저)를 기준</li>
+          <li><code class="code">sticky</code> : 스크롤 영역 기준</li>
+        </ul>
+        <h3 class="section_mid_title">flex - container</h3>
+        <img class="custom_img" src="../../resources/images/views/css/flex_container.png" alt="flex 예시" title="flex 예시">
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:20%"></col>
+            <col style="width:80%"></col>
+          </colgroup>
+					<thead>
+						<tr>
+              <th>Attribute</th>
+							<th>설명</th>
+						</tr>
+					</thead>
+					<tbody>
+            <tr>
+							<td><a href="#display">display</a></td>
+              <td>Flex Container의 화면 출력(보여짐) 특성</td>
+						</tr>
+            <tr>
+							<td><a href="#flex_direction">flex-direction</a></td>
+              <td>주 축을 설정</td>
+						</tr>
+            <tr>
+							<td><a href="#flex_wrap">flex-wrap</a></td>
+              <td>Flex items 묶음(줄 바꿈) 여부</td>
+						</tr>
+            <tr>
+							<td><a href="#flex_content">flex-content</a></td>
+              <td>주 축의 정렬 방법 (수평)</td>
+						</tr>
+            <tr>
+							<td><a href="#align_content">align-content</a></td>
+              <td>교차 축의 여러 줄 정렬 방법 (수직)</td>
+						</tr>
+            <tr>
+							<td><a href="#align_items">align-items</a></td>
+              <td>교차 축의 한 줄 정렬 방법 (수직)</td>
+						</tr>
+					</tbody>
+				</table>
+        <p id="display">display</p>
+        <ul class="small">
+          <li><code class="code">flex</code> : 블럭 요소와 같이 Flex Container 정의 (가로 넓이 최대)</li>
+          <li><code class="code">inline-flex</code> : 인라인 요소와 같이 Flex Container 정의 (가로 넓이 최소)</li>
+        </ul>
+        <p id="flex_direction">flex-direction</p>
+        <ul class="small">
+          <li><code class="code">row</code> : 수평 (좌 > 우)</li>
+          <li><code class="code">row-reverse</code> : 수평 (우 > 좌)</li>
+          <li><code class="code">column</code> : 수직 (위 > 아래)</li>
+          <li><code class="code">column-reverse</code> : 수직 (아래 > 위)</li>
+        </ul>
+        <p id="flex_wrap">flex-wrap</p>
+        <ul class="small">
+          <li><code class="code">nowrap</code> : 묶음(줄 바꿈) 없음</li>
+          <li><code class="code">wrap </code> : 여러 줄로 묶음</li>
+          <li><code class="code">wrap-reverse</code> : wrap의 반대 방향으로 묶음</li>
+        </ul>
+        <p id="flex_content">flex-content</p>
+        <ul class="small">
+          <li><code class="code">flex-start</code> : Flex Items를 시작점으로 정렬 </li>
+          <li><code class="code">flex-end</code> : Flex Items를 끝점으로 정렬</li>
+          <li><code class="code">center</code> : Flex Items를 가운데 정렬</li>
+          <li><code class="code">space-between</code> : 각 Flex Item 사이를 균등하게 정렬</li>
+          <li><code class="code">space-around</code> : 각 Flex Item의 외부 여백을 균등하게 정렬</li>
+        </ul>
+        <img class="custom_img" src="../../resources/images/views/css/justify.png" alt="justify-content 예시" title="justify-content 예시">
+        <p id="align_content">align-content</p>
+        <ul class="small">
+          <li><code class="code">stretch</code> : Flex Items를 시작점으로 정렬</li>
+          <li><code class="code">flex-start</code> : Flex Items를 시작점으로 정렬</li>
+          <li><code class="code">flex-end</code> : Flex Items를 끝점으로 정렬</li>
+          <li><code class="code">center</code> : Flex Items를 가운데 정렬</li>
+          <li><code class="code">space-between</code> : 각 Flex Item 사이를 균등하게 정렬</li>
+          <li><code class="code">space-around</code> : 각 Flex Item의 외부 여백을 균등하게 정렬</li>
+        </ul>
+        <p id="align_items">align-items</p>
+        <ul class="small">
+          <li><code class="code">stretch</code> : Flex Items를 시작점으로 정렬</li>
+          <li><code class="code">flex-start</code> : Flex Items를 시작점으로 정렬</li>
+          <li><code class="code">flex-end</code> : Flex Items를 끝점으로 정렬</li>
+          <li><code class="code">center</code> : Flex Items를 가운데 정렬</li>
+        </ul>
+        <h3 class="section_mid_title">flex - item</h3>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:20%"></col>
+            <col style="width:80%"></col>
+          </colgroup>
+					<thead>
+						<tr>
+              <th>Attribute</th>
+							<th>설명</th>
+						</tr>
+					</thead>
+					<tbody>
+            <tr>
+							<td>order</td>
+              <td>Flex Item의 순서 (작은 숫자가 우선순위)</td>
+						</tr>
+            <tr>
+							<td><a href="#flex_grow">flex-grow</a></td>
+              <td>Flex Item의 증가 너비 비율</td>
+						</tr>
+            <tr>
+							<td><a href="#flex_shrink">flex-shrink</a></td>
+              <td>Flex Item의 감소 너비 비율</td>
+						</tr>
+            <tr>
+							<td>flex-basis</td>
+              <td>Flex Item의 공간 배분 전 기본 너비</td>
+						</tr>
+					</tbody>
+				</table>
+        <p id="flex_grow">flex-grow</p>
+        <ul class="small">
+          <li><code class="code">0</code> : 증가 비율 없음</li>
+          <li><code class="code">숫자</code> : 증가 비율</li>
+        </ul>
+        <p id="flex_shrink">flex-shrink</p>
+        <ul class="small">
+          <li><code class="code">1</code> : Flex Container 너비에 따라 감소 비율 적용</li>
+          <li><code class="code">숫자</code> : 감소 비율</li>
+        </ul>
+        <h3 class="section_mid_title">전환</h3>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:20%"></col>
+            <col style="width:80%"></col>
+          </colgroup>
+					<thead>
+						<tr>
+              <th>Attribute</th>
+							<th>설명</th>
+						</tr>
+					</thead>
+					<tbody>
+            <tr>
+							<td><a href="#transtion">transtion</a></td>
+              <td>요소의 전환(시작과 끝) 효과를 지정하는 단축 속성</td>
+						</tr>
+            <tr>
+							<td>transtion-property</td>
+              <td>전환 효과를 사용할 속성 이름을 지정</td>
+						</tr>
+            <tr>
+							<td>transtion-duration</td>
+              <td>전환 효과의 지속시간을 지정 (단위는 초s단위)</td>
+						</tr>
+            <tr>
+							<td><a href="#funtion">transtion-timing-funtion</a></td>
+              <td>전환 효과의 타이밍(Easing) 함수를 지정</td>
+						</tr>
+            <tr>
+							<td>transtion-delay</td>
+              <td>전환 효과가 몇 초 뒤에 시작할지 대기시간을 지정 (단위는 초s단위)</td>
+						</tr>
+					</tbody>
+				</table>
+        <p id="transtion">transtion</p>
+        <pre class="line-numbers"><code class="language-css">
+/* transition 작성방법*/
+/* 단축형으로 작성할때 반드시 지속시간은 필수 작성해야함! */
+transition: 속성명 지속시간 타이밍함수 대기시간; 
+transition: property decoration timing-function delay;
+        </code>
+        </pre>
+        <p id="funtion">transtion-timing-funtion</p>
+        <img class="custom_img" src="../../resources/images/views/css/funtion.png" alt="transtion 예시" title="transtion 예시">
+        <h3 class="section_mid_title">transform</h3>
+        <p class="lead">요소의 변환 효과</p>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:20%"></col>
+            <col style="width:40%"></col>
+            <col style="width:40%"></col>
+          </colgroup>
+					<thead>
+						<tr>
+              <th>Property</th>
+							<th>설명</th>
+              <th>sample</th>
+						</tr>
+					</thead>
+					<tbody>
+            <tr>
+							<td style="color: #d9730d;">translate</td>
+              <td>선택한 요소의 X좌표, Y좌표 이동을 나타냅니다.</td>
+              <td><code class="code">transform:translate(10px, 20px);</code></td>
+						</tr>
+            <tr>
+							<td>translate3d</td>
+              <td>선택한 요소의 X좌표, Y좌표, Z좌표 이동을 나타냅니다.</td>
+              <td><code class="code">transform:translate3d(10px, 20px, 30px);</code></td>
+						</tr>
+            <tr>
+							<td>translateX</td>
+              <td>선택한 요소의 X좌표 이동을 나타냅니다.</td>
+              <td><code class="code">transform:translateX(10px);</code></td>
+						</tr>
+            <tr>
+							<td>translateY</td>
+              <td>선택한 요소의 Y좌표 이동을 나타냅니다.</td>
+              <td><code class="code">transform:translateY(10px);</code></td>
+						</tr>
+            <tr>
+							<td>translateZ</td>
+              <td>선택한 요소의 Z좌표 이동을 나타냅니다.</td>
+              <td><code class="code">transform:translateY(10px);</code></td>
+						</tr>
+            <tr>
+							<td style="color: #d9730d;">scale</td>
+              <td>선택한 요소의 X축, Y축 확대를 나타냅니다.</td>
+              <td><code class="code">transform:scale(2,2);</code></td>
+						</tr>
+            <tr>
+							<td>scale3d</td>
+              <td>선택한 요소의 X축, Y축, Z축 확대를 나타냅니다.</td>
+              <td><code class="code">transform:scale3d(2,2,2);</code></td>
+						</tr>
+            <tr>
+							<td>scaleX</td>
+              <td>선택한 요소의 X축 확대를 나타냅니다.</td>
+              <td><code class="code">transform:scaleX(2);</code></td>
+						</tr>
+            <tr>
+							<td>scaleY</td>
+              <td>선택한 요소의 Y축 확대를 나타냅니다.</td>
+              <td><code class="code">transform:scaleY(2);</code></td>
+						</tr>
+            <tr>
+							<td>scaleZ</td>
+              <td>선택한 요소의 Z축 확대를 나타냅니다.</td>
+              <td><code class="code">transform:scaleZ(2);</code></td>
+						</tr>
+            <tr>
+							<td style="color: #d9730d;">rotate</td>
+              <td>선택한 요소의 회전을 나타냅니다.</td>
+              <td><code class="code">transform:rotate(10deg);</code></td>
+						</tr>
+            <tr>
+							<td>rotate3d</td>
+              <td>선택한 요소의 3D 회전을 나타냅니다.</td>
+              <td><code class="code">transform:rotate3d(0,1,0,10deg);</code></td>
+						</tr>
+            <tr>
+							<td>rotateX</td>
+              <td>선택한 요소의 X축 회전을 나타냅니다.</td>
+              <td><code class="code">transform:rotateX(10deg);</code></td>
+						</tr>
+            <tr>
+							<td>rotateY</td>
+              <td>선택한 요소의 Y축 회전을 나타냅니다.</td>
+              <td><code class="code">transform:rotateY(10deg);</code></td>
+						</tr>
+            <tr>
+							<td>rotateZ</td>
+              <td>선택한 요소의 Z축 회전을 나타냅니다.</td>
+              <td><code class="code">transform:rotateZ(10deg);</code></td>
+						</tr>
+            <tr>
+							<td style="color: #d9730d;">skew</td>
+              <td>선택한 요소의 X축, Y축 기울기를 나타냅니다.</td>
+              <td><code class="code">transform:skew(10deg,10deg);</code></td>
+						</tr>
+            <tr>
+							<td>skewX</td>
+              <td>선택한 요소의 X축 기울기를 나타냅니다.</td>
+              <td><code class="code">transform:X(10deg);</code></td>
+						</tr>
+            <tr>
+							<td>skewY</td>
+              <td>선택한 요소의 Y축 기울기를 나타냅니다.</td>
+              <td><code class="code">transform:skewY(10deg);</code></td>
+						</tr>
+            <tr>
+							<td style="color: #d9730d;">transform-origin</td>
+              <td>선택한 요소의 X축, Y축 방향을 나타냅니다.</td>
+              <td><code class="code">transform-origin:20% 30%;</code></td>
+						</tr>
+            <tr>
+							<td style="color: #d9730d;">transform-style</td>
+              <td>선택한 요소의 스타일을 설정합니다.</td>
+              <td><code class="code">transform-style:preserve-3d;</code></td>
+						</tr>
+            <tr>
+							<td style="color: #d9730d;">perspective</td>
+              <td>트랜스폼의 원근점 거리를 설정합니다.</td>
+              <td><code class="code">perspective:500px;</code></td>
+						</tr>
+            <tr>
+							<td>perspective-origin</td>
+              <td>트랜스폼의 원근점 방향을 설정합니다.</td>
+              <td><code class="code">perspective-origin:100px;</code></td>
+						</tr>
+            <tr>
+							<td style="color: #d9730d;">backface-visibility</td>
+              <td>3D 요소 뒷면의 배경 유무를 설정합니다.</td>
+              <td><code class="code">backface-visibility:hidden;</code></td>
+						</tr>
+					</tbody>
+				</table>
+        <div class="animation_area">
+          <div class="animation_box transform">
+            <div class="translate">translate</div>
+          </div>
+          <div class="animation_box transform">
+            <div class="scale">SCALE</div>
+          </div>
+          <div class="animation_box transform">
+            <div class="rotate">ROTATE</div>
+          </div>
+          <div class="animation_box transform">
+            <div class="skew">Skew</div>
+          </div>
+          <div class="animation_box transform">
+            <div class="transform_origin">transform-origin</div>
+          </div>
+        </div>
+        <h3 class="section_mid_title">ANIMATION</h3>
+        <p class="lead"><code class="code">animation : {name}{duration}{timing-function}{delay}{iteration-count}{direction}{fill-mode}{play-state}</code></p>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:20%"></col>
+            <col style="width:40%"></col>
+            <col style="width:40%"></col>
+          </colgroup>
+					<thead>
+						<tr>
+              <th>Property</th>
+							<th>설명</th>
+              <th>sample</th>
+						</tr>
+					</thead>
+					<tbody>
+            <tr>
+							<td>animation-name</td>
+              <td>@keyframes에 지정된 이름을 설정합니다.</td>
+              <td><code class="code">animation-name : name</code></td>
+						</tr>
+            <tr>
+							<td>animation-duration</td>
+              <td>애니메이션이 실행되는 시간을 설정합니다.</td>
+              <td><code class="code">animation-duration : 4s</code></td>
+						</tr>
+            <tr>
+							<td>animation-timing-function</td>
+              <td>애니메이션 키프레임 변화 정도를 설정합니다.</td>
+              <td><code class="code">animation-timing-function: linear;</code></td>
+						</tr>
+            <tr>
+							<td>animation-delay</td>
+              <td>애니메이션이 시작되기 전에 대기 시간을 설정합니다.</td>
+              <td><code class="code">animation-delay: 1s;</code></td>
+						</tr>
+            <tr>
+							<td>animation-iteration-count</td>
+              <td>애니메이션 반복 횟수를 설정합니다.</td>
+              <td><code class="code">animation-iteration-count: 99;</code></td>
+						</tr>
+            <tr>
+							<td>animation-direction</td>
+              <td>애니메이션 연결 방향을 설정합니다.</td>
+              <td><code class="code">animation-direction: alternate;</code></td>
+						</tr>
+            <tr>
+							<td>animation-fill-mode</td>
+              <td>애니메이션이 시작되기 전이나 끝나고 난 후 어떤 값이 적용될지 설정합니다.</td>
+              <td><code class="code">animation-fill-mode: forwards;</code></td>
+						</tr>
+            <tr>
+							<td>animation-play-state</td>
+              <td>애니메이션의 실행 상태를 설정합니다.</td>
+              <td><code class="code">animation-play-state: paused;</code></td>
+						</tr>
+					</tbody>
+				</table>
+        <h3 class="section_mid_title">transition</h3>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:20%"></col>
+            <col style="width:40%"></col>
+            <col style="width:40%"></col>
+          </colgroup>
+					<thead>
+						<tr>
+              <th>Property</th>
+							<th>설명</th>
+              <th>sample</th>
+						</tr>
+					</thead>
+					<tbody>
+            <tr>
+							<td>transition-property</td>
+              <td>트랜지션을 적용할 css 대상을 설정합니다</td>
+              <td><code class="code">transition-property : all;</code></td>
+						</tr>
+            <tr>
+							<td>transition-duration</td>
+              <td>트랜지션의 작동시간을 설정합니다.</td>
+              <td><code class="code">transition-duration : 0.3s;</code></td>
+						</tr>
+            <tr>
+							<td>transition-timing-function</td>
+              <td>트랜지션의 움직임 효과를 설정합니다.</td>
+              <td><code class="code">transition-duration : linear;</code></td>
+						</tr>
+            <tr>
+							<td>transition-delay</td>
+              <td>트랜지션이 시작되기 전에 대기시간을 설정합니다.</td>
+              <td><code class="code">transition-delay : 1s;</code></td>
+						</tr>
+					</tbody>
+				</table>
+      </div>
+      <!-- //doc_section -->
+    </div>
+  </main>
+  <!-- //main -->
+  <!-- footer -->
+  <footer id="footer">
+    <div class="copyright">
+      <div>Full-stack development</div>
+      <div>JJGODCOM</div> 
+    </div>
+  </footer>
+  <!-- //footer -->
+</body>
+</html>

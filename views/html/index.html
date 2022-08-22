@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- search engine -->
+  <meta name="author" content="jjgodcom">
+  <meta name="description" content="jjgodcom의 프론트 백앤드 정보 정리 사이트 입니다.">
+  <meta name="keywords" content="웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, jjgodcom, publisher, css3, html, markup, design">
+  <meta name="subject" content="jjgodcom의 프론트 백앤드 정보 정리 사이트 입니다.">
+  <title>HTML</title>
+
+  <!-- web_font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gaegu:300,400,700" rel="stylesheet">
+  <!-- ico -->
+  <link rel="apple-touch-icon" sizes="57x57" href="../../resources/ico/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../../resources/ico/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../../resources/ico/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../resources/ico/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../../resources/ico/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../../resources/ico/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../../resources/ico/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../../resources/ico/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../resources/ico/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="../../resources/ico/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../resources/ico/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../../resources/ico/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../resources/ico/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <!-- css -->
+  <link rel="stylesheet" href="../../resources/css/global/reset.css">
+  <link rel="stylesheet" href="../../resources/css/views/theme.css">
+  <link rel="stylesheet" href="../../resources/css/views/html/style.css">
+  <!-- js -->
+  <script src="../../resources/js/jquery-3.1.0.min.js"></script>
+  <script src="../../resources/js/global.js"></script>
+  <script src="../../resources/js/random_rgba.js"></script>
+  <!-- prism -->
+  <link rel="stylesheet" href="../../resources/css/global/prism.css">
+  <script src="../../resources/js/prism.js"></script>
+
+  <!-- hmlt5 support -->
+	<!--[if lt IE 9]><script src="assets/js/html5shiv.js"></script><![endif]-->
+	
+	<!-- IE6,7 support -->
+	<!--[if lte IE 7]><link rel="stylesheet" href="comm/css/ie7.css" type="text/css" ><![endif]-->
+	<!--[if IE 8]><link rel="stylesheet" href="comm/css/ie8.css" type="text/css" ><![endif]-->
+	
+	<!--[if lte IE 6]>
+	<p style="font-size: 12px; color: #fff; background: #2885b0; padding:5px 0; margin: 0; text-align: center">
+	사용하고 계신 브라우저는 최신 웹 브라우저가 아닙니다. 업그레이드를 하거나 다른 최신 브라우저 사용을 권장합니다.
+	<a href="http://www.microsoft.com/korea/ie" target="_blank" >업그레이드,</a>
+	<a href="http://www.mozilla.or.kr/ko/" target="_blank">파이어폭스,</a> 
+	<a href="http://kr.opera.com/download/" target="_blank">오페라,</a>,
+	<a href="http://support.apple.com/kb/DL1531?viewlocale=ko_KR&locale=ko_KR" target="_blank">사파리,</a>
+	<a href="http://www.google.com/chrome?hl=ko" target="_blank">크롬</a></p>
+	<![endif]-->
+  
+</head>
+<body>
+  <!-- top_nav -->
+  <nav id="top_nav">
+    <div class="container">
+      <a class="logo" href="http://jjgodcom.com/">
+        <img src="../../resources/images/global/logo.png" alt="logo" title="title">
+      </a>
+      <a class="gitHub" target="_blank" href="https://github.com/jjgodcom">GitHub</a>
+    </div>
+  </nav>
+  <!-- //nav -->
+  <!-- header -->
+  <header id="header">
+    <div class="container">
+      <h1>Front-end development basics Reference v1.0</h1>
+      <a href="http://jjgodcom.com/">jjgodcom.com</a>
+    </div>
+  </header>
+  <!-- //header -->
+  <!-- main -->
+  <main id="main">
+    <div class="container">
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">프론트엔드 개발</h2>
+        <p class="lead">HTML. CSS, JS를 사용해 데이터를 그래픽 사용자 인터페이스(GUI)로 변환하고, 그것으로 사용자와 상호 작용할 수 잇도록 하는것.</p>
+        <img class="custom_img" src="../../resources/images/views/html/develop.png" alt="기본 구조 설명" title="기본 구조 설명">
+        <ul class="small">
+          <li>프론트엔드 : 사용자의 앞에 보이는 사이트 개발</li>
+          <li>백앤드 : <span style="color: #d9730d;">비즈니스 로직(Business Logic)</span>은 웹 사이트가 동작하는데 필요한, 핵심 데이터 처리를 수행하는 알고리즘을 말함.</li>
+          <li><span style="color: #d9730d;">풀스택 개발(Full-stack development)</span> : GUI 프론트엔드부터, 데이터베이스 백엔드 등 모든 소프트웨어 스택을 개발하는 것을 말합니다. </li>
+        </ul>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title"><span style="color: #d9730d;">HTML</span> (Hyper Text Markup Languge)</h2>
+        <p class="lead">페이지의 제목, 문단, 표, 이미지, 동영상 등 <span class="custom_underline">웹의 구조</span>를 담당.</p>
+        <div class="callout">
+          <span style="color: #d9730d;">하이퍼 텍스트(Hyper Text)</span>는 참조를 통해 현재 문서(페이지)에서 다른 문서로 즉시 접근(이동)할 수 있는 텍스트를 말합니다.<br>
+          EX) <span style="color: #d9730d;">버튼(텍스트)</span>을 의미
+        </div>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title"><span style="color: #337ea9;">CSS</span> (Cascading Style Sheets)</h2>
+        <p class="lead">
+          실제 화면에 표시되는 방법(색상, 크기, 폰트, 레이아웃 등)을 지정해 콘텐츠를 꾸며주는 <span class="custom_underline">시각적인 표현(정적)</span>을 담당.
+        </p>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title"><span style="color: #cb912f;">JS</span> (JavaScript)</h2>
+        <p class="lead">
+          콘텐츠를 바꾸고 움직이는 등 페이지를 동작시키는 <span class="custom_underline">동적 처리</span>를 담당.
+        </p>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">웹앱의 동작원리</h2>
+        <img class="custom_img" src="../../resources/images/views/html/webapp.png" alt="웹앱의 동작원리" title="웹앱의 동작원리">
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">웹 표준</h2>
+        <p class="lead">‘웹에서 사용되는 표준 기술이나 규칙’을 의미</p>
+        <p class="lead">W3C의 표준화 제정 단계의 ‘권고안(REC)’에 해당하는 기술</p>
+        <img class="custom_img" src="../../resources/images/views/html/w3c.png" alt="웹표준" title="웹표준">
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">크로스 브라우징</h2>
+        <p class="lead">크로스 브라우징(Cross Browsing)이란 조금은 다르게 구동되는 여러 브라우저에서, 동일한 사용자 경험(같은 화면, 같은 동작 등)을 줄 수 있도록 제작하는 기술, 방법</p>
+        <img class="custom_img" src="../../resources/images/views/html/cross.png" alt="크로스 브라우징" title="크로스 브라우징">
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">비트맵</h2>
+        <img class="custom_img" src="../../resources/images/views/html/webimg.png" alt="크로스 브라우징" title="크로스 브라우징">
+        <ul class="small">
+          <li>정교하고 다양한 색상을 자연스럽게 표현</li>
+          <li>확대/축소 시 계단 현상, 품질 저하.</li>
+          <li>Ex) .png , .jpg 등</li>
+        </ul>
+        <h3 class="section_mid_title">JPG (JPEG)</h3>
+        <ul class="small">
+          <li><span style="color: #cb912f;">손실</span> 압축 방식을 사용한다.</li>
+          <li>표현 색상도(<span style="color: #cb912f;">24비트</span>, 약 1600만 색상)가 뛰어남</li>
+          <li>이미지의 품질과 <span style="color: #cb912f;">용량을 쉽게 조절</span> 가능</li>
+          <li>가장 널리 쓰이는 이미지 포맷</li>
+        </ul>
+        <h3 class="section_mid_title">PNG</h3>
+        <ul class="small">
+          <li><span style="color: #cb912f;">비손실</span> 압축</li>
+          <li>8비트(256색상) / 24비트(약 1600만 색상) 컬러 이미지 처리</li>
+          <li>Alpha Channel 지원(<span style="color: #cb912f;">투명도</span>)</li>
+          <li>W3C 권장 포맷</li>
+        </ul>
+        <h3 class="section_mid_title">WEBP</h3>
+        <ul class="small">
+          <li>JPG, PNG, GIF를 모두 대체할 수 있는 <span class="custom_underline">구글이 개발한</span> 이미지 포맷</li>
+          <li>투명도 지원</li>
+          <li>gif 같은 애니메이션 지원</li>
+          <li>단 IE에서 지원 불가 사용전 <span class="custom_underline">하위호환성</span> 체크하기!</li>
+        </ul>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">벡터</h2>
+        <ul class="small">
+          <li>확대/축소에서 자유로움, 용량 변화가 없음.</li>
+          <li>정교한 이미지(인물, 풍경 사진 같은)를 표현하기 어려움</li>
+          <li>Ex) .svg</li>
+        </ul>
+        <h3 class="section_mid_title">SVG</h3>
+        <ul class="small">
+          <li><span style="color: #cb912f;">해상도의 영향에서 자유로움</span></li>
+          <li>CSS와 JS로 제어 가능</li>
+          <li>파일 및 코드 삽입 가능</li>
+          <li>Ex) 구글의 로고는 .svg 확장자 파일이다.</li>
+        </ul>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">벡터</h2>
+        <ul class="small">
+          <li>확대/축소에서 자유로움, 용량 변화가 없음.</li>
+          <li>정교한 이미지(인물, 풍경 사진 같은)를 표현하기 어려움</li>
+          <li>Ex) .svg</li>
+        </ul>
+        <h3 class="section_mid_title">SVG</h3>
+        <ul class="small">
+          <li><span style="color: #cb912f;">해상도의 영향에서 자유로움</span></li>
+          <li>CSS와 JS로 제어 가능</li>
+          <li>파일 및 코드 삽입 가능</li>
+          <li>Ex) 구글의 로고는 .svg 확장자 파일이다.</li>
+        </ul>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">시작하기</h2>
+        <pre class="line-numbers"><code class="language-html">
+&lt;!DOCTYPE html&gt; : 문서(페이지) HTML 버전을 지정
+
+&lt;html&gt; &lt;/html&gt; : HTML 문서가 어디에서 시작하고 어디에서 끝나는지 알려주는 역할.
+
+&lt;head&gt; &lt;/head&gt; : 문서의 **정보**를 나타내는 범위 (EX 페이지 제목, CSS 등)
+
+&lt;body&gt; &lt;/body&gt; : 문서의 **구조**를 나타내는 범위 (로고, 헤더, 버튼 등)
+        </code>
+        </pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">연결하기</h2>
+        <h3 class="section_mid_title">CSS 연결하기</h3>
+        <p class="lead"><code class="code">&lt;head&gt;</code> 태그 내부에 <code class="code">&lt;link&gt;</code> 태그를 이용하여 css 연결</p>
+        <pre class="line-numbers"><code class="language-html">
+head 태그에 link 선언 후 연결하고 싶은 css 파일 url 설정
+&lt;head&gt;
+  &lt;link rel="가져올 문서와 관계" href="가져올 문서의 경로"&gt;
+  &lt;link rel="stylesheet" href="./main.css"&gt;
+&lt;/head&gt;
+        </code>
+        </pre>
+        <h3 class="section_mid_title">JS 연결하기</h3>
+        <p class="lead"><code class="code">&lt;head&gt;</code> 태그 내부에 <code class="code">&lt;script&gt;</code> 태그를 이용하여 js 연결</p>
+        <pre class="line-numbers"><code class="language-html">
+head 태그에 link 선언 후 연결하고 싶은 css 파일 url 설정
+&lt;head&gt;
+  &lt;script src="JS 파일 경로"&gt;&lt;/script &gt;
+  &lt;script src="./mina.js"&gt;&lt;/script &gt;
+&lt;/head&gt;
+        </code>
+        </pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">상대 경로와 절대 경로</h2>
+        <h3 class="section_mid_title">상대 경로</h3>
+        <div class="callout">
+          ./ 주변(생략가능)<br>
+          ../ 상위 폴더
+        </div>
+        <h3 class="section_mid_title">절대 경로</h3>
+        <div class="callout">
+          http (https) 원격<br>
+          / (//) 루트경로
+        </div>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">브라우저 스타일 초기화</h2>
+        <ol class="small">
+          <li><a href="https://www.jsdelivr.com/package/npm/reset-css" target="_blank">https://www.jsdelivr.com/package/npm/reset-css</a> 클릭</li>
+          <li>귀찮으면 아래 절대경로 사용</li>
+          <li>반드시 사용할 css보다 최상단에 위치 해야함</li>
+        </ol>
+        <pre class="line-numbers"><code class="language-html">
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.css"&gt;
+min : 용량 줄인 파일 공백이 없음
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"&gt;
+        </code>
+        </pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">Emmet</h2>
+        <p class="lead"><a href="https://docs.emmet.io/cheat-sheet/" target="_blank">https://docs.emmet.io/cheat-sheet/</a> 돔구조 작성할떄 빠르게 작성 가능한 기능</p>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">HTML 개요</h2>
+        <h3 class="section_mid_title">HTML</h3>
+        <p class="lead">HTML(HyperText Markup Language)은 웹 페이지를 만들기 위한 언어입니다.</p>
+        <ul class="small">
+          <li>HT - HyoerText : 문서와 문서를 연결</li>
+          <li>M - Markup : 마크업, 태그</li>
+          <li>L - Language : 언어</li>
+          <li>즉 HTML이란? 문서와 문서로 연결된 태그 언어를 말합니다.</li>
+        </ul>
+        <h3 class="section_mid_title">기본문법</h3>
+        <pre class="line-numbers"><code class="language-html">
+태그를 작성하는 기본 문법
+&lt;태그&gt;내용&lt;/태그&gt;
+        </code>
+        </pre>
+        <h3 class="section_mid_title">부모와 자식 관계</h3>
+        <pre class="line-numbers"><code class="language-html">
+&lt;!-- 부모 요소 --&gt;
+&lt;태그&gt;
+  &lt;!-- 자식 요소 --&gt;
+  &lt;태그&gt;내용&lt;/태그&gt;
+  &lt;!-- //자식 요소 --&gt;
+&lt;/태그&gt;
+&lt;!-- //부모 요소 --&gt;
+        </code>
+        </pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">글자와 상자</h2>
+        <p class="lead">블럭 요소는 박스, 인라인 요소는 텍스트를 의미합니다.</p>
+        <img class="custom_img" src="../../resources/images/views/html/block_inline.jpg" alt="글자와 상자" title="글자와 상자">
+        <h3 class="section_mid_title">인라인(Inline)</h3>
+        <ul class="small">
+          <li>포함한 콘텐츠 크기만큼 자동으로 <span style="color: #cb912f;">줄어듬!</span></li>
+          <li>글자를 마늘기 위한 요소들</li>
+          <li>요소가 수평으로 쌓임</li>
+          <li>콘텐츠 영역을 설정하는 용도</li>
+          <li>글자는 가로사이즈와 세로사이즈 지정 불가</li>
+          <li>인라인 요소 안에는 블럭요소 사용 불가</li>
+          <li>독립된 텍스트 영역으로, 한 줄에 여러 개의 인라인 요소를 표현 할 수 있습니다.</li>
+          <li>인라인 요소에는 블록 요소가 포함 될 수 없지만, 인라인 요소는 포함 될 수 있습니다.</li>
+          <li>
+            <code class="code">&lt;span&gt;</code>,
+            <code class="code">&lt;a&gt;</code>,
+            <code class="code">&lt;strong&gt;</code>,
+            <code class="code">&lt;em&gt;</code>,
+            <code class="code">&lt;img&gt;</code>
+          </li>
+        </ul>
+        <h3 class="section_mid_title">블록(Block)</h3>
+        <ul class="small">
+          <li>부모 요소의 크기만큼 자동으로 <span style="color: #cb912f;">늘어남!</span></li>
+          <li>상자(레이아웃)를 만들기 위한 요소</li>
+          <li>콘텐츠 영역을 설정하는 용도</li>
+          <li>요소가 수직으로 쌓임</li>
+          <li>독립된 박스 영역으로, 한 줄에 하나에 블록 요소만 표현 할 수 있습니다.</li>
+          <li>블록요소에는 블록요소와 인라인 요소를 포함 할 수 있습니다.</li>
+          <li>
+            <code class="code">&lt;div&gt;</code>,
+            <code class="code">&lt;p&gt;</code>,
+            <code class="code">&lt;h1&gt;</code>,
+            <code class="code">&lt;h2&gt;</code>,
+            <code class="code">&lt;h3&gt;</code>,
+            <code class="code">&lt;h4&gt;</code>,
+            <code class="code">&lt;h5&gt;</code>,
+            <code class="code">&lt;h6&gt;</code>,
+            <code class="code">&lt;ul&gt;</code>,
+            <code class="code">&lt;li&gt;</code>
+          </li>
+        </ul>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">HTML Reference</h2>
+        <h3 class="section_mid_title">전역 속성</h3>
+        <pre class="line-numbers"><code class="language-html">
+title="요소의 정보나 설명을 지정"
+
+style=”요소에 적용할 스타일(CSS)을 지정”
+
+class=”요소를 지칭하는 중복 가능한 이름” *중복가능
+
+id=”요소를 지칭하는 고유한 이름” *중복불가
+
+data-이름=”요소에 데이터를 지정”
+
+defer : script 태그에 사용됨 , HTML 구조가 준비된 후 JS를 해석하겠다는 의미를 가지고 있음
+        </code>
+        </pre>
+        <h3 class="section_mid_title">태그</h3>
+        <p class="lead">태그란? 정보를 정의하는 방식을 정의합니다.</p>
+        <ul class="small">
+          <li>태그는 열린태그와 닫는 태그가 있습니다.</li>
+          <li>닫는 태그에는 "/" 잇어야 합니다.</li>
+          <li>닫는 태그가 필요없는 태그도 있습니다.</li>
+          <li>HTML5에서는 "/"가 생략이 가능합니다.</li>
+        </ul>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:10%"></col>
+            <col style="width:70%"></col>
+            <col style="width:10%"></col>
+            <col style="width:10%"></col>
+          </colgroup>
+					<thead>
+						<tr>
+							<th>Tag</th>
+							<th>설명</th>
+							<th>Content</th>
+							<th>Version</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code class="code">&lt;h1&gt;~&lt;h6&gt;</code></td>
+							<td>제목 영역을 성정합니다.</td>
+							<td>Block</td>
+							<td>HTML4</td>
+						</tr>
+						<tr>
+							<td><code class="code">&lt;div&gt;</code></td>
+							<td>문서의 영역을 나누거나 그룹화 할 때 사용합니다.</td>
+							<td>Block</td>
+							<td>HTML4</td>
+						</tr>
+						<tr>
+							<td><code class="code">&lt;ul&gt;</code></td>
+							<td>순서가 없는 목록을 정의합니다.</td>
+							<td>Block</td>
+							<td>HTML4</td>
+						</tr>
+						<tr>
+							<td><code class="code">&lt;ol&gt;</code></td>
+							<td>순서가 있는 목록을 정의합니다. </td>
+							<td>Block</td>
+							<td>HTML4</td>
+						</tr>
+						<tr>
+							<td><code class="code">&lt;li&gt;</code></td>
+							<td>목록의 항목을 정의합니다.</td>
+							<td>Block</td>
+							<td>HTML4</td>
+						</tr>
+						<tr>
+							<td><code class="code">&lt;p&gt;</code></td>
+							<td>문단(paragraph)을 정의합니다</td>
+							<td>Block</td>
+							<td>HTML4</td>
+						</tr>
+						<tr>
+							<td><code class="code">&lt;span&gt;</code></td>
+							<td>인라인 요소 그룹화를 정의합니다.</td>
+							<td>Inline</td>
+							<td>HTML4</td>
+						</tr>
+						<tr>
+							<td><code class="code">&lt;table&gt;</code></td>
+							<td>표를 만드는 태그이며 전체구성 레이아웃을 만드는 데도 사용 한다.</td>
+							<td>Block</td>
+							<td>HTML4</td>
+						</tr>
+						<tr>
+							<td><code class="code">&lt;tr&gt;</code></td>
+							<td>같은행에 넣을것을 묶어준다.(행,가로줄)</td>
+							<td>Block</td>
+							<td>HTML4</td>
+						</tr>
+						<tr>
+							<td><code class="code">&lt;th&gt;</code></td>
+							<td>표의 제목을 쓰는 역활이다 .</td>
+							<td>Block</td>
+							<td>HTML4</td>
+						</tr>
+						<tr>
+							<td><code class="code">&lt;td&gt;</code></td>
+							<td>항목하나를 묶어주는것이다.(칸,세로줄)</td>
+							<td>Block</td>
+							<td>HTML4</td>
+						</tr>
+						<tr>
+							<td><code class="code">&lt;tbody&gt;</code></td>
+							<td>table 의 body 부분이다.</td>
+							<td>Block</td>
+							<td>HTML4</td>
+						</tr>
+						<tr>
+							<td><code class="code">&lt;thead&gt;</code></td>
+							<td>table 의 head 부분이다.</td>
+							<td>Block</td>
+							<td>HTML4</td>
+						</tr>
+						<tr>
+							<td><code class="code">&lt;tfoot&gt;</code></td>
+							<td>table 의 footer 부분이다 .</td>
+							<td>Block</td>
+							<td>HTML4</td>
+						</tr>
+						<tr>
+							<td><code class="code">&lt;col&gt;</code></td>
+							<td>표에서 열의 속성 값을 정의하는데 각 열에 반복적으로 스타일을 적용하는 대신 전체 열의 스타일을 적용한다.</td>
+							<td>Block</td>
+							<td>HTML4</td>
+						</tr>
+						<tr>
+							<td><code class="code">&lt;colgroup&gt;</code></td>
+							<td>표 안에서 셀(열) 을 그룹화하는 데 사용되며 col 태그와 마찬가지로 전체 스타일을 적용한다.</td>
+							<td>Block</td>
+							<td>HTML4</td>
+						</tr>
+						<tr>
+							<td><code class="code">&lt;br&gt;</code></td>
+							<td>줄바꿈 태그이다.</td>
+							<td>Block</td>
+							<td>HTML4</td>
+						</tr>
+						<tr>
+							<td><code class="code">&lt;strong&gt;</code></td>
+							<td><strong>중요한</strong> 의미를 갖는 텍스트를 설정합니다.</td>
+							<td>inline</td>
+							<td>HTML4</td>
+						</tr>
+						<tr>
+							<td><code class="code">&lt;em&gt;</code></td>
+							<td><em>텍스트를</em> 강조할 때 사용합니다.</td>
+							<td>inline</td>
+							<td>HTML4</td>
+						</tr>
+						<tr>
+							<td><code class="code">&lt;b&gt;</code></td>
+							<td>다른 텍스트와 <b>단순 구별</b>하고 싶을 때 사용합니다.</td>
+							<td>inline</td>
+							<td>HTML4</td>
+						</tr>
+						<tr>
+							<td><code class="code">&lt;mark&gt;</code></td>
+							<td>중요성과 강조를 고려하지 않은 <mark>단순 참고용 표시</mark>를 할때 사용합니다.</td>
+							<td>inline</td>
+							<td>HTML5</td>
+						</tr>
+						<tr>
+							<td><code class="code">&lt;address&gt;</code></td>
+							<td>주소를 입력할 때 사용한다.</td>
+							<td>inline</td>
+							<td>HTML5</td>
+						</tr>
+						<tr>
+							<td><code class="code">&lt;section&gt;</code></td>
+							<td>일반적으로 문서의 컨텐츠 섹션을 의미한다.</td>
+							<td>block</td>
+							<td>HTML5</td>
+						</tr>
+						<tr>
+							<td><code class="code">&lt;nav&gt;</code></td>
+							<td>컨텐츠의 독립적인 항목을 나타내는 컨텐츠를 의미한다.</td>
+							<td>block</td>
+							<td>HTML5</td>
+						</tr>
+						<tr>
+							<td><code class="code">&lt;main&gt;</code></td>
+							<td>컨텐츠의 독립적인 항목을 나타내는 컨텐츠를 의미한다.</td>
+							<td>block</td>
+							<td>HTML5</td>
+						</tr>
+						<tr>
+							<td><code class="code">&lt;aside&gt;</code></td>
+							<td>웹 문서의 메인 컨텐츠와 관련된 사이드 컨텐츠 영역을 나타낸다.</td>
+							<td>block</td>
+							<td>HTML5</td>
+						</tr>
+						<tr>
+							<td><code class="code">&lt;header&gt;</code></td>
+							<td>웹 문서의 헤더 영역을 나타낸다.</td>
+							<td>block</td>
+							<td>HTML5</td>
+						</tr>
+						<tr>
+							<td><code class="code">&lt;footer&gt;</code></td>
+							<td>웹 문서의 풋터 영역을 나타낸다.</td>
+							<td>block</td>
+							<td>HTML5</td>
+						</tr>
+					</tbody>
+				</table>
+        <h3 class="section_mid_title">section</h3>
+				<ul class="small">
+					<li>일반적으로 문서의 콘텐츠 색션을 의미합니다.</li>
+					<li>콘텐츠와 관련된 한 가지 주제  영역을 말합니다.</li>
+					<li>section 요소는 문장이나 문서의 스타일링 요소가 아니기 때문에 편의나 영역을 위함이라면 div 태그가 좋습니다.</li>
+					<li>section 요소는 제목이 없는 경우는 섹션이라고 할 수 없기 때문에 제목을 제공해야 합니다.</li>
+					<li>section 요소는 일반적인 주제가 아니라면 구체적인 요소(article, aside, nav)를 사용하는 것이 더 적절합니다.</li>
+				</ul>
+				<h3 class="section_mid_title">article</h3>
+				<ul class="small">
+					<li>콘텐츠의 독립적인 항목을 나타내는 콘텐츠를 의미합니다.</li>
+					<li>article은 포럼, 신문기사, 잡지, 블러그 항목, 게시판 글 등 콘텐츠의 독립적인 항목을 나타냅니다.</li>
+					<li>section은 하나의 주제를 나타낸다면, article은 주제를 묶은 독립적인 콘텐츠입니다.</li>
+					<li>section 요소 안에는 article 요소를 쓸 수 있으며, article 요소 안에도 section 요소를 쓸 수 있습니다.</li>
+				</ul>
+				<h3 class="section_mid_title">nav</h3>
+				<ul class="small">
+					<li>페이지 내에서 이동 할 수 있는 네비게이션 링크 그룹입니다.</li>
+					<li>nav는 문서의 핵심적인 페이지의 메뉴 및 서브 메뉴에서 사용하고, 문서에서 주로 한 번 사용합니다.</li>
+					<li>문서 안에 링크가 포함된 콘텐츠는 nav를 사용하지 않습니다</li>
+					<li>nav는 핵심적인 네비게션에 사용해야 하므로 foot 내에 링크 그룹의 사용은 적절하지 안습니다.</li>
+				</ul>
+				<h3 class="section_mid_title">main</h3>
+				<ul class="small">
+					<li>웹 문서의 주요 콘텐츠 영역을 나타낼 때 사용합니다.</li>
+					<li>main은 웹 페이지에서 한 번만 사용 할 수 있으며, 접근성과 검색영역에 노출을 향상시킵니다.</li>
+					<li>article, aside, footer, header, nav를 하위 요소로 사용할 수 있습니다.</li>
+				</ul>
+				<h3 class="section_mid_title">aside</h3>
+				<ul class="small">
+					<li>웹 문서의 메인 콘텐츠와 관련된 사이드 콘텐츠 영역을 나타냅니다.</li>
+					<li>aside는 메인 콘텐츠와 관련된 사이드이 정보, 광고, 등 부준적인 정보를 그룹화 할  때 사용합니다.</li>
+				</ul>
+				<h3 class="section_mid_title">header</h3>
+				<ul class="small">
+					<li>웹 문서의 해더 영역을 나타냅니다.</li>
+					<li>header 에는 웹 페이지에 대한 소개, 내비게이션 영역, 테이블 영역, 검색 영역, 로고 영역 을 포함한 영역입니다.</li>
+					<li>header는 제목 태그가 포함 될 수 있으며, 필수 조건은 아닙니다.</li>
+					<li>header 는 색션 콘텐츠가 아닌 그룹화하기 위한 요소이므로 section 요소를 포함 할 수 없습니다.</li>
+				</ul>
+				<h3 class="section_mid_title">footer</h3>
+				<ul class="small">
+					<li>웹 문서의 footer 영역을 나타냅니다.</li>
+					<li>footer 는 저작권 정보, 회사 정보, 관련 링크, 주소, 바닥글, 사이트 정보 등을 포함하는 콘텐츠 영역입니다.</li>
+					<li>footer는 섹션 콘텐츠가 아닌 그룹을 나타내는 요소이며, section, article, aside 등을 포함 할 수 있습니다.</li>
+				</ul>
+				<h3 class="section_mid_title">HTML5 에서 새로 생긴 태그</h3>
+				<ul class="small">
+					<li>dialog : 대화를 의미있는 콘텐츠로 만들고자 할때 사용하며 &lt;dt&gt;에 말하는 사람 &lt;dd&gt;에 내용을 작성한다.</li>
+					<li>figure : 이미지, 그래프, 사진, 예제 코드, 비디오, 일반 텍스트등을 하나로 묶어 블록을 형성하고 캡션을 포함시켜 서로의 관계를 명확히 구조화 시킨다. 반드시 메인이 되는 문서 안에 삽입될 필요는 없으며 페이지 옆이나 참조용 별도 페이지등에 넣어도 크게 상관없는 내용을 지정할 수 있다.</li>
+					<li>mark : 형광펜으로 특정단어들을 칠해서 강조하는 효과와 비슷하며 문장내의 중요한 부분에 강조효과를 넣는 &lt;em&gt;, &lt;strong&gt;과는 다른 개념이다. 시각적 주목효과 만을 노리며 스타일이 정의되어 있지 않으므로 직접 효과를 작성한다.</li>
+					<li>time : 날짜와 시간을 기계가 이해할 수 있게 명확하게 인코딩하면서 사람도 이해할 수 있게 노출시킨다. YYYY-MM-DD(날짜) / HH:MM:SS(24시의 형태) 로 표기하고 동시에 나타낼 경우, 2013-01-30T12:00:00+09:00 와 같이 T문자로 구분하고 문자열 끝에 타임존 정보를 더하면 된다.(time요소에 지정할 수 있는 일시의 문자열 형태는 ISO-86이라는 표준 규격에 정해져 있다.)</li>
+					<li>meter : 통화, 인구, 점수, 치수와 같은 숫자들과 같이 특정 범위내에 있는 숫자 값을 시스템에 인지시킬 필요가 있을때 사용할 수 있다. '%'나 '분수'형태로도 사용할 수 있다.
+						<ol class="small">
+							<li>value : 실제로 측정된 진짜 데이터를 지정한다.</li>
+							<li>title : 튤팁 입력을 할수 있다.</li>
+							<li>high : 입력된 데이터들 중의 사용자가 허용할 수 있는 최대값을 지정한다.</li>
+							<li>low : 입력된 데이터들 중의 사용자가 허용할 수 있는 최저값을 지정한다.</li>
+							<li>max : meter에서 인식할 수 있는 최고 값을 지정한다.</li>
+							<li>min : meter에서 인식할 수 있는 최저 값을 지정한다. </li>
+							<li>optimum : 최적의 측정값을 지정해 준다. min으로 설정된 최저값과 max로 설정된 최대값 사이에서 가능한 한 최고 적합한 값을 지정해준다</li>
+						</ol>
+					</li>
+					<li>progress : 다운로드 진척 상태를 알려줄때 유용하게 사용할수 있는 태그로 최대값 max 속성과 현재 다운로드한 값 value 속성을 가진다. 이는 자바스크립트와 연동하여 동적으로 다운로드 상태를 제공할 수 있다.</li>
+					<li>ruby : 한자, 일어등의 발음등을 표기하기위해 사용하며 &lt;rp&gt;와 &lt;rt&gt;를 사용한다.5.5pt의 작은 글씨를 사용해 첨언을 넣는 영국 출판문화에서 기원한 단어.</li>
+					<li>details : HTML 문서에서 추가적인 설명을 붙일때 사용하며 워드프로세서의 '각주' 역할과 비슷하다. &lt;summary&gt; 태그와 함께 사용되며 기본적으로 &lt;details&gt;는 '감춤'상태이다. summary 부분만 보이도록 되어있고 그 외 콘텐츠는 기본적으로 감추어져 있는 것이다. details 콘텐츠를 모두 펼쳐 놓기 위한 속성이 있는데 'open' 속성이다.</li>
+				</ul>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">SVG</h2>
+        <p class="lead">스케일러블 벡터 그래픽스(Scalable Vector Graphic, SVG)는 2차원 벡터 그래픽을 표현하기 위한 XML 기반의 파일 형식으로, 1999년 W3C의 주도하에 개발된 오픈 표준의 벡터 그래픽 파일 형식입니다.</p>
+        <div class="animation_area">
+          <div class="animation_box">
+            <svg style="background-color: #ef9a9a;">
+              <rect class="rect1" x="30" y="30" width="140" height="140" stroke="#880e4f" stroke-width="5" fill="none"></rect>
+            </svg>
+          </div>
+          <div class="animation_box">
+            <svg style="background-color: #ef9a9a;">
+              <rect class="rect2" x="30" y="30" width="140" height="140" stroke="#880e4f" stroke-width="5" fill="none"></rect>
+            </svg>
+          </div>
+          <div class="animation_box">
+            <svg style="background-color: #ef9a9a;">
+              <rect class="rect3" x="30" y="30" width="140" height="140" stroke="#880e4f" stroke-width="5" fill="none"></rect>
+            </svg>
+          </div>
+          <div class="animation_box">
+            <svg style="background-color: #ef9a9a;">
+              <rect class="rect4" x="30" y="30" width="140" height="140" stroke="#880e4f" stroke-width="5" fill="none"></rect>
+            </svg>
+          </div>
+          <div class="animation_box">
+            <svg style="background:#f48fb1;">
+              <circle class="cir1" cx="100" cy="100" r="80" stroke="#880e4f" stroke-width="5" fill="none"></circle>
+            </svg>
+          </div>
+          <div class="animation_box">
+            <svg style="background:#f48fb1;">
+              <circle class="cir2" cx="100" cy="100" r="80" stroke="#880e4f" stroke-width="5" fill="none"></circle>
+           </svg>
+          </div>
+          <div class="animation_box">
+            <svg style="background:#f48fb1;">
+              <circle class="cir3" cx="100" cy="100" r="80" stroke="#880e4f" stroke-width="5" fill="none"></circle>
+            </svg>
+          </div>
+          <div class="animation_box">
+            <svg style="background:#f48fb1;">
+              <circle class="cir4" cx="100" cy="100" r="80" stroke="#880e4f" stroke-width="5" fill="none"></circle>
+            </svg>
+          </div>
+          <div class="animation_box">
+            <svg style="background:#ce93d8;">
+              <path class="patha1" fill="none" stroke="#880e4f " stroke-miterlimit="10" d="M28.667,20.667c0,0-41.334,167,154.333,167"></path>
+            </svg>
+          </div>
+          <div class="animation_box">
+            <svg style="background:#ce93d8;">
+              <path class="patha2" fill="none" stroke="#880e4f " stroke-miterlimit="10" d="M28.667,20.667c0,0-41.334,167,154.333,167"></path>
+            </svg>
+          </div>
+          <div class="animation_box">
+            <svg style="background:#ce93d8;">
+              <path class="patha3" fill="none" stroke="#880e4f " stroke-miterlimit="10" d="M28.667,20.667c0,0-41.334,167,154.333,167"></path>
+            </svg>
+          </div>
+          <div class="animation_box">
+            <svg style="background:#ce93d8;">
+              <path class="patha4" fill="none" stroke="#880e4f " stroke-miterlimit="10" d="M28.667,20.667c0,0-41.334,167,154.333,167"></path>
+            </svg>
+          </div>
+          <div class="animation_box">
+            <svg style="background:#ef9a9a;">
+                <path class="pathb1" d="M188.876,141.665c-35.899,41.053-98.28,45.232-139.333,9.333
+                C16.7,122.279,13.358,72.374,42.076,39.531c22.975-26.274,62.899-28.948,89.173-5.973c21.019,18.38,23.159,50.319,4.779,71.339
+                c-14.704,16.815-40.256,18.527-57.071,3.823c-13.452-11.763-14.822-32.204-3.058-45.657c9.411-10.762,25.764-11.857,36.525-2.447
+                c8.609,7.528,9.486,20.611,1.957,29.22c-6.023,6.888-16.489,7.589-23.376,1.566c-5.51-4.818-6.071-13.191-1.253-18.701" stroke="#880e4f " stroke-width="2" fill="none"/>
+            </svg>
+          </div>
+          <div class="animation_box">
+              <svg style="background:#ef9a9a;">
+                  <path class="pathb2" d="M188.876,141.665c-35.899,41.053-98.28,45.232-139.333,9.333
+                  C16.7,122.279,13.358,72.374,42.076,39.531c22.975-26.274,62.899-28.948,89.173-5.973c21.019,18.38,23.159,50.319,4.779,71.339
+                  c-14.704,16.815-40.256,18.527-57.071,3.823c-13.452-11.763-14.822-32.204-3.058-45.657c9.411-10.762,25.764-11.857,36.525-2.447
+                  c8.609,7.528,9.486,20.611,1.957,29.22c-6.023,6.888-16.489,7.589-23.376,1.566c-5.51-4.818-6.071-13.191-1.253-18.701" stroke="#880e4f " stroke-width="2" fill="none"/>
+              </svg>
+          </div>
+          <div class="animation_box">
+              <svg style="background:#ef9a9a;">
+                  <path class="pathb3" d="M188.876,141.665c-35.899,41.053-98.28,45.232-139.333,9.333
+                  C16.7,122.279,13.358,72.374,42.076,39.531c22.975-26.274,62.899-28.948,89.173-5.973c21.019,18.38,23.159,50.319,4.779,71.339
+                  c-14.704,16.815-40.256,18.527-57.071,3.823c-13.452-11.763-14.822-32.204-3.058-45.657c9.411-10.762,25.764-11.857,36.525-2.447
+                  c8.609,7.528,9.486,20.611,1.957,29.22c-6.023,6.888-16.489,7.589-23.376,1.566c-5.51-4.818-6.071-13.191-1.253-18.701" stroke="#880e4f " stroke-width="2" fill="none"/>
+              </svg>
+          </div>
+          <div class="animation_box">
+              <svg style="background:#ef9a9a;">
+                  <path class="pathb4" d="M188.876,141.665c-35.899,41.053-98.28,45.232-139.333,9.333
+                  C16.7,122.279,13.358,72.374,42.076,39.531c22.975-26.274,62.899-28.948,89.173-5.973c21.019,18.38,23.159,50.319,4.779,71.339
+                  c-14.704,16.815-40.256,18.527-57.071,3.823c-13.452-11.763-14.822-32.204-3.058-45.657c9.411-10.762,25.764-11.857,36.525-2.447
+                  c8.609,7.528,9.486,20.611,1.957,29.22c-6.023,6.888-16.489,7.589-23.376,1.566c-5.51-4.818-6.071-13.191-1.253-18.701" stroke="#880e4f " stroke-width="2" fill="none"/>
+              </svg>
+          </div>
+          <div class="animation_box">
+              <svg style="background:#f48fb1;">
+                  <path class="pathc1" fill="none" stroke="#880e4f " stroke-miterlimit="10" d="M86.327,122.387c-44.595,97.691-115.176,9.187-14.972-18.774
+                  c-100.204,27.961-75.014-82.403,5.343-23.41C-3.659,21.209,98.333-27.908,98.333,69.783c0-97.691,101.993-48.574,21.635,10.419
+                  c80.357-58.993,105.548,51.371,5.343,23.41c100.205,27.961,29.624,116.466-14.972,18.774
+                  C154.936,220.078,41.732,220.078,86.327,122.387z"/>
+              </svg>
+          </div>
+          <div class="animation_box">
+              <svg style="background:#f48fb1;">
+                  <path class="pathc2" fill="none" stroke="#880e4f " stroke-miterlimit="10" d="M86.327,122.387c-44.595,97.691-115.176,9.187-14.972-18.774
+                  c-100.204,27.961-75.014-82.403,5.343-23.41C-3.659,21.209,98.333-27.908,98.333,69.783c0-97.691,101.993-48.574,21.635,10.419
+                  c80.357-58.993,105.548,51.371,5.343,23.41c100.205,27.961,29.624,116.466-14.972,18.774
+                  C154.936,220.078,41.732,220.078,86.327,122.387z"/>
+              </svg>
+          </div>
+          <div class="animation_box">
+              <svg style="background:#f48fb1;">
+                  <path class="pathc3" fill="none" stroke="#880e4f " stroke-miterlimit="10" d="M86.327,122.387c-44.595,97.691-115.176,9.187-14.972-18.774
+                  c-100.204,27.961-75.014-82.403,5.343-23.41C-3.659,21.209,98.333-27.908,98.333,69.783c0-97.691,101.993-48.574,21.635,10.419
+                  c80.357-58.993,105.548,51.371,5.343,23.41c100.205,27.961,29.624,116.466-14.972,18.774
+                  C154.936,220.078,41.732,220.078,86.327,122.387z"/>
+              </svg>
+          </div>
+          <div class="animation_box">
+              <svg style="background:#f48fb1;">
+                  <path class="pathc4" fill="none" stroke="#880e4f " stroke-miterlimit="10" d="M86.327,122.387c-44.595,97.691-115.176,9.187-14.972-18.774
+                  c-100.204,27.961-75.014-82.403,5.343-23.41C-3.659,21.209,98.333-27.908,98.333,69.783c0-97.691,101.993-48.574,21.635,10.419
+                  c80.357-58.993,105.548,51.371,5.343,23.41c100.205,27.961,29.624,116.466-14.972,18.774
+                  C154.936,220.078,41.732,220.078,86.327,122.387z"/>
+              </svg>
+          </div>
+          <div class="animation_box">
+              <svg style="background:#ce93d8;">
+                  <path class="pathd1" d="M162.771,162.841c-69.414-66.75-69.414-66.75-56.957-18.392
+                  c-12.457-48.358-12.457-48.358-47.441,36.493c34.984-84.851,34.984-84.851-0.109-59.853C93.357,96.091,93.357,96.091,8.898,87.247
+                  c84.459,8.844,84.459,8.844,56.89-18.599c27.57,27.443,27.57,27.443,16.93-57.408c10.639,84.851,10.639,84.851,35.268,48.358
+                  c-24.629,36.493-24.629,36.493,59.83-1.638c-84.459,38.131-84.459,38.131-35.093,48.486
+                  C93.357,96.091,93.357,96.091,162.771,162.841z" stroke-width="2" fill="none" stroke="#880e4f "/>
+              </svg>
+          </div>
+          <div class="animation_box">
+              <svg style="background:#ce93d8;">
+                  <path class="pathd2" d="M162.771,162.841c-69.414-66.75-69.414-66.75-56.957-18.392
+                  c-12.457-48.358-12.457-48.358-47.441,36.493c34.984-84.851,34.984-84.851-0.109-59.853C93.357,96.091,93.357,96.091,8.898,87.247
+                  c84.459,8.844,84.459,8.844,56.89-18.599c27.57,27.443,27.57,27.443,16.93-57.408c10.639,84.851,10.639,84.851,35.268,48.358
+                  c-24.629,36.493-24.629,36.493,59.83-1.638c-84.459,38.131-84.459,38.131-35.093,48.486
+                  C93.357,96.091,93.357,96.091,162.771,162.841z" stroke-width="2" fill="none" stroke="#880e4f "/>
+              </svg>
+          </div>
+          <div class="animation_box">
+              <svg style="background:#ce93d8;">
+                  <path class="pathd3" d="M162.771,162.841c-69.414-66.75-69.414-66.75-56.957-18.392
+                  c-12.457-48.358-12.457-48.358-47.441,36.493c34.984-84.851,34.984-84.851-0.109-59.853C93.357,96.091,93.357,96.091,8.898,87.247
+                  c84.459,8.844,84.459,8.844,56.89-18.599c27.57,27.443,27.57,27.443,16.93-57.408c10.639,84.851,10.639,84.851,35.268,48.358
+                  c-24.629,36.493-24.629,36.493,59.83-1.638c-84.459,38.131-84.459,38.131-35.093,48.486
+                  C93.357,96.091,93.357,96.091,162.771,162.841z" stroke-width="2" fill="none" stroke="#880e4f "/>
+              </svg>
+          </div>
+          <div class="animation_box">
+              <svg style="background:#ce93d8;">
+                  <path class="pathd4" d="M162.771,162.841c-69.414-66.75-69.414-66.75-56.957-18.392
+                  c-12.457-48.358-12.457-48.358-47.441,36.493c34.984-84.851,34.984-84.851-0.109-59.853C93.357,96.091,93.357,96.091,8.898,87.247
+                  c84.459,8.844,84.459,8.844,56.89-18.599c27.57,27.443,27.57,27.443,16.93-57.408c10.639,84.851,10.639,84.851,35.268,48.358
+                  c-24.629,36.493-24.629,36.493,59.83-1.638c-84.459,38.131-84.459,38.131-35.093,48.486
+                  C93.357,96.091,93.357,96.091,162.771,162.841z" stroke-width="2" fill="none" stroke="#880e4f "/>
+              </svg>
+          </div>
+          <div class="animation_box">
+              <svg style="background:#ef9a9a;">
+                  <path class="pathe1" d="M143,177
+                  c-28,2-58-14-69-41c-14,8-17,28-11,43c-17-22-20-54-6-78c-10-5-22-1-31,5c-4,4-8,7-11,12c9-26,31-48,59-51c-5-17-26-23-43-21
+                  c26-10,58-8,79,13c4-6,4-13,3-20c-1-3-2-6-3-9c-3-7-9-13-14-19c25,14,44,40,44,69c5-1,9-4,13-7c2-2,3-5,5-7c4-8,8-17,7-27
+                  c8,28,0,60-23,79c14,10,34,5,46-6c-17,23-46,38-75,32C112,161,128,173,143,177L143,177z" stroke="#880e4f" stroke-width="2" fill="none"/>
+              </svg>
+          </div>
+          <div class="animation_box">
+              <svg style="background:#ef9a9a;">
+                  <path class="pathe2" d="M143,177
+                  c-28,2-58-14-69-41c-14,8-17,28-11,43c-17-22-20-54-6-78c-10-5-22-1-31,5c-4,4-8,7-11,12c9-26,31-48,59-51c-5-17-26-23-43-21
+                  c26-10,58-8,79,13c4-6,4-13,3-20c-1-3-2-6-3-9c-3-7-9-13-14-19c25,14,44,40,44,69c5-1,9-4,13-7c2-2,3-5,5-7c4-8,8-17,7-27
+                  c8,28,0,60-23,79c14,10,34,5,46-6c-17,23-46,38-75,32C112,161,128,173,143,177L143,177z" stroke="#880e4f" stroke-width="2" fill="none"/>
+              </svg>
+          </div>
+          <div class="animation_box">
+              <svg style="background:#ef9a9a;">
+                  <path class="pathe3" d="M143,177
+                  c-28,2-58-14-69-41c-14,8-17,28-11,43c-17-22-20-54-6-78c-10-5-22-1-31,5c-4,4-8,7-11,12c9-26,31-48,59-51c-5-17-26-23-43-21
+                  c26-10,58-8,79,13c4-6,4-13,3-20c-1-3-2-6-3-9c-3-7-9-13-14-19c25,14,44,40,44,69c5-1,9-4,13-7c2-2,3-5,5-7c4-8,8-17,7-27
+                  c8,28,0,60-23,79c14,10,34,5,46-6c-17,23-46,38-75,32C112,161,128,173,143,177L143,177z" stroke="#880e4f" stroke-width="2" fill="none"/>
+              </svg>
+          </div>
+          <div class="animation_box">
+              <svg style="background:#ef9a9a;">
+                  <path class="pathe4" d="M143,177
+                  c-28,2-58-14-69-41c-14,8-17,28-11,43c-17-22-20-54-6-78c-10-5-22-1-31,5c-4,4-8,7-11,12c9-26,31-48,59-51c-5-17-26-23-43-21
+                  c26-10,58-8,79,13c4-6,4-13,3-20c-1-3-2-6-3-9c-3-7-9-13-14-19c25,14,44,40,44,69c5-1,9-4,13-7c2-2,3-5,5-7c4-8,8-17,7-27
+                  c8,28,0,60-23,79c14,10,34,5,46-6c-17,23-46,38-75,32C112,161,128,173,143,177L143,177z" stroke="#880e4f" stroke-width="2" fill="none"/>
+              </svg>
+          </div>
+        </div>
+      </div>
+      <!-- //doc_section -->
+    </div>
+  </main>
+  <!-- //main -->
+  <!-- footer -->
+  <footer id="footer">
+    <div class="copyright">
+      <div>Full-stack development</div>
+      <div>JJGODCOM</div> 
+    </div>
+  </footer>
+  <!-- //footer -->
+</body>
+</html>

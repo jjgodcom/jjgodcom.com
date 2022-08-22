@@ -1,0 +1,45 @@
+/* #main */
+#main {margin: 130px 0;}
+/* detail_area */
+#main .detail_area .container {display: flex; padding: 70px 60px; background-color: #202020;}
+#main .detail_area .container .text_box {margin-right: auto; width: 40%; color:#fff; display: flex; flex-direction: column;}
+#main .detail_area .container .text_box .lead {font-size: 1.5em; margin-bottom: 0.5em; line-height: 2;}
+#main .detail_area .container .text_box .references_box {margin-top: auto;}
+#main .detail_area .container .text_box .references_box .title {font-size: 1.6em; color: #4758fc;}
+#main .detail_area .container .text_box .references_box .list {display: flex; margin-top: 25px; flex-direction: row; flex-wrap: wrap;}
+#main .detail_area .container .text_box .references_box .list li {margin-right: 10px; margin-bottom: 10px;}
+#main .detail_area .container .text_box .references_box .list li a {color:#fff; border-radius: 10px; background-color: #1b191a;  padding: 5px; margin-bottom: 10px; font-size: 1em; transition: all .5s ease;}
+#main .detail_area .container .thumbnail_box {position: relative; width: 600px; height: 400px; }
+#main .detail_area .container .thumbnail {width: 100%; height: 100%; position: absolute; top: -100px; right: 0;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;}
+
+#main .detail_area .container .text_box .references_box .list li a:hover {color: #4758fc;}
+/* references_area */
+#main .references_area {margin: 50px 0;}
+#main .references_area h2.title, 
+#main .references_area h3.title {color:#fff; margin-top: 1.5em; font-weight: bold;}
+#main .references_area h2.title {font-size: 4em;}
+#main .references_area h3.title {font-size: 3em;}
+#main .references_area p,
+#main .references_area ul {margin: 1em 0; color:#fff; font-size: 1.5em;}
+#main .references_area ul li {list-style: disc; margin-bottom: 0.25em;}
+#main .references_area ul li a {color: #0cf;}
+
+@media(max-width:1280px){
+	#main .detail_area .container {box-sizing: border-box;}
+}
+@media(max-width:960px){
+    #main .detail_area .container {flex-direction: column-reverse; padding: 40px 30px; align-items: center;}
+    #main .detail_area .container .text_box {width: 100%; text-align: center;}
+    #header .back {display: none;}
+    #header .text {margin: 0 auto;}
+    #main .detail_area .container .text_box .references_box .list {justify-content: center;}
+}
+
+@media(max-width:580px){
+    #main .detail_area .container .thumbnail_box {width: 90%; height: 200px;}
+}
+
+

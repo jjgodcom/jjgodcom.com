@@ -1,0 +1,223 @@
+.animation_area {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 19px;
+  background-color: #464141;
+}
+
+.animation_box {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  margin: 40px;
+  font-size: 18px;
+}
+
+.animation_box svg{
+  width: 100%;
+  height: 100%;
+}
+
+.rect1 {animation: rect1 5s infinite linear; stroke-dasharray: 18;} /*나누기32*/
+.rect2 {animation: rect2 5s infinite linear; stroke-dasharray: 71;} /*나눈기8*/
+.rect3 {animation: rect3 5s infinite linear; stroke-dasharray: 281;} /*나누기2*/
+.rect4 {animation: rect4 5s infinite linear; stroke-dasharray: 562;} /*전체값*/
+@keyframes rect1 {
+    0% {stroke: #880e4f; stroke-dashoffset:18;}
+    35% {stroke: #3e2723 ;}
+    70% {stroke: #1b5e20; stroke-dashoffset:0;}
+    100% {stroke: #d4e157 ;}
+}
+@keyframes rect2 {
+    0% {stroke: #880e4f; stroke-dashoffset:71; }
+    35% {stroke: #3e2723 ;}
+    70% {stroke: #1b5e20; stroke-dashoffset:0;}
+    100% {stroke: #d4e157 ;}
+}
+@keyframes rect3 {
+    0% {stroke: #880e4f; stroke-dashoffset:281; }
+    35% {stroke: #3e2723 ;}
+    70% {stroke: #1b5e20; stroke-dashoffset:0;}
+    100% {stroke: #d4e157 ;}
+}
+@keyframes rect4 {
+    0% {stroke: #880e4f; stroke-dashoffset:562; }
+    35% {stroke: #3e2723 ;}
+    70% {stroke: #1b5e20; stroke-dashoffset:0;}
+    100% {stroke: #d4e157 ;}
+}
+
+
+.cir1 {animation: cir1 5s infinite linear; stroke-dasharray: 16;}
+.cir2 {animation: cir2 5s infinite linear; stroke-dasharray: 63;}
+.cir3 {animation: cir3 5s infinite linear; stroke-dasharray: 251;}
+.cir4 {animation: cir4 5s infinite linear; stroke-dasharray: 502;}
+@keyframes cir1 {
+    0% {stroke: #880e4f; stroke-dashoffset:16;}
+    35% {stroke: #3e2723 ;}
+    70% {stroke: #1b5e20; stroke-dashoffset:0;}
+    100% {stroke: #d4e157 ;}
+}
+@keyframes cir2 {
+    0% {stroke: #880e4f; stroke-dashoffset:63; }
+    35% {stroke: #3e2723 ;}
+    70% {stroke: #1b5e20; stroke-dashoffset:0;}
+    100% {stroke: #d4e157 ;}
+}
+@keyframes cir3 {
+    0% {stroke: #880e4f; stroke-dashoffset:251; }
+    35% {stroke: #3e2723 ;}
+    70% {stroke: #1b5e20; stroke-dashoffset:0;}
+    100% {stroke: #d4e157 ;}
+}
+@keyframes cir4 {
+    0% {stroke: #880e4f; stroke-dashoffset:502; }
+    35% {stroke: #3e2723 ;}
+    70% {stroke: #1b5e20; stroke-dashoffset:0;}
+    100% {stroke: #d4e157 ;}
+}
+
+.patha1 {animation: patha1 5s infinite linear; stroke-dasharray: 7;}
+.patha2 {animation: patha2 5s infinite linear; stroke-dasharray: 26;}
+.patha3 {animation: patha3 5s infinite linear; stroke-dasharray: 135;}
+.patha4 {animation: patha4 5s infinite linear; stroke-dasharray: 270;} 
+@keyframes patha1 {
+    0% {stroke: #880e4f; stroke-dashoffset:7;}
+    35% {stroke: #3e2723 ;}
+    70% {stroke: #1b5e20; stroke-dashoffset:0;}
+    100% {stroke: #d4e157 ;}
+}
+@keyframes patha2 {
+    0% {stroke: #880e4f; stroke-dashoffset:26; }
+    35% {stroke: #3e2723 ;}
+    70% {stroke: #1b5e20; stroke-dashoffset:0;}
+    100% {stroke: #d4e157 ;}
+}
+@keyframes patha3 {
+    0% {stroke: #880e4f; stroke-dashoffset:135; }
+    35% {stroke: #3e2723 ;}
+    70% {stroke: #1b5e20; stroke-dashoffset:0;}
+    100% {stroke: #d4e157 ;}
+}
+@keyframes patha4 {
+    0% {stroke: #880e4f; stroke-dashoffset:270; }
+    35% {stroke: #3e2723 ;}
+    70% {stroke: #1b5e20; stroke-dashoffset:0;}
+    100% {stroke: #d4e157 ;}
+}
+
+.pathb1 {animation: pathb1 5s infinite linear; stroke-dasharray: 39;} /*나누기32*/
+.pathb2 {animation: pathb2 5s infinite linear; stroke-dasharray: 87;} /*나눈기8*/
+.pathb3 {animation: pathb3 5s infinite linear; stroke-dasharray: 347;} /*나누기2*/
+.pathb4 {animation: pathb4 5s infinite linear; stroke-dasharray: 693;} /*전체값*/ 
+@keyframes pathb1 {
+    0% {stroke: #880e4f; stroke-dashoffset:39;}
+    35% {stroke: #3e2723 ;}
+    70% {stroke: #1b5e20; stroke-dashoffset:0;}
+    100% {stroke: #d4e157 ;}
+}
+@keyframes pathb2 {
+    0% {stroke: #880e4f; stroke-dashoffset:87; }
+    35% {stroke: #3e2723 ;}
+    70% {stroke: #1b5e20; stroke-dashoffset:0;}
+    100% {stroke: #d4e157 ;}
+}
+@keyframes pathb3 {
+    0% {stroke: #880e4f; stroke-dashoffset:347; }
+    35% {stroke: #3e2723 ;}
+    70% {stroke: #1b5e20; stroke-dashoffset:0;}
+    100% {stroke: #d4e157 ;}
+}
+@keyframes pathb4 {
+    0% {stroke: #880e4f; stroke-dashoffset:693; }
+    35% {stroke: #3e2723 ;}
+    70% {stroke: #1b5e20; stroke-dashoffset:0;}
+    100% {stroke: #d4e157 ;}
+}
+
+.pathc1 {animation: pathc1 5s infinite linear; stroke-dasharray: 37;} /*나누기32*/
+.pathc2 {animation: pathc2 5s infinite linear; stroke-dasharray: 146;} /*나눈기8*/
+.pathc3 {animation: pathc3 5s infinite linear; stroke-dasharray: 582;} /*나누기2*/
+.pathc4 {animation: pathc4 5s infinite linear; stroke-dasharray: 1164;} /*전체값*/
+@keyframes pathc1 {
+    0% {stroke: #880e4f; stroke-dashoffset:37;}
+    35% {stroke: #3e2723 ;}
+    70% {stroke: #1b5e20; stroke-dashoffset:0;}
+    100% {stroke: #d4e157 ;}
+}
+@keyframes pathc2 {
+    0% {stroke: #880e4f; stroke-dashoffset:146; }
+    35% {stroke: #3e2723 ;}
+    70% {stroke: #1b5e20; stroke-dashoffset:0;}
+    100% {stroke: #d4e157 ;}
+}
+@keyframes pathc3 {
+    0% {stroke: #880e4f; stroke-dashoffset:582; }
+    35% {stroke: #3e2723 ;}
+    70% {stroke: #1b5e20; stroke-dashoffset:0;}
+    100% {stroke: #d4e157 ;}
+}
+@keyframes pathc4 {
+    0% {stroke: #880e4f; stroke-dashoffset:1164; }
+    35% {stroke: #3e2723 ;}
+    70% {stroke: #1b5e20; stroke-dashoffset:0;}
+    100% {stroke: #d4e157 ;}
+}
+
+.pathd1 {animation: pathd1 5s infinite linear; stroke-dasharray: 60;} /*나누기32*/
+.pathd2 {animation: pathd2 5s infinite linear; stroke-dasharray: 239;} /*나눈기8*/
+.pathd3 {animation: pathd3 5s infinite linear; stroke-dasharray: 954;} /*나누기2*/
+.pathd4 {animation: pathd4 5s infinite linear; stroke-dasharray: 1907;} /*전체값*/ 
+@keyframes pathd1 {
+    0% {stroke: #880e4f; stroke-dashoffset:60;}
+    35% {stroke: #3e2723 ;}
+    70% {stroke: #1b5e20; stroke-dashoffset:0;}
+    100% {stroke: #d4e157 ;}
+}
+@keyframes pathd2 {
+    0% {stroke: #880e4f; stroke-dashoffset:239; }
+    35% {stroke: #3e2723 ;}
+    70% {stroke: #1b5e20; stroke-dashoffset:0;}
+    100% {stroke: #d4e157 ;}
+}
+@keyframes pathd3 {
+    0% {stroke: #880e4f; stroke-dashoffset:954; }
+    35% {stroke: #3e2723 ;}
+    70% {stroke: #1b5e20; stroke-dashoffset:0;}
+    100% {stroke: #d4e157 ;}
+}
+@keyframes pathd4 {
+    0% {stroke: #880e4f; stroke-dashoffset:1907; }
+    35% {stroke: #3e2723 ;}
+    70% {stroke: #1b5e20; stroke-dashoffset:0;}
+    100% {stroke: #d4e157 ;}
+}
+
+.pathe1 {animation: pathe1 5s infinite linear; stroke-dasharray: 16;} /*나누기32*/
+.pathe2 {animation: pathe2 5s infinite linear; stroke-dasharray: 119;} /*나눈기8*/
+.pathe3 {animation: pathe3 5s infinite linear; stroke-dasharray: 474;} /*나누기2*/
+.pathe4 {animation: pathe4 5s infinite linear; stroke-dasharray: 948;} /*전체값*/
+@keyframes pathe1 {
+    0% {stroke: #880e4f; stroke-dashoffset:16;}
+    35% {stroke: #3e2723 ;}
+    70% {stroke: #1b5e20; stroke-dashoffset:0;}
+    100% {stroke: #d4e157 ;}
+}
+@keyframes pathe2 {
+    0% {stroke: #880e4f; stroke-dashoffset:119; }
+    35% {stroke: #3e2723 ;}
+    70% {stroke: #1b5e20; stroke-dashoffset:0;}
+    100% {stroke: #d4e157 ;}
+}
+@keyframes pathe3 {
+    0% {stroke: #880e4f; stroke-dashoffset:474; }
+    35% {stroke: #3e2723 ;}
+    70% {stroke: #1b5e20; stroke-dashoffset:0;}
+    100% {stroke: #d4e157 ;}
+}
+@keyframes pathe4 {
+    0% {stroke: #880e4f; stroke-dashoffset:948; }
+    35% {stroke: #3e2723 ;}
+    70% {stroke: #1b5e20; stroke-dashoffset:0;}
+    100% {stroke: #d4e157 ;}
+}

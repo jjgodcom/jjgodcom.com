@@ -1,0 +1,172 @@
+.animation_area {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 19px;
+  background-color: #464141;
+}
+
+.animation_box {
+  display: flex;
+  width: 140px;
+  height: 140px;
+  margin: 40px;
+  font-size: 18px;
+}
+
+.animation_box div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.animation_box.radius div {
+  background-color: #f48fb1;
+}
+
+.animation_box.radius div:hover{
+  border-radius: 0;
+}
+
+.radius01 {border-radius: 0px;}
+.radius02 {border-radius: 5px;}
+.radius03 {border-radius: 10px;}
+.radius04 {border-radius: 15px;}
+.radius05 {border-radius: 20px;}
+.radius06 {border-radius: 25px;}
+.radius07 {border-radius: 30px;}
+.radius08 {border-radius: 35px;}
+.radius09 {border-radius: 40px;}
+.radius10 {border-radius: 45px;}
+.radius11 {border-radius: 50px;}
+.radius12 {border-radius: 55px;}
+.radius13 {border-radius: 60px;}
+.radius14 {border-radius: 65px;}
+.radius15 {
+animation-name : radius15;
+animation-duration: 1s;
+animation-timing-function: ease-in-out;
+animation-iteration-count: 100;
+}
+@keyframes radius15{
+	0% {border-radius: 0px;}
+	50% {border-radius: 70px;}
+	100% {border-radius: 0px;}
+}
+
+.gradient01 {background: linear-gradient(to top, #cc208e, #6713d2);}
+.gradient02 {background: linear-gradient(to top, #a18cd1, #fbc2eb)} 
+.gradient03 {background: linear-gradient(0deg, #00dbde, #fc00ff)}
+.gradient04 {background: linear-gradient(140deg, #16a085, #f4d03f, #874da2, #c7eafd, #04befe, #00e3ae, #517fa4, #ff9a44, #ffffff, #50cc7f)}  
+.gradient05 {background: radial-gradient(red, yellow 50%, blue, green, aqua);}
+.gradient06 {background: linear-gradient(120deg, #231557 50%, #FFF800 50%);}
+
+.transform {
+  border:1px solid #ccc;
+}
+.transform > div{
+  transition: all 0.3s ease-in-out;
+}
+.transform > div:hover{
+  transform:none;
+}
+.translate {
+  transform: translate(10px, 10px);
+  background: linear-gradient(45deg, #009245 , #FCEE21);
+}
+.scale {
+  transform: scale(0.9,0.9);
+  background: linear-gradient(45deg, #D74177 , #FFE98A);
+}
+.rotate {
+  background: linear-gradient(45deg, #8E78FF,#00897b);
+  transform: rotate(10deg);
+}
+.skew {
+  background: linear-gradient(to top, #93278F, #00A99D);
+  transform:skew(10deg,10deg);
+}
+.transform_origin {
+  background: linear-gradient(45deg, #45145A , #FF5300);
+  transform: rotate(15deg);
+    transform-origin: 0% 0%;
+}
+
+.shadow > div {
+  background-color: #ff9100;
+  transition: all 0.3s ease-in-out;
+  animation-duration: 1s;
+  animation-iteration-count: 100;
+  animation-timing-function: ease-in-out;
+}
+.shadow:nth-child(1) > div {
+  animation-name: shadow01;
+}
+@keyframes shadow01{
+  0% {box-shadow: 0px 0px 5px rgba(0,0,0,0.8);}
+  50% {box-shadow: 16px 16px 5px rgba(0,0,0,0.8);}
+  100% {box-shadow: 0px 0px 5px rgba(0,0,0,0.8);}
+}
+.shadow:nth-child(2) > div {
+  animation-name: shadow02;
+}
+@keyframes shadow02{
+  0% {box-shadow: 4px 4px 0px rgba(0,0,0,0.8);}
+  25% {box-shadow: 4px 4px 12px rgba(0,0,0,0.8);}
+  50% {box-shadow: 4px 4px 24px rgba(0,0,0,0.8);}
+  75% {box-shadow: 4px 4px 12px rgba(0,0,0,0.8);}
+  100% {box-shadow: 4px 4px 0px rgba(0,0,0,0.8);}
+}
+.shadow:nth-child(3) > div {
+  animation-name: shadow03;
+}
+@keyframes shadow03{
+  0% {box-shadow: 10px 10px 0px 5px rgba(0,0,0,0.8);}
+  25% {box-shadow: 18px 18px 0px 5px rgba(0,0,0,0.8);}
+  50% {box-shadow: -18px -18px 0px 5px rgba(0,0,0,0.8);}
+  75% {box-shadow: 18px 18px 0px 5px rgba(0,0,0,0.8);}
+  100% {box-shadow: 10px 10px 0px 5px rgba(0,0,0,0.8);}
+}
+.shadow:nth-child(4) > div {
+  animation-name: shadow04;
+}
+@keyframes shadow04{
+  0% {box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.8);}
+  25% {box-shadow: 0px 0px 0px 9px rgba(0,0,0,0.8);}
+  50% {box-shadow: 0px 0px 0px 19px rgba(0,0,0,0.8);}
+  75% {box-shadow: 0px 0px 0px 9px rgba(0,0,0,0.8);}
+  100% {box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.8);}
+}
+.shadow:nth-child(5) > div {
+  animation-name: shadow05;
+}
+@keyframes shadow05{
+  0% {box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.8);}
+  25% {box-shadow: 0px 0px 6px 9px rgba(0,0,0,0.8);}
+  50% {box-shadow: 0px 0px 6px 19px rgba(0,0,0,0.8);}
+  75% {box-shadow: 0px 0px 6px 9px rgba(0,0,0,0.8);}
+  100% {box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.8);}
+}
+.shadow:nth-child(6) > div {
+  animation-name: shadow06;
+}
+@keyframes shadow06{
+  0% {box-shadow: 0px 0px 5px -3px rgba(0,0,0,0.8);}
+  25% {box-shadow: 0px 8px 6px -3px rgba(0,0,0,0.8);}
+  50% {box-shadow: 0px 18px 5px -3px rgba(0,0,0,0.8);}
+  75% {box-shadow: 0px 8px 6px -3px rgba(0,0,0,0.8);}
+  100% {box-shadow: 0px 0px 5px -3px rgba(0,0,0,0.8);}
+}
+.shadow:nth-child(7) > div {
+  animation-name: shadow07;
+}
+@keyframes shadow07{
+  0% {box-shadow:  0px 0px 5px 1px rgba(0,0,0,0.8) inset;}
+  25% {box-shadow:  0px 0px 9px 5px rgba(0,0,0,0.8) inset;}
+  50% {box-shadow:  0px 0px 14px 9px rgba(0,0,0,0.8) inset;}
+  75% {box-shadow:  0px 0px 9px 5px rgba(0,0,0,0.8) inset;}
+  100% {box-shadow:  0px 0px 5px 1px rgba(0,0,0,0.8) inset;}
+}

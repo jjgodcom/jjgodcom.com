@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- search engine -->
+  <meta name="author" content="jjgodcom">
+  <meta name="description" content="jjgodcom의 프론트 백앤드 정보 정리 사이트 입니다.">
+  <meta name="keywords" content="웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, jjgodcom, publisher, css3, html, markup, design">
+  <meta name="subject" content="jjgodcom의 프론트 백앤드 정보 정리 사이트 입니다.">
+  <title>setting</title>
+
+  <!-- web_font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gaegu:300,400,700" rel="stylesheet">
+  <!-- ico -->
+  <link rel="apple-touch-icon" sizes="57x57" href="../../resources/ico/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../../resources/ico/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../../resources/ico/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../resources/ico/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../../resources/ico/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../../resources/ico/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../../resources/ico/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../../resources/ico/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../resources/ico/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="../../resources/ico/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../resources/ico/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../../resources/ico/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../resources/ico/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <!-- css -->
+  <link rel="stylesheet" href="../../resources/css/global/reset.css">
+  <link rel="stylesheet" href="../../resources/css/views/theme.css">
+  <!-- js -->
+  <script src="../../resources/js/jquery-3.1.0.min.js"></script>
+  <script src="../../resources/js/global.js"></script>
+  <script src="../../resources/js/random_rgba.js"></script>
+  <!-- prism -->
+  <link rel="stylesheet" href="../../resources/css/global/prism.css">
+  <script src="../../resources/js/prism.js"></script>
+
+  <!-- hmlt5 support -->
+	<!--[if lt IE 9]><script src="assets/js/html5shiv.js"></script><![endif]-->
+	
+	<!-- IE6,7 support -->
+	<!--[if lte IE 7]><link rel="stylesheet" href="comm/css/ie7.css" type="text/css" ><![endif]-->
+	<!--[if IE 8]><link rel="stylesheet" href="comm/css/ie8.css" type="text/css" ><![endif]-->
+	
+	<!--[if lte IE 6]>
+	<p style="font-size: 12px; color: #fff; background: #2885b0; padding:5px 0; margin: 0; text-align: center">
+	사용하고 계신 브라우저는 최신 웹 브라우저가 아닙니다. 업그레이드를 하거나 다른 최신 브라우저 사용을 권장합니다.
+	<a href="http://www.microsoft.com/korea/ie" target="_blank" >업그레이드,</a>
+	<a href="http://www.mozilla.or.kr/ko/" target="_blank">파이어폭스,</a> 
+	<a href="http://kr.opera.com/download/" target="_blank">오페라,</a>,
+	<a href="http://support.apple.com/kb/DL1531?viewlocale=ko_KR&locale=ko_KR" target="_blank">사파리,</a>
+	<a href="http://www.google.com/chrome?hl=ko" target="_blank">크롬</a></p>
+	<![endif]-->
+  
+</head>
+<body>
+  <!-- top_nav -->
+  <nav id="top_nav">
+    <div class="container">
+      <a class="logo" href="http://jjgodcom.com/">
+        <img src="../../resources/images/global/logo.png" alt="logo" title="title">
+      </a>
+      <a class="gitHub" target="_blank" href="https://github.com/jjgodcom">GitHub</a>
+    </div>
+  </nav>
+  <!-- //nav -->
+  <!-- header -->
+  <header id="header">
+    <div class="container">
+      <h1>Setting Reference v1.0</h1>
+      <a href="http://jjgodcom.com/">jjgodcom.com</a>
+    </div>
+  </header>
+  <!-- //header -->
+  <!-- main -->
+  <main id="main">
+    <div class="container">
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">Reset.css</h2>
+        <p class="lead">브라우저의 기본 스타일 초기화 하는 CND</p>
+        <pre class="line-numbers"><code class="language-html">
+&lt;!-- css  --&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" /&gt;
+        </code>
+        </pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">파비콘(Favicon)</h2>
+        <p class="lead">웹페이지를 나타내는 아이콘, 웹페이지의 로고를 설정합니다.</p>
+        <ul class="small">
+          <li><code class="code">favicon.ico</code> : 64 x 64 (px) 또는 32 x 32 또는 16 x 16</li>
+          <li><code class="code">favicon.png</code> : 500 x 500 (px)</li>
+          <li><a href="https://iconifier.net/" target="_blank">iconifier.net</a> 여기서 간편하게 제작 가능</li>
+        </ul>
+        <pre class="line-numbers"><code class="language-html">
+&lt;!-- ico --&gt;
+&lt;link rel="shortcut icon" href="./resources/ico/favicon.ico" type="image/x-icon" /&gt;
+&lt;link rel="apple-touch-icon" href="./resources/ico/apple-touch-icon.png" /&gt;
+&lt;link rel="apple-touch-icon" sizes="57x57" href="./resources/ico/apple-touch-icon-57x57.png" /&gt;
+&lt;link rel="apple-touch-icon" sizes="72x72" href="./resources/ico/apple-touch-icon-72x72.png" /&gt;
+&lt;link rel="apple-touch-icon" sizes="76x76" href="./resources/ico/apple-touch-icon-76x76.png" /&gt;
+&lt;link rel="apple-touch-icon" sizes="114x114" href="./resources/ico/apple-touch-icon-114x114.png" /&gt;
+&lt;link rel="apple-touch-icon" sizes="120x120" href="./resources/ico/apple-touch-icon-120x120.png" /&gt;
+&lt;link rel="apple-touch-icon" sizes="144x144" href="./resources/ico/apple-touch-icon-144x144.png" /&gt;
+&lt;link rel="apple-touch-icon" sizes="152x152" href="./resources/ico/apple-touch-icon-152x152.png" /&gt;
+&lt;link rel="apple-touch-icon" sizes="180x180" href="./resources/ico/apple-touch-icon-180x180.png" /&gt;
+        </code>
+        </pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">오픈 그래프(The Open Graph protocol)</h2>
+        <p class="lead">웹페이지가 소셜 미디어(페이스북 등)로 공유될 때 우선적으로 활용되는 정보를 지정합니다.</p>
+        <img class="custom_img" src="../../resources/images/views/setting/og.png" alt="og" title="og" >
+        <ul class="small">
+          <li><code class="code">og:type</code> : 페이지의 유형</li>
+          <li><code class="code">og:site_name</code> : 속한 사이트의 이름</li>
+          <li><code class="code">og:title</code> : 페이지의 이름(제목)</li>
+          <li><code class="code">og:description</code> : 페이지의 간단한 설명</li>
+          <li><code class="code">og:image</code> : 페이지의 대표 이미지 주소(URL)</li>
+          <li><code class="code">og:url</code> : 페이지 주소(URL)</li>
+        </ul>
+        <pre class="line-numbers"><code class="language-html">
+&lt;!-- og  --&gt;
+&lt;meta property="og:type" content="website" /&gt;
+&lt;meta property="og:site_name" content="jjgodcom" /&gt;
+&lt;meta property="og:title" content="jjgodcom" /&gt;
+&lt;meta property="og:description" content="jjgodcom의 프론트 백앤드 정보 정리 사이트 입니다." /&gt;
+&lt;meta property="og:image" content="./resources/ico/apple-touch-icon-120x120.png" /&gt;
+&lt;meta property="og:url" content="http://jjgodcom.com/" /&gt;
+        </code>
+        </pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">트위터 카드(Twitter Cards)</h2>
+        <p class="lead">웹페이지가 소셜 미디어(트위터)로 공유될 때 우선적으로 활용되는 정보를 지정합니다.</p>
+        <ul class="small">
+          <li><code class="code">twitter:card</code> : 페이지(카드)의 유형</li>
+          <li><code class="code">twitter:site</code> : 속한 사이트의 이름</li>
+          <li><code class="code">twitter:title</code> : 페이지의 이름(제목)</li>
+          <li><code class="code">twitter:description</code> : 페이지의 간단한 설명</li>
+          <li><code class="code">twitter:image</code> : 페이지의 대표 이미지 주소(URL)</li>
+          <li><code class="code">twitter:url</code> : 페이지 주소(URL)</li>
+        </ul>
+        <pre class="line-numbers"><code class="language-html">
+&lt;!-- twitter --&gt;
+&lt;meta property="twitter:card" content="summary" /&gt;
+&lt;meta property="twitter:site" content="jjgodcom" /&gt;
+&lt;meta property="twitter:title" content="jjgodcom" /&gt;
+&lt;meta property="twitter:description" content="jjgodcom의 프론트 백앤드 정보 정리 사이트 입니다." /&gt;
+&lt;meta property="twitter:image" content="./resources/ico/apple-touch-icon-120x120.png" /&gt;
+&lt;meta property="twitter:url" content="http://jjgodcom.com/" /&gt;
+        </code>
+        </pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">Google Fonts</h2>
+        <p class="lead"><a href="https://fonts.google.com/" target="_blank">Google Fonts</a> 해당 링크는 구글에서 제공하는 무료 폰트</p>
+        
+        <pre class="line-numbers"><code class="language-html">
+&lt;!-- web font --&gt;
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" /&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet" /&gt;
+&lt;style&gt;
+body {
+	font-family: 'Nanum Gothic', sans-serif;
+}
+&lt;/style&gt;  
+        </code>
+        </pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">Google Material Icons</h2>
+        <p class="lead"><a href="https://fonts.google.com/icons?selected=Material+Icons" target="_blank">Google Material Icons</a> 해당 링크는 기본 아이콘 무료 제공</p>
+        <pre class="line-numbers"><code class="language-html">
+&lt;!-- IN HEAD --&gt;
+&lt;link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" /&gt;
+
+&lt;!-- IN BODY --&gt;
+&lt;div&gt; class="material-icons"&gt;upload&lt;/div&gt;
+        </code>
+        </pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">BEM(Block Element Modifier)</h2>
+        <p class="lead">HTML 클래스 속성의 작명법</p>
+        <ul class="small">
+          <li>요소__일부분 : Underscore(Lodash) 기호로 요소의 일부분을 표시</li>
+          <li>요소—상태 : Hyphen(Dash) 기호로 요소의 상태를 표시</li>
+        </ul>
+        <pre class="line-numbers"><code class="language-html">
+&lt;!-- 요소의 일부분 --&gt;
+&lt;div class="container"&gt;
+  &lt;div class="container__name"&gt;&lt;/div&gt;
+  &lt;div class="item"&gt;
+    &lt;div class="item__name"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- 요소의 상태 --&gt;
+&lt;div class="btn btn--primary"&gt;&lt;/div&gt;
+&lt;div class="btn btn--success"&gt;&lt;/div&gt;
+&lt;div class="btn btn--error"&gt;&lt;/div&gt;
+        </code>
+        </pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">Lodash</h2>
+        <p class="lead"><a href="https://lodash.com/" target="_blank">Lodash</a>는 다양한 유틸리티 기능을 제공하는 자바스크립트 라이브러리입니다.</p>
+        <ul class="small">
+          <li><a href="https://lodash.com/docs/4.17.15" target="_blank">Lodash API</a></li>
+          <li><a href="https://lodash.com/docs/4.17.15#throttle" target="_blank">Lodash throttle</a></li>
+        </ul>
+        <pre class="line-numbers"><code class="language-html">
+&lt;script&gt; src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"&gt;&lt;/script&gt;
+&lt;script&gt;&gt;
+  // _.throttle 기능을 사용해서 스크롤할때 과부화 없이 0.3초마다 실행되게 함
+  // _.throttle(함수, 시간)
+  window.addEventListener("scroll", _.throttle(function () {
+    console.log("scroll");
+  }, 300));
+&lt;/script&gt;
+        </code>
+        </pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">GSAP & ScrollToPlugin</h2>
+        <p class="lead"><a href="https://greensock.com/gsap/" target="_blank">GSAP(The GreenSock Animation Platform)</a>은 자바스크립트로 제어하는 타임라인 기반의 애니메이션 라이브러리입니다.</p>
+        <p class="lead"><a href="https://greensock.com/scrolltoplugin/" target="_blank">ScrollToPlugin</a>은 스크롤 애니메이션을 지원하는 GSAP 플러그인입니다.</p>
+        <pre class="line-numbers"><code class="language-html">
+&lt;!-- gsap --&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"&gt;&lt;/script&gt;
+&lt;!-- ScrollToPlugin --&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js" integrity="sha512-nTHzMQK7lwWt8nL4KF6DhwLHluv6dVq/hNnj2PBN0xMl2KaMm1PM02csx57mmToPAodHmPsipoERRNn4pG7f+Q==" crossorigin="anonymous"&gt;&lt;/script&gt;
+        </code>
+        </pre>
+        <p>forEach 예시</p>
+        <pre class="line-numbers"><code class="language-js">
+fadeEls.forEach(function (fadeEl, index) {
+  gsap.to(fadeEl, 1, {
+    delay : (index + 1) * 0.7 , // index 값에 따라 순차적으로 나오게 함
+    opacity : 1
+  });
+});
+        </code>
+        </pre>
+        <p>램덤 함수를 이용한 예시</p>
+        <pre class="line-numbers"><code class="language-js">
+// 램덤함수를 이용하여 애니매이션 만들기
+// 범위 랜덤 함수(소수점 2자리까지)
+function random(min, max) {
+  // `.toFixed()`를 통해 반환된 문자 데이터를,
+  // `parseFloat()`을 통해 소수점을 가지는 숫자 데이터로 변환
+  return parseFloat((Math.random() * (max - min) + min).toFixed(2))
+}
+// youtube__area animation
+function floatingObject(selector, delay, size) {
+  // gsap.to(요소, 애니메이션 동작 시간, 옵션);
+  gsap.to(selector, random(1.5, 2.5), {
+    y: size, // y축
+    repeat: -1, // 무한
+    yoyo: true,
+    ease: Power1.easeInOut, // 움직임 부드러워짐
+    delay: random(0, delay) // 지연시간
+  });
+}
+floatingObject(".floating1", 1, 15);
+        </code>
+        </pre>
+        <p>스트롤 최상단 이동 버튼</p>
+        <pre class="line-numbers"><code class="language-js">
+const toTopEl = document.querySelector("#to-top");
+
+toTopEl.addEventListener("click", function () {
+  gsap.to(window, 0.7, {
+    scrollTo: 0
+  });
+});
+        </code>
+        </pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">ScrollMagic</h2>
+        <p class="lead"><a href="https://github.com/janpaepke/ScrollMagic" target="_blank">ScrollMagic</a>은 스크롤과 요소의 상호 작용을 위한 자바스크립트 라이브러리입니다.</p>
+        <ul class="small">
+          <li>대표적으로 어떤 요소가 현재 화면에 보이는 상태인지를 확인할 때 사용합니다.</li>
+          <li><a href="http://scrollmagic.io/docs/">ScrollMagic API</a></li>
+        </ul>
+        <pre class="line-numbers"><code class="language-html">
+&lt;script&gt; src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollM>agic.min.js"&gt;&lt;/script&gt;
+        </code>
+        </pre>
+        <p>기본 예제</p>
+        <pre class="line-numbers"><code class="language-js">
+new ScrollMagic
+  .Scene({ // 감시할 장면(Scene)을 추가
+    triggerElement: spyEl, // 보여짐 여부를 감시할 요소를 지정
+    triggerHook: .8 // 화면의 80% 지점에서 보여짐 여부 감시
+  })
+  .setClassToggle(spyEl, 'show') // 요소가 화면에 보이면 show 클래스 추가
+  .addTo(new ScrollMagic.Controller()) // 컨트롤러에 장면을 할당(필수!)
+        </code>
+        </pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">Swiper</h2>
+        <p class="lead"><a href="https://swiperjs.com/" target="_blank">Swiper</a>는 하드웨어 가속 전환과 여러 기본 동작을 갖춘 현대적인 슬라이드 라이브러리입니다.</p>
+        <ul class="small">
+          <li><a href="https://swiperjs.com/swiper-api">Swiper API</a> 옵션</li>
+        </ul>
+        <p>HTML</p>
+        <pre class="line-numbers"><code class="language-html">
+&lt;!-- in HEAD --&gt;
+&lt;link rel="stylesheet" href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css" /&gt;
+&lt;script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"&gt;&lt;/script&gt;
+
+&lt;!-- in BODY --&gt;
+&lt;div class="swiper-container"&gt;
+  &lt;div class="swiper-wrapper"&gt;
+    &lt;div class="swiper-slide"&gt;1&lt;/div&gt;
+    &lt;div class="swiper-slide"&gt;2&lt;/div&gt;
+    &lt;div class="swiper-slide"&gt;3&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- pagination--&gt;
+&lt;div class="swiper-pagination"&gt;&lt;/div&gt;
+
+&lt;!-- btn--&gt;
+&lt;div class="swiper-prev"&gt;&lt;/div&gt;
+&lt;div class="swiper-next"&gt;&lt;/div&gt;
+        </code>
+        </pre>
+        <p>기본 예제</p>
+        <pre class="line-numbers"><code class="language-js">
+//new Swiper(요소, 옵션);
+new Swiper('.swiper-container', {
+  direction: 'vertical', // 수직 슬라이드
+  autoplay: true, // 자동 재생 여부
+	autoplay : { // 옵션 추가
+    delay: 5000 // 5s
+  }
+  loop: true, // 반복 재생 여부
+	slidesPerView: 3, // 한 번에 보여줄 슬라이드 개수
+  spaceBetween: 10, // 슬라이드 사이 여백
+  centeredSlides: true, // 1번 슬라이드가 가운데 보이기
+	slidesPerView: 5 // 한화면에 몇개 보여줄건지
+	pagination: { // 페이지 번호 사용 여부
+	  el: '.promotion .swiper-pagination', // 페이지 번호 요소 선택자
+    clickable: true // 사용자의 페이지 번호 요소 제어 가능 여부
+  },
+  navigation: { // 슬라이드 이전/다음 버튼 사용 여부
+    prevEl: '.promotion .swiper-prev', // 이전 버튼 선택자
+    nextEl: '.promotion .swiper-next' // 다음 버튼 선택자
+  }
+});
+        </code>
+        </pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">Youtube API</h2>
+        <p class="lead"><a href="https://developers.google.com/youtube/iframe_api_reference?hl=ko" target="_blank">IFrame Player API</a> 를 통해 YouTube 동영상을 제어할 수 있습니다.</p>
+        <p class="lead"><a href="https://developers.google.com/youtube/player_parameters.html?playerVersion=HTML5&hl=ko#Parameters" target="_blank">플레이어 매개변수(playerVars)</a> 에서 더 많은 옵션을 확인할 수 있습니다.</p>
+        <pre class="line-numbers"><code class="language-html">
+&lt;!-- in HEAD --&gt;
+&lt;script&gt; defer src="./js/youtube.js"&gt;&lt;/script&gt;
+
+&lt;!-- in BODY --&gt;
+&lt;div&gt; id="player"&gt;&lt;/div&gt;
+        </code>
+        </pre>
+        <p>기본 예제</p>
+        <pre class="line-numbers"><code class="language-js">
+// Youtube IFrame API를 비동기로 로드합니다.
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+function onYouTubePlayerAPIReady() {
+  // &lt;div id="player"&gt;&lt;/div&gt;
+  // 아래 플레이어는 자동으로 아이디 player 찾음 #절대 넣지마셈
+  new YT.Player('player', {
+    videoId: 'An6LvWQuj_8', // 재생할 유튜브 영상 ID
+    playerVars: {
+      autoplay: true, // 자동 재생 유무
+      loop: true, // 반복 재생 유무
+      playlist: 'An6LvWQuj_8' // 반복 재생할 유튜브 영상 ID 목록
+    },
+    events: {
+      // 영상이 준비되었을 때,
+      onReady: function (event) {
+        event.target.mute(); // 음소거!
+      }
+    }
+  });
+}
+        </code>
+        </pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">유용한 CSS</h2>
+        <h3 class="section_mid_title">16:9 비율</h3>
+        <pre class="line-numbers"><code class="language-css">
+/* 100% : 56.25% = 16 : 9 */
+
+width : 100%
+padding-top : 56.25%
+        </code>
+        </pre>
+        <h3 class="section_mid_title">가운데 배치</h3>
+        <pre class="line-numbers"><code class="language-css">
+transform:translateX(-50%); // left: 50%;
+transform:translateY(-50%); // top: 50%;
+transform:translate(-50%,-50%); // top: 50%; left: 50%;
+        </code>
+        </pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">자주쓰는 JS</h2>
+        <h3 class="section_mid_title">show, hide()</h3>
+        <pre class="line-numbers"><code class="language-js">
+let flag = false;
+
+element.addEventListener("click", function () {
+  flag = !flas // 반대값으으로 변경
+  if(flag){
+    // 숨김 처리
+    el.classList.add("hide");
+  }else{
+    // 보임 처리
+    el.classList.remove("hide");
+  }
+});
+        </code>
+        </pre>
+        <h3 class="section_mid_title">랜덤한 숫자를 생성하는 함수</h3>
+        <pre class="line-numbers"><code class="language-js">
+// 범위 랜덤 함수(소수점 2자리까지)
+function random(min, max) {
+  // `.toFixed()`를 통해 반환된 문자 데이터를,
+  // `parseFloat()`을 통해 소수점을 가지는 숫자 데이터로 변환
+  return parseFloat((Math.random() * (max - min) + min).toFixed(2))
+}
+        </code>
+        </pre>
+      </div>
+      <!-- //doc_section --> 
+    </div>
+  </main>
+  <!-- //main -->
+  <!-- footer -->
+  <footer id="footer">
+    <div class="copyright">
+      <div>Full-stack development</div>
+      <div>JJGODCOM</div> 
+    </div>
+  </footer>
+  <!-- //footer -->
+</body>
+</html>

@@ -1,0 +1,96 @@
+body {
+  background-image: url(../../../images/views/portfolio/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* #top_nav */
+#top_nav {margin: 15px 0;}
+#top_nav .container {
+  display: flex;
+  align-items: center; 
+  max-width: 700px;
+  margin: 0 auto;
+}
+#top_nav .logo {margin-right: auto;}
+#top_nav .logo img {width: 40px;}
+#top_nav .gitHub {font-weight: bold; font-size: 1.4em; color:#2c4348; transition: all .5s ease; text-decoration: none;}
+#top_nav .gitHub:hover {color: #4758fc;}
+
+.container {
+  
+}
+.container #area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.container #area .box {
+  width: 80px;
+  height: 80px;
+  margin: 4px;
+  overflow: hidden;
+  background-color: #555;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transform: skewX(-14deg);
+  transition: transform 0.1s ,
+              background-color 0.6s;
+}
+.container #area .box:hover {
+  background-color: #ff9c00;
+  transform: skewX(-14deg) scale(1.3);
+  z-index: 1;
+}
+.container #area .box .image {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: skewX(14deg);
+}
+.container #area .box:nth-child(1) .image {background-image: url(../../../images/views/portfolio/hero1.png);}
+.container #area .box:nth-child(2) .image {background-image: url(../../../images/views/portfolio/hero2.png);}
+.container #area .box:nth-child(3) .image {background-image: url(../../../images/views/portfolio/hero3.png);}
+.container #area .box:nth-child(4) .image {background-image: url(../../../images/views/portfolio/hero4.png);}
+.container #area .box:nth-child(5) .image {background-image: url(../../../images/views/portfolio/hero5.png);}
+.container #area .box:nth-child(6) .image {background-image: url(../../../images/views/portfolio/hero6.png);}
+.container #area .box:nth-child(7) .image {background-image: url(../../../images/views/portfolio/hero7.png);}
+.container #area .box:nth-child(8) .image {background-image: url(../../../images/views/portfolio/hero8.png);}
+.container #area .box:nth-child(9) .image {background-image: url(../../../images/views/portfolio/hero9.png);}
+.container #area .box:nth-child(10) .image {background-image: url(../../../images/views/portfolio/hero10.png);}
+.container #area .box:nth-child(11) .image {background-image: url(../../../images/views/portfolio/hero11.png);}
+.container #area .box:nth-child(12) .image {background-image: url(../../../images/views/portfolio/hero12.png);}
+.container #area .box:nth-child(13) .image {background-image: url(../../../images/views/portfolio/hero13.png);}
+.container #area .box:nth-child(14) .image {background-image: url(../../../images/views/portfolio/hero14.png);}
+.container #area .box:nth-child(15) .image {background-image: url(../../../images/views/portfolio/hero15.png);}
+.container #area .box:nth-child(16) .image {background-image: url(../../../images/views/portfolio/hero16.png);}
+.container #area .box:nth-child(17) .image {background-image: url(../../../images/views/portfolio/hero17.png);}
+.container #area .box:nth-child(18) .image {background-image: url(../../../images/views/portfolio/hero18.png);}
+.container #area .box:nth-child(19) .image {background-image: url(../../../images/views/portfolio/hero19.png);}
+.container #area .box:nth-child(20) .image {background-image: url(../../../images/views/portfolio/hero20.png);}
+.container #area .box:nth-child(21) .image {background-image: url(../../../images/views/portfolio/hero21.png);}
+.container #area .box:nth-child(22) .image {background-image: url(../../../images/views/portfolio/hero22.png);}
+.container #area .box:nth-child(23) .image {background-image: url(../../../images/views/portfolio/hero23.png);}
+.container #area .box:nth-child(24) .image {background-image: url(../../../images/views/portfolio/hero24.png);}
+.container #area .box:nth-child(25) .image {background-image: url(../../../images/views/portfolio/hero25.png);}
+.container #area .box:nth-child(26) .image {background-image: url(../../../images/views/portfolio/hero26.png);}
+.container #area .box:nth-child(27) .image {background-image: url(../../../images/views/portfolio/hero27.png);}
+.container #area .box:nth-child(28) .image {background-image: url(../../../images/views/portfolio/hero28.png);}
+.container #area .box:nth-child(29) .image {background-image: url(../../../images/views/portfolio/hero29.png);}
+.container #area .box:nth-child(30) .image {background-image: url(../../../images/views/portfolio/hero30.png);}
+.container #area .box:nth-child(31) .image {background-image: url(../../../images/views/portfolio/hero31.png);}
+.container #area .box:nth-child(32) .image {background-image: url(../../../images/views/portfolio/hero32.png);}
+
+
+
+/* #footer */
+#footer {padding: 20px; background: transparent;}
+#footer .copyright { text-align: center; color: #2c4348;}
+#footer .copyright div:first-child {font-size: 1.5em; font-family: Gaegu; font-weight: bold;}
+#footer .copyright div:last-child {font-size: 1.3em; margin-top: 5px; font-family: Gaegu; font-weight: bold;}

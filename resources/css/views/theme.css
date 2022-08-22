@@ -1,0 +1,51 @@
+/* #header */
+#header {width: 100%; padding: 60px 0; background-color: #eee;}
+#header h1 {font-size: 5em; line-height: 1; margin-bottom: 10px; font-weight: bold; color:#fff;}
+#header a {font-size: 2em; line-height: 1.4; font-weight: 300; color:#fff;}
+
+/* #main */
+#main {margin: 60px 0;}
+#main .doc_section {color:#fff;}
+#main .section_title {font-size: 2.5em; padding-bottom: 10px; margin: 40px 0 20px; border-bottom: 1px solid #eee; font-weight: bold;}
+#main .section_mid_title {font-size: 2em; padding-bottom: 10px; margin: 40px 0 20px; border-bottom: 1px solid rgba(238, 238, 238, 0.5); font-weight: bold;}
+#main .section_sub_title {font-size: 1.2em; font-weight: bold; margin: 10px 0;}
+#main h4.section_sub_title {font-size: 1.5em; font-weight: bold; margin: 10px 0;}
+#main p.lead {font-size: 1.8em; margin-bottom: 20px; line-height: 1.4;}
+#main p {font-size: 1.2em; margin-bottom: 10px; line-height: 1.9;}
+#main p a {color:#428bca; transition: all .5s ease;}
+#main p a:hover {text-decoration: underline;}
+#main .callout {font-size: 1.2em; margin: 20px 0; padding: 20px; border-left:3px solid #4758fc; background-color: #454b4e4d;}
+#main .table {color: #fff; background-color: #454b4e4d; border-collapse: collapse; width: 100%; margin-bottom: 20px; text-align: left;}
+#main .table td,
+#main .table th {padding: .75rem; vertical-align: top; color:#fff; border-top: 1px solid #3f4245; font-size: 1.4em;}
+#main .table th {border-bottom: 2px solid #3f4245; border-top:0; font-weight: bold; }
+#main ol,
+#main ul {margin-bottom: 20px; line-height: 1.4; font-size: 1.8em; padding-left: 22px;}
+#main ol li {padding-bottom: 15px; list-style: decimal;}
+#main ul li {padding-bottom: 15px; list-style: disc;}
+#main ol span {font-size: 0.75em; font-weight: 600;}
+#main ul.small li {font-size: 0.7em;}
+a {color:#428bca; transition: all .5s ease;}
+a:hover {text-decoration: underline;}
+
+
+@media(max-width:960px){
+
+}
+
+@media(max-width:580px){
+    /* #header */
+    #header h1 {font-size: 3em;}
+
+    /* #main */
+    #main .table {table-layout: fixed;}
+    table
+    #main .table,
+    #main .table thead,
+    #main .table tbody,
+    #main .table th,
+    #main .table td,
+    #main .table tr {display: block;}
+    #main .table th {display: none;}
+    #main .table td {word-break: break-word;}
+}
