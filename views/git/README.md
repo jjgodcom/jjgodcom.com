@@ -44,6 +44,8 @@ _이텔릭_
 이미지에 링크 연결
 [![JJGODCOM](http://jjgodcom.com/resources/images/global/logo.png)](jjgodcom.com)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9f2f756f-e1fc-48d9-9c07-b7d7433d8aaa/deploy-status)](http://jjgodcom.com/)
+
 # 인용문(BlockQuote)
 > 남의 말이나 글에서 직접 또는 간접으로 따온 문장.  
 > (네이버 국어 사전)

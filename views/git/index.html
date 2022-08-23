@@ -221,25 +221,188 @@ git reset --hard ORIG_HEAD
         </pre>
       </div>
       <!-- //doc_section -->
-
-
       <!-- doc_section -->
       <div class="doc_section">
-        <h2 class="section_title">타이틀h2</h2>
-        <h3 class="section_mid_title">h3</h3>
-        <p class="lead">타이틀 설명</p>
-        <p>그냥 설명</p>
+        <h2 class="section_title">Markdown(.md)</h2>
+        <p class="lead">GitHub용 파일명은 반드시 <code class="code">README.md</code> 로 생성하기</p>
+        <p class="lead"><a href="https://github.com/jjgodcom/jjgodcom.com_20220822/edit/master/views/git/README.md" target="_blank">README.md</a> 작성방법은 이곳 참고</p>
+        <h3 class="section_mid_title">장단점</h3>
+        <p>장점</p>
         <ul class="small">
-          <li>글머리</li>
+          <li>문법이 쉽고 간결하다.</li>
+          <li>관리가 쉽다.</li>
+          <li>지원 가능한 플랫폼과 프로그램이 다양하다.</li>
         </ul>
-        <div class="callout">
-          콜아웃
-        </div>
-        <img class="custom_img" src="" alt="" >
-        <pre class="line-numbers"><code class="language-git">
-&lt;!DOCTYPE html&gt; : 문서(페이지) HTML 버전을 지정
+        <p>단점</p>
+        <ul class="small">
+          <li>표준이 없다.</li>
+          <li>모든 HTML 마크업을 대신하지 못한다.</li>
+        </ul>
+        <h3 class="section_mid_title">제목(Header)</h3>
+        <p><code class="code">#</code> 의 개수가 작아질수록 크기 작아짐</p>
+        <pre class="line-numbers"><code class="language-markdown">
+# 제목(Header)
+# 제목 1
+## 제목2
+### 제목3
+#### 제목4
+##### 제목5
+###### 제목6
         </code>
         </pre>
+        <h3 class="section_mid_title">문장(paragraph)</h3>
+        <p>문장만 작성하면 됨</p>
+        <pre class="line-numbers"><code class="language-markdown">
+# 문장(paragraph)
+안녕하세요
+        </code>
+        </pre>
+        <h3 class="section_mid_title">줄바꿈(Line Breaks)</h3>
+        <p><code class="code">&nbsp;&nbsp;(스페이스바 두번)</code> or <code class="code">&lt;br&gt;</code> 사용</p>
+        <pre class="line-numbers"><code class="language-markdown">
+# 줄바꿈(Line Breaks)
+띄어쓰기 두번쓰면 줄바꿈  
+동해물과 백두산이 마르고 닳도록 <br>
+하느님이 보우하시 우리나라 만세
+        </code>
+        </pre>
+        <h3 class="section_mid_title">강조(paragraph)</h3>
+        <ul class="small">
+          <li><code class="code">_ABC_</code> : 이텔릭</li>
+          <li><code class="code">**ABC**  </code> : 두껍게</li>
+          <li><code class="code">**_ABC + ABC_**  </code> : 이텔릭 + 두껍게</li>
+          <li><code class="code">~~ABC~~  </code> : 취소선</li>
+          <li><code class="code">&lt;u&gt;ABC&lt;/u&gt;</code> : 밑줄</li>
+        </ul>
+        <pre class="line-numbers"><code class="language-markdown">
+# 강조(Emphasis)
+_이텔릭_  
+**두껍게**  
+**_이텔릭 + 두껍게_**  
+~~취소선~~  
+<u>밑줄</u>
+        </code>
+        </pre>
+        <h3 class="section_mid_title">목록(List)</h3>
+        <ul class="small">
+          <li><code class="code">1.</code> : 순서가 필요한 목록</li>
+          <li><code class="code">-</code> : 순서가 필요하지 않는 목록</li>
+          <li><code class="code">(tab2번)</code> : 들여쓰기</li>
+        </ul>
+        <pre class="line-numbers"><code class="language-markdown">
+# 목록(List)
+1. 순서가 필요한 목록
+1. 순서가 필요한 목록
+    1. 들여쓰기(tab 2번)
+    1. 들여쓰기(tab 2번)
+1. 순서가 필요한 목록
+
+- 순서가 필요하지 않은 목록
+- 순서가 필요하지 않은 목록
+    - 들여쓰기(tab 2번)
+    - 들여쓰기(tab 2번)
+- 순서가 필요하지 않은 목록
+        </code>
+        </pre>
+        <h3 class="section_mid_title">링크(Links)</h3>
+        <p><code class="code">[출력할 텍스트](링크 "title속성")</code></p>
+        <pre class="line-numbers"><code class="language-markdown">
+# 링크(Links)
+[GOOGLE](https://www.google.co.kr/)  
+[NAVER](https://www.naver.com/ "NAVER로 이동!")  
+&lt;a href="jjgodcom.com" target="_blank"&gt;jjgodcom&lt;/a&gt;
+        </code>
+        </pre>
+        <h3 class="section_mid_title">이미지(Images)</h3>
+        <ul class="small">
+          <li><code class="code">![이름](이미지경로)</code> : 이미지</li>
+          <li><code class="code">![[이름](이미지경로)](주소)</code> : 이미지 클릭시 경로 이동</li>
+          <li>크기 조절을 원할경우 HTML 태그 width 직접 작성</li>
+        </ul>
+        <pre class="line-numbers"><code class="language-markdown">
+# 이미지(Images)
+![JJGODCOM](http://jjgodcom.com/resources/images/global/logo.png)
+이미지에 링크 연결
+[![JJGODCOM](http://jjgodcom.com/resources/images/global/logo.png)](jjgodcom.com)
+Netlify
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9f2f756f-e1fc-48d9-9c07-b7d7433d8aaa/deploy-status)](jjgodcom.com)
+        </code>
+        </pre>
+        <h3 class="section_mid_title">인용문(BlockQuote)</h3>
+        <p><code class="code">&gt;</code>를 사용합니다.</p>
+        <pre class="line-numbers"><code class="language-markdown">
+# 인용문(BlockQuote)
+> 남의 말이나 글에서 직접 또는 간접으로 따온 문장.  
+> (네이버 국어 사전)
+
+> 인용문을 작성하세요
+>> 중첩된 인용문1
+>>> 중첩된 인용문2
+>>>> 중첩된 인용문3
+        </code>
+        </pre>
+        <h3 class="section_mid_title">인라인(inLine) 코드 강조</h3>
+        <p><code class="code">` `</code>를 사용합니다.</p>
+        <pre class="line-numbers"><code class="language-markdown">
+# 인라인(inLine) 코드 강조
+`code`
+        </code>
+        </pre>
+        <h3 class="section_mid_title">블럭(Block) 코드 강조</h3>
+        <p><code class="code">```언어 작성할내용```</code>를 사용합니다.</p>
+        <pre class="line-numbers"><code class="language-markdown">
+# 블럭(Block) 코드 강조
+```html
+<a href="jjgodcom.com" target="_blank">jjgodcom</a>
+```
+
+```css
+a {
+  top:50px
+}
+```
+
+```javascript
+function demo(){
+  console.log
+}
+```
+
+```bash
+git commit -m '메시지'
+```
+
+```plaintext
+단순
+        </code>
+        </pre>
+        <h3 class="section_mid_title">표(Table)</h3>
+        <ul class="small">
+          <li><code class="code">--|--|--</code> : 표 생성</li>
+          <li><code class="code">--|:--:|--</code> : 가운데 정렬</li>
+          <li><code class="code">--|--:|--</code> : 오른쪽 정렬</li>
+        </ul>
+        <pre class="line-numbers"><code class="language-markdown">
+# 표(Table)
+표 생성 및 정렬
+값 | 의미 | 기본값
+--|:--:|--:
+static | 기준 없음 | 0
+relarive | 요소 자신 | X
+        </code>
+        </pre>
+        <h3 class="section_mid_title">수평선</h3>
+        <p><code class="code">---</code>, <code class="code">***</code>, <code class="code">___</code>를 사용합니다.</p>
+        <pre class="line-numbers"><code class="language-markdown">
+# 수평선
+---
+***
+___
+        </code>
+        </pre>
+
+        
+        
       </div>
       <!-- //doc_section -->
     </div>
