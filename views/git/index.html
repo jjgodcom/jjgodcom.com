@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- search engine -->
+  <meta name="author" content="jjgodcom">
+  <meta name="description" content="jjgodcom의 프론트 백앤드 정보 정리 사이트 입니다.">
+  <meta name="keywords" content="웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, jjgodcom, publisher, css3, html, markup, design">
+  <meta name="subject" content="jjgodcom의 프론트 백앤드 정보 정리 사이트 입니다.">
+  <title>JJGODCOM</title>
+
+  <!-- web_font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gaegu:300,400,700" rel="stylesheet">
+  <!-- ico -->
+  <link rel="apple-touch-icon" sizes="57x57" href="../../resources/ico/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../../resources/ico/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../../resources/ico/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../resources/ico/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../../resources/ico/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../../resources/ico/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../../resources/ico/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../../resources/ico/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../resources/ico/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="../../resources/ico/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../resources/ico/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../../resources/ico/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../resources/ico/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <!-- css -->
+  <link rel="stylesheet" href="../../resources/css/global/reset.css">
+  <link rel="stylesheet" href="../../resources/css/views/theme.css">
+  <!-- js -->
+  <script src="../../resources/js/jquery-3.1.0.min.js"></script>
+  <script src="../../resources/js/global.js"></script>
+  <script src="../../resources/js/random_rgba.js"></script>
+  <!-- prism -->
+  <link rel="stylesheet" href="../../resources/css/global/prism.css">
+  <script src="../../resources/js/prism.js"></script>
+
+  <!-- hmlt5 support -->
+	<!--[if lt IE 9]><script src="assets/js/html5shiv.js"></script><![endif]-->
+	
+	<!-- IE6,7 support -->
+	<!--[if lte IE 7]><link rel="stylesheet" href="comm/css/ie7.css" type="text/css" ><![endif]-->
+	<!--[if IE 8]><link rel="stylesheet" href="comm/css/ie8.css" type="text/css" ><![endif]-->
+	
+	<!--[if lte IE 6]>
+	<p style="font-size: 12px; color: #fff; background: #2885b0; padding:5px 0; margin: 0; text-align: center">
+	사용하고 계신 브라우저는 최신 웹 브라우저가 아닙니다. 업그레이드를 하거나 다른 최신 브라우저 사용을 권장합니다.
+	<a href="http://www.microsoft.com/korea/ie" target="_blank" >업그레이드,</a>
+	<a href="http://www.mozilla.or.kr/ko/" target="_blank">파이어폭스,</a> 
+	<a href="http://kr.opera.com/download/" target="_blank">오페라,</a>,
+	<a href="http://support.apple.com/kb/DL1531?viewlocale=ko_KR&locale=ko_KR" target="_blank">사파리,</a>
+	<a href="http://www.google.com/chrome?hl=ko" target="_blank">크롬</a></p>
+	<![endif]-->
+  
+</head>
+<body>
+  <!-- top_nav -->
+  <nav id="top_nav">
+    <div class="container">
+      <a class="logo" href="http://jjgodcom.com/">
+        <img src="../../resources/images/global/logo.png" alt="logo" title="title">
+      </a>
+      <a class="gitHub" target="_blank" href="https://github.com/jjgodcom">GitHub</a>
+    </div>
+  </nav>
+  <!-- //nav -->
+  <!-- header -->
+  <header id="header">
+    <div class="container">
+      <h1>Git Reference v1.0</h1>
+      <a href="http://jjgodcom.com/">jjgodcom.com</a>
+    </div>
+  </header>
+  <!-- //header -->
+  <!-- main -->
+  <main id="main">
+    <div class="container">
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">Git</h2>
+        <p class="lead">GIt은 컴퓨터 파일의 변경사항을 추적하고 여러 사용자들 간에 해당 파일 작업을 조율하기 위한 대표적인 버전관리 시스템(VCS)입니다.</p>
+        <h3 class="section_mid_title">설치</h3>
+        <p class="lead"><a href="https://git-scm.com/">Git</a> 사이트 클릭후 다운로드</p>
+        <h3 class="section_mid_title">버전 확인</h3>
+        <ol class="small">
+          <li>cmd창 열기 (명령 프롬프트)</li>
+          <li>cmd창에서 <code class="code">git --version</code>엔터</li>
+          <li>버전이 정상적으로 출력이되면 설치 완료됨</li>
+        </ol>
+        <img class="custom_img" src="../../resources/images/views/git/version.png" alt="version" title="version" >
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">GitHub</h2>
+        <p class="lead"><a href="https://github.com/">GitHub</a> 접속후 가입하기</p>
+        <h3 class="section_mid_title">기본세팅</h3>
+        <p>Git 설치후 터머널에서 한번만 세팅하면 됨</p>
+        <pre class="line-numbers"><code class="language-git">
+# 개행 문자 (NewLine) 설정
+## MacOS
+git config --global core.autocrlf input
+## Windows
+git config --global core.autocrlf true
+
+# 사용자 정보 등록
+## 커밋(버전 생성)을 위한 정보 등록
+git config --global user.name 'jjgodcom'
+git config --global user.email 'jjgodcom1@gamil.com'
+
+#구성 확인
+gut config --global --list
+        </code>
+        </pre>
+        <h3 class="section_mid_title">GitHub에 프로젝트 업로드하기</h3>
+        <ol class="small">
+          <li>New버튼 클릭해서 새로운 프로젝트 만들기</li>
+          <li>Repository name 에 프로젝트 이름 작성</li>
+          <li>Create repository 클릭</li>
+          <li>다음화면 넘어가면 주소 반드시 복사하기</li>
+          <li>터미널에서 <code class="code">git remote add origin 주소</code> 입력</li>
+          <li>터미널에서 <code class="code">git push origin master</code> 입력</li>
+          <li>6번 입력후 잠시후에 깃허브에 로그인하라는 창에서 Sign in 머시기 클릭</li>
+          <li>GitHub 접속해서 생성된 프로젝트에 파일이 업로드가 되어있는지 확인</li>
+        </ol>
+        <h3 class="section_mid_title">버전 생성과 업로드 이해</h3>
+        <pre class="line-numbers"><code class="language-git">
+# 현재 프로젝트에서 변경사항 추적(버전 관리)을 시작
+git init
+
+# 변경사항을 추적할 특정 파일(index.html)을 지정
+git add index.html
+# 모든 파일의 변경사항을 추적하도록 지정
+git add .
+
+# 메시지(-m '')와 함쎄 버전을 생성.
+git commit -m '메시지'
+
+# origin이란 별칭으로 원격 저장소를 연결
+git remote add origin 복사한주소
+
+# origin이란 별칭의 원격 저장소로 버전 내역 전송
+git push origin master
+        </code>
+        </pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">Netify</h2>
+        <p class="lead"><a href="https://app.netlify.com/teams/jjgodcom/overview">Netify</a>는 GitHub 프로젝트 연결하면 실시간 사이트로 배포합니다.</p>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">branch 생성</h2>
+        <pre class="line-numbers"><code class="language-git">
+# branch 목록
+git branch
+
+# signin 이라는 branch 생성
+git branch signin
+
+# signin 이라는 branch 연결
+git checkout signig
+        </code>
+        </pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">branch 병합(Pull Request)</h2>
+        <pre class="line-numbers"><code class="language-git">
+git add .
+git commit -m '수정된 내용'
+git push origin signin
+        </code>
+        </pre>
+        <p>Pull requests 클릭 후 New pull reauest 클릭</p>
+        <img class="custom_img" src="../../resources/images/views/git/pullRequest01.png" alt="pullRequest01" title="pullRequest01">
+        <p>수정한 브런치 선택후 Create pull request 클릭</p>
+        <img class="custom_img" src="../../resources/images/views/git/pullRequest02.png" alt="pullRequest02" title="pullRequest02">
+        <p>창이 넘어가면 merge pull request 클릭</p>
+        <img class="custom_img" src="../../resources/images/views/git/pullRequest03.png" alt="pullRequest03" title="pullRequest03">
+        <p>끝</p>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">Clone - 프로젝트 복제</h2>
+        <pre class="line-numbers"><code class="language-git">
+# 경로 변경
+cd 경로
+
+# 경로 빠져 나가기
+cd ..
+
+# 프로젝트 복사
+git clone 주소
+        </code>
+        </pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">Reset - 버전 되돌리기</h2>
+        <pre class="line-numbers"><code class="language-git">
+# 가장 최신버전에서 한단계 뒤로 되돌리겟다,
+git reset --hard HEAD~1
+
+# 만약 잘못 되돌렸을경우 한번은 복구 가능
+git reset --hard ORIG_HEAD
+        </code>
+        </pre>
+      </div>
+      <!-- //doc_section -->
+
+
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">타이틀h2</h2>
+        <h3 class="section_mid_title">h3</h3>
+        <p class="lead">타이틀 설명</p>
+        <p>그냥 설명</p>
+        <ul class="small">
+          <li>글머리</li>
+        </ul>
+        <div class="callout">
+          콜아웃
+        </div>
+        <img class="custom_img" src="" alt="" >
+        <pre class="line-numbers"><code class="language-git">
+&lt;!DOCTYPE html&gt; : 문서(페이지) HTML 버전을 지정
+        </code>
+        </pre>
+      </div>
+      <!-- //doc_section -->
+    </div>
+  </main>
+  <!-- //main -->
+  <!-- footer -->
+  <footer id="footer">
+    <div class="copyright">
+      <div>Full-stack development</div>
+      <div>JJGODCOM</div> 
+    </div>
+  </footer>
+  <!-- //footer -->
+</body>
+</html>
