@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- search engine -->
+  <meta name="author" content="jjgodcom">
+  <meta name="description" content="jjgodcom의 프론트 백앤드 정보 정리 사이트 입니다.">
+  <meta name="keywords" content="웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, jjgodcom, publisher, css3, html, markup, design">
+  <meta name="subject" content="jjgodcom의 프론트 백앤드 정보 정리 사이트 입니다.">
+  <title>JJGODCOM</title>
+
+  <!-- web_font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gaegu:300,400,700" rel="stylesheet">
+  <!-- ico -->
+  <link rel="apple-touch-icon" sizes="57x57" href="../../resources/ico/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../../resources/ico/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../../resources/ico/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../resources/ico/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../../resources/ico/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../../resources/ico/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../../resources/ico/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../../resources/ico/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../resources/ico/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="../../resources/ico/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../resources/ico/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../../resources/ico/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../resources/ico/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <!-- css -->
+  <link rel="stylesheet" href="../../resources/css/global/reset.css">
+  <link rel="stylesheet" href="../../resources/css/views/theme.css">
+  <!-- js -->
+  <script src="../../resources/js/jquery-3.1.0.min.js"></script>
+  <script src="../../resources/js/global.js"></script>
+  <script src="../../resources/js/random_rgba.js"></script>
+  <!-- prism -->
+  <link rel="stylesheet" href="../../resources/css/global/prism.css">
+  <script src="../../resources/js/prism.js"></script>
+
+  <!-- hmlt5 support -->
+	<!--[if lt IE 9]><script src="assets/js/html5shiv.js"></script><![endif]-->
+	
+	<!-- IE6,7 support -->
+	<!--[if lte IE 7]><link rel="stylesheet" href="comm/css/ie7.css" type="text/css" ><![endif]-->
+	<!--[if IE 8]><link rel="stylesheet" href="comm/css/ie8.css" type="text/css" ><![endif]-->
+	
+	<!--[if lte IE 6]>
+	<p style="font-size: 12px; color: #fff; background: #2885b0; padding:5px 0; margin: 0; text-align: center">
+	사용하고 계신 브라우저는 최신 웹 브라우저가 아닙니다. 업그레이드를 하거나 다른 최신 브라우저 사용을 권장합니다.
+	<a href="http://www.microsoft.com/korea/ie" target="_blank" >업그레이드,</a>
+	<a href="http://www.mozilla.or.kr/ko/" target="_blank">파이어폭스,</a> 
+	<a href="http://kr.opera.com/download/" target="_blank">오페라,</a>,
+	<a href="http://support.apple.com/kb/DL1531?viewlocale=ko_KR&locale=ko_KR" target="_blank">사파리,</a>
+	<a href="http://www.google.com/chrome?hl=ko" target="_blank">크롬</a></p>
+	<![endif]-->
+  
+</head>
+<body>
+  <!-- top_nav -->
+  <nav id="top_nav">
+    <div class="container">
+      <a class="logo" href="http://jjgodcom.com/">
+        <img src="../../resources/images/global/logo.png" alt="logo" title="title">
+      </a>
+      <a class="gitHub" target="_blank" href="https://github.com/jjgodcom">GitHub</a>
+    </div>
+  </nav>
+  <!-- //nav -->
+  <!-- header -->
+  <header id="header">
+    <div class="container">
+      <h1>Node.js Reference v1.0</h1>
+      <a href="http://jjgodcom.com/">jjgodcom.com</a>
+    </div>
+  </header>
+  <!-- //header -->
+  <!-- main -->
+  <main id="main">
+    <div class="container">
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">Node.js</h2>
+        <p class="lead">Node.js는 Chrome V8 JavaScript 엔진으로 빌드된 <span style="color:green">JavaScript 런타임(프로그래밍 언어가 동작하는 환경)</span></p>
+        <h3 class="section_mid_title">NVM 설치</h3>
+        <ol class="small">
+          <li><a href="https://github.com/coreybutler/nvm-windows" target="_blank">NVM-windows</a> 접속</li>
+          <li>Download Now 클릭</li>
+          <li>nvm-setup.zip 파일 다운로드</li>
+          <li>다운로드 완료후 터미널에서 nvm —version 입력후 버전확인</li>
+        </ol>
+        <h3 class="section_mid_title">NVM 사용법</h3>
+        <pre class="line-numbers"><code class="language-bash">
+# 도움말
+nvm --help
+
+# 버전 확인
+nvm ls
+
+# node.js 12.14.1 버전 설치
+nvm install 12.14.1
+nvm install 12.21.0
+
+# 버전 삭제
+nvm uninstall 12.21.0
+
+# 사용할 버전 선택
+# 에러가 날경우 path경로 띄어쓰기 없어야함
+# 나는 관리자 권한으로 터미널 열어서 하니 use성공함
+nvm use 12.14.1
+
+# 설치된 node.js 버전 확인
+node --version
+        </code>
+        </pre>
+        <h3 class="section_mid_title">NPM</h3>
+        <p class="lead">NPM(Node Package Manager)은 전세계의 개발자들이 만든 다양한 기능(패키지, 모듈)들을 관리.</p>
+        <pre class="line-numbers"><code class="language-bash">
+# 입력시 package.json 파일이 생성됨
+npm init -y
+
+# parcel-bundler 설치
+npm install parcel-bundler -D
+
+# lodash 설치
+npm install lodash
+        </code>
+        </pre>
+        <h3 class="section_mid_title">개발 서버 실행과 빌드</h3>
+        <p>터미널에서 명령어로 index.html 실행하기</p>
+        <p>1. package.json 에 해당 명령어 추가</p>
+        <pre class="line-numbers"><code class="language-bash">
+// dev = 개발용
+// build 배포용
+"scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+        </code>
+        </pre>
+        <p>2. 터미널에서 npm run dev 실행후 파란부분 클릭</p>
+        <img class="custom_img" src="../../resources/images/views/node/dev.png" alt="dev" title="dev">
+        <h3 class="section_mid_title">.gitignore</h3>
+        <pre class="line-numbers"><code class="language-bash">
+.cache/
+dist/
+node_modules/
+        </code>
+        </pre>
+      </div>
+      <!-- //doc_section -->
+    </div>
+  </main>
+  <!-- //main -->
+  <!-- footer -->
+  <footer id="footer">
+    <div class="copyright">
+      <div>Full-stack development</div>
+      <div>JJGODCOM</div> 
+    </div>
+  </footer>
+  <!-- //footer -->
+</body>
+</html>
