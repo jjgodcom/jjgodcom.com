@@ -413,38 +413,7 @@ console.log(fruits[2]); // Cherry
             <code class="code">function(){}</code>
           </li>
         </ul>
-        <pre class="line-numbers"><code class="language-js">
-// 함수 선언
-function helloFunc() {
-  // 실행 코드
-  console.log(1234);
-}
-
-// 함수 호출
-helloFunc(); // 1234
-        </code>
-        </pre>
-        <pre class="line-numbers"><code class="language-js">
-function helloFunc() {
-  return 123;
-}
-
-const a = helloFunc();
-console.log(a); // 123
-        </code>
-        </pre>
-        <pre class="line-numbers"><code class="language-js">
-function sum(a, b) { // a와 b는 매개변수(parameters)
-  return a + b;
-}
-
-const a = sum(1, 2); // 1과 2는 인수(Arguments)
-const b = sum(3, 4);
-const c = sum(7, 2);
-
-console.log(a,b,c); // 3, 7, 9
-        </code>
-        </pre>
+        <p>매개변수와 인수</p>
         <pre class="line-numbers"><code class="language-js">
 function sum(a, b) { // a와 b는 매개변수(parameters)
   return a + b;
@@ -457,6 +426,7 @@ const c = sum(7, 2);
 console.log(a,b,c); // 3, 7, 9 
         </code>
         </pre>
+        <p>객체 데이터</p>
         <pre class="line-numbers"><code class="language-js">
 // 객체 데이터
 const jjgodcom = {
@@ -472,6 +442,77 @@ const hisName = jjgodcom.getName();
 console.log(hisName); // jjgodcom
 // 혹은
 console.log(jjgodcom.getName()); // jjgodcom
+        </code>
+        </pre>
+        <p>화살표 함수</p>
+        <p><code class="code">() =&gt; {}</code> vs <code class="code">function () {}</code></p>
+        <pre class="line-numbers"><code class="language-js">
+// 다양한 화살표 함수 작성 방법
+const double =  function (x) {
+  return x * 2;
+}
+const doubleArrow = (x) =&gt; {
+  return x * 2;
+}
+const doubleArrow = (x) =&gt; x*2
+const doubleArrow = x =&gt; x*2
+const doubleArrow = x =&gt; ({ name: "jj" }) //객체 쓸떄
+        </code>
+        </pre>
+        <p>즉시실행함수</p>
+        <pre class="line-numbers"><code class="language-js">
+// 즉시실행함수
+const a = 7;
+// 첫번째 방법
+(
+  function () {
+    console.log(a * 2);
+  }
+)();
+// 두번쨰 방법
+(
+  function () {
+    console.log(a * 2);
+  }()
+);
+        </code>
+        </pre>
+        <p>타이머 함수</p>
+        <ul class="small">
+          <li><code class="code">setTimeout(함수, 시간)</code> : 일정 시간 후 함수 실행</li>
+          <li><code class="code">clearTimeout()</code> : 설정된 Timeout 함수를 종료</li>
+        </ul>
+        <pre class="line-numbers"><code class="language-js">
+// setTimeout , clearTimeout
+// 3초뒤 실행됨
+const timer = setTimeout(() => {
+  console.log("tete");
+},3000);
+
+// h1 태그 클릭시 타이머 정지
+const h1EL = document.querySelector("h1");
+h1EL.addEventListener("click",() => {
+  clearTimeout(timer);
+});
+        </code>
+        </pre>
+        <p>반복 함수</p>
+        <ul class="small">
+          <li><code class="code">setInterval(함수, 시간)</code> : 시간 간격마다 함수 실행</li>
+          <li><code class="code">clearInterval()</code> : 설정된 Interval 함수를 종료</li>
+        </ul>
+        <pre class="line-numbers"><code class="language-js">
+// setInterval, clearInterval
+// 3에 한번씩 실행됨
+const timer = setInterval(() => {
+  console.log("tete");
+},3000);
+
+// h1 태그 클릭시 정지
+const h1EL = document.querySelector("h1");
+h1EL.addEventListener("click",() => {
+  clearInterval(timer);
+});
         </code>
         </pre>
       </div>
