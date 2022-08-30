@@ -444,21 +444,6 @@ console.log(hisName); // jjgodcom
 console.log(jjgodcom.getName()); // jjgodcom
         </code>
         </pre>
-        <p>화살표 함수</p>
-        <p><code class="code">() =&gt; {}</code> vs <code class="code">function () {}</code></p>
-        <pre class="line-numbers"><code class="language-js">
-// 다양한 화살표 함수 작성 방법
-const double =  function (x) {
-  return x * 2;
-}
-const doubleArrow = (x) =&gt; {
-  return x * 2;
-}
-const doubleArrow = (x) =&gt; x*2
-const doubleArrow = x =&gt; x*2
-const doubleArrow = x =&gt; ({ name: "jj" }) //객체 쓸떄
-        </code>
-        </pre>
         <p>즉시실행함수</p>
         <pre class="line-numbers"><code class="language-js">
 // 즉시실행함수
@@ -513,6 +498,96 @@ const h1EL = document.querySelector("h1");
 h1EL.addEventListener("click",() => {
   clearInterval(timer);
 });
+        </code>
+        </pre>
+        <h3 id="null" class="section_mid_title">ES6</h3>
+        <p>화살표 함수</p>
+        <p><code class="code">() =&gt; {}</code> vs <code class="code">function () {}</code></p>
+        <pre class="line-numbers"><code class="language-js">
+// 다양한 화살표 함수 작성 방법
+const double =  function (x) {
+  return x * 2;
+}
+const doubleArrow = (x) =&gt; {
+  return x * 2;
+}
+const doubleArrow = (x) =&gt; x*2
+const doubleArrow = x =&gt; x*2
+const doubleArrow = x =&gt; ({ name: "jj" }) //객체 쓸떄
+        </code>
+        </pre>
+        <p>객체에서 생략과 arrow 함수 작성 방법</p>
+        <pre class="line-numbers"><code class="language-js">
+// 객체에서 생략과 arrow함수
+const jjgodcom = {
+    name: "jjgodcom",
+    // : function 생략 가능
+    nomal() {
+        console.log(this.name);
+    },
+    // 객체에서 화살표 함수 작성하는법
+    arrow: () =&gt; {
+        console.log(this.name);
+    }
+}
+jjgodcom.nomal();
+jjgodcom.arrow();
+        </code>
+        </pre>
+        <p>ES6 Classes</p>
+        <pre class="line-numbers"><code class="language-js">
+// ES6 Classes
+
+// function USer(first, last) {
+//     this.firstName = first;
+//     this.lastName = last;
+// }
+// USer.prototype.getFullName = function () {
+//     return `${this.firstName} ${this.lastName}`
+// }
+
+// 위에 주석 코드를 class를 이용하여 구현
+class User{
+  constructor(first, last){
+      this.firstName = first;
+      this.lastName = last;
+  }
+  getFullName() {
+      return `${this.firstName} ${this.lastName}`
+  }
+}
+const de1 = new User("a","1");
+console.log(de1);
+        </code>
+        </pre>
+        <p>상속(확장)</p>
+        <pre class="line-numbers"><code class="language-js">
+class Vehicle {
+  constructor(name, wheel){
+      this.name = name;
+      this.wheel = wheel;
+  }
+}
+const myVehicle = new Vehicle("운송수단",2);
+console.log(myVehicle);
+
+// extends : 확장(상속)
+class Bicycle extends Vehicle{
+    constructor(name,wheel){
+        super(name, wheel);
+    }
+}
+const myBicycle = new Bicycle("삼천리",2);
+console.log(myBicycle);
+
+class Car extends Vehicle{
+    constructor(name, wheel, license){
+        super(name, wheel);
+        this.license = license;
+    }
+}
+const myCar = new Car("벤츠", 4, true);
+console.log(myCar);
         </code>
         </pre>
       </div>
