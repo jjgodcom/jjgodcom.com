@@ -337,17 +337,183 @@ console.log(email); // jjgodcom1@gmail.com
 console.log(hello); // Hello JJGODCOM?!
         </code>
         </pre>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:20%">
+            <col style="width:80%">
+          </colgroup>
+					<thead>
+						<tr>
+							<th>종류</th>
+							<th>설명</th>
+						</tr>
+					</thead>
+					<tbody>
+            <tr>
+              <td><code class="code">.indexOf()</code></td> 
+              <td>객체에서 주어진 값과 일치하는 첫 번째 인덱스를 반환합니다.</td>
+            </tr>
+            <tr>
+              <td><code class="code">.slice()</code></td>
+              <td>문자열의 일부를 추출하면서 새로운 문자열을 반환합니다.</td>
+            </tr>
+            <tr>
+              <td><code class="code">.replace()</code></td>
+              <td>어떤 패턴에 일치하는 일부 또는 모든 부분이 교체된 새로운 문자열을 반환합니다.</td>
+            </tr>
+            <tr>
+              <td><code class="code">.match()</code></td>
+              <td>문자열이 정규식과 매치되는 부분을 검색합니다.</td>
+            </tr>
+            <tr>
+              <td><code class="code">.trim()</code></td>
+              <td>문자열 양 끝의 공백을 제거합니다.</td>
+            </tr>
+					</tbody>
+				</table>
+        <pre class="line-numbers"><code class="language-js">
+const str = "HEllo world!";
+const email = "jjgodcom1@gmail.com";
+const str2 = "    jjgodcom1@gmail.com";
+
+// .indexOf()
+console.log(str.indexOf("world")); // 6을 반환
+console.log(str.indexOf("z")); // -1을 반환
+console.log(str.indexOf("ㅁㄴㅇ") !== -1); // 비교연산자로 데이터 찾기
+
+// .slice()
+console.log(str.slice(0, 3)); // HEl을 반환
+
+// .replace()
+console.log(str.replace("world","asd")); // world를 asd로 변환
+console.log(str.replace(" world!","")); // HEllo를 반환
+
+// .match()
+// 이메일 아이디 잘라내기
+console.log(email.match(/.+(?=@)/)[0]); // 배열에서 0번째는 jjgodcom1이다
+
+// .trim()
+console.log(str.trim()); // 모든 공백 문자 제거
+        </code>
+        </pre>
         <h3 id="number" class="section_mid_title">Number</h3>
         <ul class="small">
           <li>숫자 데이터</li>
           <li>정수 및 부동소수점 숫자를 나타냅니다.</li>
         </ul>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:20%">
+            <col style="width:80%">
+          </colgroup>
+					<thead>
+						<tr>
+							<th>종류</th>
+							<th>설명</th>
+						</tr>
+					</thead>
+					<tbody>
+            <tr>
+              <td><code class="code">.totoFixed()</code></td>
+              <td>숫자를 고정 소수점 표기법으로 표시합니다.</td>
+            </tr>
+            <tr>
+              <td><code class="code">.parseInt()</code></td>
+              <td>문자열 인자를 파싱하여 특정 진수의 정수를 반환합니다.</td>
+            </tr>
+            <tr>
+              <td><code class="code">.parseFloat()</code></td>
+              <td>주어진 값을 필요한 경우 문자열로 변환한 후 부동소수점 실수로 파싱해 반환합니다.</td>
+            </tr>
+					</tbody>
+				</table>
         <pre class="line-numbers"><code class="language-js">
-let number = 123;
-let opacity = 1.57;
+const pi = 3.14159265358979;
+console.log(pi); // 숫자형
 
-console.log(number); // 123
-console.log(opacity); // 1.57
+// .toFixed()
+// 소수점 원하는 자리까지 반환
+// 반환값은 문자열
+const str = pi.toFixed(2);
+console.log(str); // 문자열을 반환
+console.log(typeof str);
+
+// parseInt(); 소수점X 숫자로 반환
+// parseInt(); 소수점 포함 숫자로 반환
+const integer = parseInt(str);
+const float = parseFloat(str);
+console.log(integer);
+console.log(float);
+console.log(typeof integer, typeof float);
+        </code>
+        </pre>
+        <p>Math</p>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:20%">
+            <col style="width:80%">
+          </colgroup>
+					<thead>
+						<tr>
+							<th>종류</th>
+							<th>설명</th>
+						</tr>
+					</thead>
+					<tbody>
+            <tr>
+              <td><code class="code">.abs()</code></td>
+              <td>절대값만 반환</td>
+            </tr>
+            <tr>
+              <td><code class="code">.min()</code></td>
+              <td>가장 작은값을 추출함.</td>
+            </tr>
+            <tr>
+              <td><code class="code">.max()</code></td>
+              <td>가장 큰 값을 추출함.</td>
+            </tr>
+            <tr>
+              <td><code class="code">.ceil()</code></td>
+              <td>소수점 무시하고 올림처리.</td>
+            </tr>
+            <tr>
+              <td><code class="code">.floor()</code></td>
+              <td>소수점 무사하고 내림처리.</td>
+            </tr>
+            <tr>
+              <td><code class="code">.round()</code></td>
+              <td>반올림 처리.</td>
+            </tr>
+            <tr>
+              <td><code class="code">.random()</code></td>
+              <td>소수점 랜덤숫자 추출</td>
+            </tr>
+					</tbody>
+				</table>
+        <pre class="line-numbers"><code class="language-js">
+// .abs() : 절대값만 반환
+console.log("abs : ", Math.abs(-12)); // 12
+
+// .min() : 가장 작은값을 추출함
+console.log("min : ", Math.min(2, 8)); // 2
+
+// .max() : 가장 큰 값을 추출함
+console.log("max : ", Math.max(2, 8)); // 8
+
+// .ceil() : 소수점 무시하고 올림처리
+console.log("ceil : ", Math.ceil(3.14)); // 4
+
+// .floor() : 소수점 무사하고 내림처리
+console.log("floor : ", Math.floor(3.14)); // 3
+
+// .round() : 반올림 처리
+console.log("round : ", Math.round(3.14)); // 3
+
+// .random() : 소수점 랜덤숫자 추출
+console.log("random : ", Math.random()); // 0.~~
+function random() {
+  return Math.floor(Math.random() * 10)
+}
         </code>
         </pre>
         <h3 id="undefined" class="section_mid_title">Undefined</h3>
@@ -379,17 +545,59 @@ console.log(empty); // null
           <li>여러 데이터를 <code class="code">{Key: Value}</code>형태로 저장합니다.</li>
           <li><code class="code">{ }</code> 사용함</li>
         </ul>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:20%">
+            <col style="width:80%">
+          </colgroup>
+					<thead>
+						<tr>
+							<th>종류</th>
+							<th>설명</th>
+						</tr>
+					</thead>
+					<tbody>
+            <tr>
+              <td><code class="code">Object.assign()</code></td>
+              <td>객체 합병</td>
+            </tr>
+            <tr>
+              <td><code class="code">Object.keys()</code></td>
+              <td>기존객체 이름으로 새로운 배열로 생성됨</td>
+            </tr>
+					</tbody>
+				</table>
         <pre class="line-numbers"><code class="language-js">
-let user = {
-  // Key: Value,
-  name: 'jjgodcom',
-  age: 1994,
-  isValid: true
-};
+const userAge = {
+  name : "jjgodcom",
+  age : 85
+}
+const userEmail = {
+  name : "jjgodcom",
+  email : "jjgodcom1@gmail.com"
+}
+const user = {
+  name : "jjgodcom",
+  age : 85,
+  email : "jjgodcom1@gmail.com"
+}
 
-console.log(user.name); // jjgodcom
-console.log(user.age); // 1994
-console.log(user.isValid); // true
+
+// Object.assign() : 객체 합병 
+const target = Object.assign(userAge, userEmail);
+const newTarget = Object.assign({},userAge, userEmail);
+
+console.log(target);
+console.log(newTarget);
+console.log(target === newTarget);
+
+// Object.keys() : 기존객체 이름으로 새로운 배열로 생성됨
+const keys = Object.keys(user);
+const value = keys.map(key =&gt; user[key]);
+
+console.log(keys); 
+console.log(user["email"]);
+console.log(value);
         </code>
         </pre>
         <h3 id="array" class="section_mid_title">Array</h3>
@@ -398,12 +606,192 @@ console.log(user.isValid); // true
           <li>여러 데이터를 순차적으로 저장합니다. </li>
           <li><code class="code">[ ]</code> 사용함</li>
         </ul>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:20%">
+            <col style="width:80%">
+          </colgroup>
+					<thead>
+						<tr>
+							<th>종류</th>
+							<th>설명</th>
+						</tr>
+					</thead>
+					<tbody>
+            <tr>
+              <td><code class="code">.concat()</code></td>
+              <td>두개의 배열 데이터를 병합</td>
+            </tr>
+            <tr>
+              <td><code class="code">.forEach()</code></td>
+              <td>배열 아이템 개수만큼 콜백함수 실행</td>
+            </tr>
+            <tr>
+              <td><code class="code">.map()</code></td>
+              <td>반환된 데이터를 기준으로 새로운 배열 생성</td>
+            </tr>
+            <tr>
+              <td><code class="code">.filter()</code></td>
+              <td>특정한 기준에 의해서 true값만 새로운 배열로 생성</td>
+            </tr>
+            <tr>
+              <td><code class="code">.find()</code></td>
+              <td>찾은 아이템을 출력</td>
+            </tr>
+            <tr>
+              <td><code class="code">.findIndex()</code></td>
+              <td>찾은 아이템의 index번호 출력 없을경우</td>
+            </tr>
+            <tr>
+              <td><code class="code">.includes()</code></td>
+              <td>배열에서 특정한 데이터가 있는지 확인 가능</td>
+            </tr>
+            <tr>
+              <td><code class="code">.push()</code></td>
+              <td>배열 제일 뒤에 새로운 값 추가</td>
+            </tr>
+            <tr>
+              <td><code class="code">.unshift()</code></td>
+              <td>배열 가장앞에 새로운 값 추가</td>
+            </tr>
+            <tr>
+              <td><code class="code">.reverse()</code></td>
+              <td>배열을 순서를 거꾸로 출력</td>
+            </tr>
+            <tr>
+              <td><code class="code">.splice()</code></td>
+              <td>배열 값 삭제 또는 교체</td>
+            </tr>
+					</tbody>
+				</table>
         <pre class="line-numbers"><code class="language-js">
-let fruits = ['Apple', 'Banana', 'Cherry'];
+const number = [1, 2, 3, 4];
+const fruits = ["apple", "banana", "cherry"];
 
-console.log(fruits[0]); // Apple
-console.log(fruits[1]); // Banana
-console.log(fruits[2]); // Cherry
+// .concat() : 두개의 배열 데이터를 병합
+// 원본 배열은 수정 안됨
+console.log(number.concat(fruits));
+
+// .forEach() : 배열 아이템 개수만큼 콜백함수 실행
+fruits.forEach(function (item, index, array) {
+  console.log(item, index, array);
+});
+fruits.forEach((item, index) =&gt; {
+  console.log("arrow : ",item, index);
+});
+
+// .map() : 반환된 데이터를 기준으로 새로운 배열 생성
+const a = fruits.map(function (item, index) {
+  return `${item}-${index}`
+});
+// 화살표 함수로
+const aArrow = fruits.map((item, index) =&gt; `${item}-${index}`);
+const b = fruits.map(function (item, index) {
+  return {
+    id: index,
+    name: item
+  }
+});
+// 화살표 함수로
+const bArrow = fruits.map((item, index) =&gt; ({
+  id: index,
+  name: item
+}));
+console.log(a);
+console.log("aArrow : ",aArrow);
+console.log(b[0].name);
+console.log("bArrow : ",bArrow[0].name);
+
+// .filter() : 특정한 기준에 의해서 true값만 새로운 배열로 생성
+const fA = number.map(number =&gt; number &lt; 3);
+const fB = number.filter(item =&gt; item &lt; 3);
+console.log(fA);
+console.log(fB);
+
+// .find() : 찾은 아이템을 출력
+// .findIndex() : 찾은 아이템의 index번호 출력 없을경우 -1
+const findA = fruits.find(item =&gt; /^c/.test(item));
+const findB = fruits.findIndex(item =&gt; /^t/.test(item));
+console.log(findA);
+console.log(findB);
+
+// .includes() : 배열에서 특정한 데이터가 있는지 확인 가능 T or F
+const includesA = number.includes(3);
+const includesB = fruits.includes("jjgodcom");
+console.log(includesA);
+console.log(includesB);
+
+// .push() : 배열 제일 뒤에 새로운 값 추가
+// .unshift() : 배열 가장앞에 새로운 값 추가
+//  원본수정됨
+const number1 = [1, 2, 3, 4];
+const fruits1 = ["apple", "banana", "cherry"];
+
+number1.push(5);
+fruits1.unshift(0);
+console.log(number1);
+console.log(fruits1);
+
+// .reverse() : 배열을 순서를 거꾸로 출력 
+// 원본 수정됨
+const number2 = [1, 2, 3, 4];
+const fruits2 = ["apple", "banana", "cherry"];
+
+number2.reverse();
+fruits2.reverse();
+console.log(number2);
+console.log(fruits2);
+
+// .splice(인덱스, 지울 아이템 개수) : 배열 값 삭제 또는 교체
+// 원본 수정됨
+const number3 = [1, 2, 3, 4];
+const fruits3 = ["apple", "banana", "cherry"];
+
+number3.splice(2, 1); // 2번쨰 인덱스부터 1개 삭제
+fruits3.splice(2, 0, 999);  // 2번쨰 인덱스에 999넣기
+console.log(number3);
+console.log(fruits3);
+        </code>
+        </pre>
+        <h2 class="section_mid_title">구조 분해 할당</h2>
+        <pre class="line-numbers"><code class="language-js">
+// 구조 분해 할당
+// 비구조화 할당
+const user = {
+  name : "jjgodcom",
+  age : 85,
+  email : "jjgodcom1@gmail.com"
+}
+const { name, age, email, address="기본값지정" } = user;
+const fruits = ["apple", "banana", "cherry"];
+const [a, b, c, d] = fruits;
+
+console.log(`사용자의 이름은 ${name} 입니다.`);
+console.log(`${name}의 나이는 ${age}세입니다.`);
+console.log(`${name}의 이메일 주소는 ${email}입니다.`);
+console.log(address);
+console.log(a,b,c,d);
+        </code>
+        </pre>
+        <h2 class="section_mid_title">전개 연산자</h2>
+        <pre class="line-numbers"><code class="language-js">
+// 전개 연산자
+
+const fruits = ["apple", "banana", "cherry"];
+console.log(fruits);
+console.log(...fruits); // 전개 연산자
+// 값 : apple banana cherry
+
+function toObject(a, b, c) {
+  return {
+    a: a,
+    b: b,
+    c: c
+  }
+}
+const toObject2 = (a, b, c) => ({a,b,c});
+console.log(toObject(...fruits));
+console.log(toObject2(...fruits));
         </code>
         </pre>
         <h2 id="function" class="section_mid_title">함수</h2>
