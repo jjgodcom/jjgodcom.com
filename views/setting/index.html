@@ -243,6 +243,56 @@ body {
 &lt;/script&gt;
         </code>
         </pre>
+        <h3 class="section_mid_title">uniq</h3>
+        <ul class="small">
+          <li><code class="code">_.uniqBy()</code> : 중복이 발생한 배열에서 쓰면 중복 제거후 배열 생성</li>
+          <li><code class="code">_.unionBy()</code> : 배열을 합치기 전이라면 인수로 적용후 새로운 배열로 생성</li>
+        </ul>
+        <pre><code class="line-numbers language-js">
+import _ from 'lodash'; // From 'node_modules'
+
+const usersA = [
+  { userId : "1" , name: "JJGODCOM"},
+  { userId : "2" , name: "Neo"},
+];
+const usersB = [
+  { userId : "1" , name: "JJGODCOM"},
+  { userId : "3" , name: "Amy"},
+];
+// 배열이 합쳐져 있고 중복값이 있을때 좋음
+const usersC = usersA.concat(usersB);
+console.log("concat", usersC);
+console.log("uniqBy", _.uniqBy(usersC, "userId"));
+
+// _.unionBy : 배열이 여러개일때 사용
+const usersD = _.unionBy(usersA, usersB, "userId");
+console.log("unionBy", usersD);
+        </code></pre>
+        <h3 class="section_mid_title">find</h3>
+        <ul class="small">
+          <li><code class="code">_.find()</code> : 배열에서 원하는 객체 찾기</li>
+          <li><code class="code">_.findIndex()</code> : 배열 index번호 찾기</li>
+          <li><code class="code">_.remove()</code> : `_.remove` :  배열에서 원하는 객체 삭제</li>
+        </ul>
+        <pre><code class="line-numbers language-js">
+import _ from 'lodash'; // From 'node_modules'
+
+const users = [
+  { userId : "1" , name: "JJGODCOM"},
+  { userId : "2" , name: "Neo"},
+  { userId : "3" , name: "Amy"},
+  { userId : "4" , name: "Evan"},
+  { userId : "5" , name: "Lewis"},
+];
+
+const foundUser = _.find(users, {name:"Amy"});
+const foundUserIndex = _.findIndex(users, {name:"Amy"});
+console.log(foundUser);
+console.log(foundUserIndex);
+
+_.remove(users, {name:"JJGODCOM"});
+console.log(users);
+        </code></pre>
       </div>
       <!-- //doc_section -->
       <!-- doc_section -->
@@ -426,6 +476,17 @@ function onYouTubePlayerAPIReady() {
 }
         </code>
         </pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">약속</h2>
+        <ul>
+          <li>html 태그 네이밍 : <code class="code">menu-logo</code></li>
+          <li>js 네이밍 : 카멜케이스로 <code class="code">foundUser</code></li>
+        </ul>
+        <h3 class="section_mid_title">16:9 비율</h3>
+
       </div>
       <!-- //doc_section -->
       <!-- doc_section -->

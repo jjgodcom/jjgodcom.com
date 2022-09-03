@@ -1952,6 +1952,82 @@ console.log("colorDepth : " + screen.colorDepth);
         </code></pre>
       </div>
       <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">가져오기(import) 내보내기(export)</h2>
+        <h3 class="section_mid_title">export default</h3>
+        <ul class="small">
+          <li>이름을 지정하지 않아도 됨</li>
+        </ul>
+        <p>main.js</p>
+        <pre><code class="line-numbers language-js">
+import checkType from './getType'; // From 'node_modules'
+console.log(checkType([1,2,3]));
+        </code></pre>
+        <p>getType.js</p>
+        <pre><code class="line-numbers language-js">
+export default function (data) {
+  return Object.prototype.toString.call(data).slice(8 ,-1);
+}
+        </code></pre>
+        <h3 class="section_mid_title">named export</h3>
+        <ul class="small">
+          <li>이름을 지정해서 내보내기</li>
+          <li>여러개 내보내기 가능</li>
+        </ul>
+        <p>main.js</p>
+        <pre><code class="line-numbers language-js">
+// import { random, user } from './getRandom'; // From 'node_modules'
+import * as R from './getRandom'; // From 'node_modules' 한번에 가져오기
+//console.log(random(), random());
+//console.log(user);
+console.log(R);
+        </code></pre>
+        <p>getType.js</p>
+        <pre><code class="line-numbers language-js">
+export function random() {
+  return Math.floor(Math.random() * 10)
+}
+export const user = {
+  name: "jjgodcom",
+  age: 85
+}
+        </code></pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">localStorage</h2>
+        <p>콘솔창에서 Application 에서 Local Storage 클릭 하면 정보 열람 가능</p>
+        <ul class="small">
+          <li><code class="code">localStorage.setItem();</code> : 항목 추가</li>
+          <li><code class="code">localStorage.getItem();</code> : 항목 읽기</li>
+          <li><code class="code">localStorage.removeItem();</code> : 항목 제거</li>
+        </ul>
+        <pre><code class="line-numbers language-js">
+const user = {
+  name:"jjgodcom",
+  age:1,
+  emails:[
+    "jjgodcom1",
+    "flvns"
+  ]
+}
+
+// JSON.stringify() : 문자 데이터화 시켜줌
+// JSON.parse() : 객체 데이터로 변환
+localStorage.setItem("user", JSON.stringify(user));
+console.log(JSON.parse(localStorage.getItem("user")));
+// localStorage.removeItem("user");
+
+const str = localStorage.getItem("user");
+const obj = JSON.parse(str);
+obj.age = 22 ;
+console.log(obj);
+localStorage.setItem("user", JSON.stringify(obj)); // 값 변경하기
+        </code></pre>
+      </div>
+      <!-- //doc_section -->
      
       <!-- doc_section -->
       <div class="doc_section">
