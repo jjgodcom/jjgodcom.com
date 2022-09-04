@@ -2216,31 +2216,6 @@ function myFunction() {
     //200, 4, 27
 }
           </code></pre>
-          <h3 class="section_mid_title">정규식</h3>
-          <pre><code class="line-numbers language-js">
-// 모든 l을 bbb로 치환해라 
-// 여기서 g는 글로벌을 뜻함
-document.write("str.replace('l','bbb')) 정규식 g => "+str.replace(/l/g,'bbb'));
-document.write("<br>");
-// 여기서 i는 대소문자 구분하지 않음을 뜻함
-document.write("str.replace('l','bbb')) 정규식 gi => "+str.replace(/l/gi,'bbb'));
-
-// 영문자와 숫자는 '' 로 replace 후 길이가 0 이면 OK
-// 아니면 영문자와 숫자가 아닌값이 있다는 의미
-id.replace(/[a-z.0-9]/gi,'').length > 0 
-
-// ** Password
-// => 길이(4이상), 숫자와 특수문자 반드시포함
-// => 특수문자 : HTML 특수문자 리스트표 참고 (http://kor.pe.kr/util/4/charmap2.htm)
-password.replace(/[!-*]/gi,'').length >= pLength 
-alert(' Password는 특수문자를 반드시 1개 이상 포함해야 됩니다 ~~');
-password.replace(/[0-9.!-*]/gi,'').length > 0 
-alert(' Password는 숫자와 특수문자로만 입력하세요 ~~');
-
-//한글과 영문만 허용 
-name.replace(/[a-z.가-힇]/gi,'').length > 0 
-alert(' Name은 한글과 영문으로만 입력하세요 ~~');
-          </code></pre>
       </div>
       <!-- //doc_section -->
       
