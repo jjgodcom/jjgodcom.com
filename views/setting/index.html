@@ -480,13 +480,37 @@ function onYouTubePlayerAPIReady() {
       <!-- //doc_section -->
       <!-- doc_section -->
       <div class="doc_section">
+        <h2 class="section_title">OMDB API</h2>
+        <p class="lead"><a href="https://www.omdbapi.com/" target="_blank">OMDB API</a> 는 오픈 무비 데이터베이스 입니다.</p>
+        <h3 class="section_mid_title">axios</h3>
+        <p>OMDB API를 사용하기 위해서는 편리한 axios 사용을 합니당</p>
+        <p>터미널에서 <code class="code">npm i axios</code> 설치</p>
+        <pre class="line-numbers"><code class="language-css">
+import axios from "axios";
+
+function fetchMovies() {
+  axios
+    .get("https://www.omdbapi.com/?apikey=7035c60c&s=frozen")
+    .then(res => {
+      console.log(res);
+      const h1El = document.querySelector("h1");
+      const imgEl = document.querySelector("img");
+      h1El.textContent = res.data.Search[0].Title;
+      imgEl.src = res.data.Search[0].Poster;
+    });
+}
+fetchMovies();
+        </code>
+        </pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
         <h2 class="section_title">약속</h2>
         <ul>
           <li>html 태그 네이밍 : <code class="code">menu-logo</code></li>
           <li>js 네이밍 : 카멜케이스로 <code class="code">foundUser</code></li>
         </ul>
-        <h3 class="section_mid_title">16:9 비율</h3>
-
       </div>
       <!-- //doc_section -->
       <!-- doc_section -->
