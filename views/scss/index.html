@@ -84,21 +84,496 @@
     <div class="container">
       <!-- doc_section -->
       <div class="doc_section">
-        <h2 class="section_title">타이틀h2</h2>
-        <h3 class="section_mid_title">h3</h3>
-        <p class="lead">타이틀 설명</p>
-        <p>그냥 설명</p>
-        <ul class="small">
-          <li>글머리</li>
+        <h2 class="section_title">개요</h2>
+        <ul>
+          <li>싸부의 정리잘된 SCSS <a href="https://heropy.blog/2018/01/31/sass/" target="_blank">사이트</a></li>
+          <li>SCSS 사용법 <a href="https://sass-lang.com/guide" target="_blank">공식 홈페이지</a></li>
+          <li>SCSS 컴파일 바로 보여주는 <a href="https://www.sassmeister.com/" target="_blank">사이트</a></li>
         </ul>
-        <div class="callout">
-          콜아웃
-        </div>
-        <img class="custom_img" src="" alt="" >
-        <pre class="line-numbers"><code class="language-html">
-&lt;!DOCTYPE html&gt; : 문서(페이지) HTML 버전을 지정
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">시작전 프로젝트 세팅</h2>
+        <ol class="small">
+          <li>터미널에서 <code class="code">npm init -y</code> 입력.</li>
+          <li>터미널에서 <code class="code">npm install parcel-bundler -D</code> 입력.</li>
+          <li>설치 후 <code class="code">package.json</code> 세팅하기 <a href="http://jjgodcom.com/views/node/index.html" target="_blank">(참고)</a></li>
+          <li>세팅 후 <code class="code">index.html</code>, <code class="code">main.scss</code> 생성</li>
+          <li>세팅이 완료되면 터미널에서 <code class="code">npm run dev</code> 입력</li>
+        </ol>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">주석</h2>
+        <p class="lead">Sass(SCSS)는 JavaScript처럼 두 가지 스타일의 주석을 사용합니다.</p>
+        <pre class="line-numbers"><code class="language-scss">
+// 컴파일되지 않는 주석 : 배포하면 안나타남
+/* 컴파일되는 주석 */ : 배포해도 나타남
         </code>
         </pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">데이터 종류</h2>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:20%">
+            <col style="width:40%">
+            <col style="width:40%">
+          </colgroup>
+					<thead>
+						<tr>
+							<th>데이터</th>
+							<th>설명</th>
+							<th>예시</th>
+						</tr>
+					</thead>
+					<tbody>
+            <tr>
+              <td>Numbers</td>
+              <td>숫자</td>
+              <td>
+                <code class="code">1</code>,
+                <code class="code">.82</code>,
+                <code class="code">20px</code>,
+                <code class="code">2em...</code>
+              </td>
+            </tr>
+            <tr>
+              <td>Strings</td>
+              <td>문자</td>
+              <td>
+                <code class="code">bold</code>,
+                <code class="code">relative</code>,
+                <code class="code">"/images/a.png"</code>,
+                <code class="code">"dotum"</code>
+              </td>
+            </tr>
+            <tr>
+              <td>Colors</td>
+              <td>색상 표현</td>
+              <td>
+                <code class="code">red</code>,
+                <code class="code">blue</code>,
+                <code class="code">#FFFF00</code>,
+                <code class="code">rgba(255,0,0,.5)</code>
+              </td>
+            </tr>
+            <tr>
+              <td>Booleans</td>
+              <td>논리</td>
+              <td>
+                <code class="code">true</code>,
+                <code class="code">false</code>
+              </td>
+            </tr>
+            <tr>
+              <td>Nulls</td>
+              <td>아무것도 없음</td>
+              <td>
+                <code class="code">null</code>
+              </td>
+            </tr>
+            <tr>
+              <td>Lists</td>
+              <td>공백이나 <code class="code">,</code>로 구분된 값의 목록</td>
+              <td>
+                <code class="code">(apple, orange, banana)</code>,
+                <code class="code">apple orange</code>
+              </td>
+            </tr>
+            <tr>
+              <td>Maps</td>
+              <td>Lists와 유사하나 값이 <code class="code">Key: Value</code> 형태</td>
+              <td>
+                <code class="code">(apple: a, orange: o, banana: b)</code>
+              </td>
+            </tr>
+					</tbody>
+				</table>
+        <pre class="line-numbers"><code class="language-scss">
+$null : null;
+$list: orange, royalblue, yellow;
+$map: (
+  o: orange,
+  r: royalblue,
+  y: yellow
+);
+        </code>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">@import - 가져오기</h2>
+        <pre class="line-numbers"><code class="language-scss">
+// 파일 확장자가 .css일 때
+@import "hello.css"; 
+
+// 다중 파일 불러오기
+@import "./sub.scss", "./sub2.scss"; 
+
+// 파일 이름이 http://로 시작하는 경우
+@import "http://hello.com/hello"; 
+
+// url()이 붙었을 경우
+@import url(hello); 
+
+// 미디어쿼리가 있는 경우
+@import "hello" screen; 
+        </code>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">중첩</h2>
+        <p class="lead">상위 선택자의 반복을 피하고 좀 더 편리하게 복잡한 구조를 작성할 수 있습니다.</p>
+        <pre class="line-numbers"><code class="language-scss">
+.container {
+  > ul { // > : 자식선택자
+      li {
+        font-size: 40px;
+        .name {
+          color: royalblue;
+        }
+        .age{
+          color: orange;
+        }
+      }
+  }
+}
+        </code>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">& - 부모 선택자 참조</h2>
+        <p class="lead">중첩 안에서 <code class="code">&</code>키워드는 상위(부모) 선택자를 참조하여 치환합니다.</p>
+        <pre class="line-numbers"><code class="language-scss">
+// .list li:last-child
+.list {
+  color:ref;
+  li {
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+// fs-small, fs-medium, fs-large
+.fs {
+  &-small {font-size: 12px;} // .fs-small
+  &-medium {font-size: 14px;} // .fs-medium
+  &-large {font-size: 16px;} // .fs-large
+}
+        </code>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">중첩된 속성</h2>
+        <p class="lead"><code class="code">font-</code>,<code class="code">margin-</code>등과 같이 동일한 네임 스페이스를 가지는 속성들을 다음과 같이 사용할 수 있습니다.</p>
+        <pre class="line-numbers"><code class="language-scss">
+.box {
+  font: {
+    weight: bold; // font-weight: bold;
+    size : 10px; // font-size: 10px;
+    family: sans-serif; font-family: sans-serif;
+  };
+  margin: {
+    top:10px; // margin-top:10px;
+    left:20px // margin-left:20px;
+  };
+}
+        </code>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">$ - 변수</h2>
+        <p class="lead">변수 이름 앞에는 항상<code class="code">$</code>를 붙입니다.</p>
+        <pre class="line-numbers"><code class="language-scss">
+$변수이름: 속성값;
+$sizeG : 200px; // 전역변수
+
+.container {
+  $size : 100px; // 지역변수
+  position: fixed;
+  top: $size;
+  .item {
+    width: $sizeG;
+    height: $size;
+    transform: translateX($size);
+  }
+}
+        </code>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">연산자</h2>
+        <h3 class="section_mid_title">산술 연산자</h3>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:20%">
+            <col style="width:80%">
+          </colgroup>
+					<thead>
+						<tr>
+							<th>종류</th>
+							<th>설명</th>
+						</tr>
+					</thead>
+					<tbody>
+            <tr>
+              <td><code class="code">+</code></td>
+              <td>더하기</td>
+            </tr>
+            <tr>
+              <td><code class="code">-</code></td>
+              <td>뺴기</td>
+            </tr>
+            <tr>
+              <td><code class="code">*</code></td>
+              <td>곱하기</td>
+            </tr>
+            <tr>
+              <td><code class="code">/</code></td>
+              <td>나누기</td>
+            </tr>
+            <tr>
+              <td><code class="code">%</code></td>
+              <td>나머지</td>
+            </tr>
+					</tbody>
+				</table>
+        <pre class="line-numbers"><code class="language-scss">
+div {
+  $size: 30px;
+  width: 20px + 20px;
+  width: 40px - 10px;
+  width: 10px * 2;
+  width: (30px / 2); // 나누기 사용방법 1
+  width: ($size / 2); // 나누기 사용방법 2
+  width: 20px % 7;
+  width: calc(100% - 200px); // calc() 사용법
+}
+        </code></pre>
+        <h3 class="section_mid_title">비교 연산자</h3>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:20%">
+            <col style="width:80%">
+          </colgroup>
+					<thead>
+						<tr>
+							<th>종류</th>
+							<th>설명</th>
+						</tr>
+					</thead>
+					<tbody>
+            <tr>
+              <td><code class="code">==</code></td>
+              <td>동등</td>
+            </tr>
+            <tr>
+              <td><code class="code">!=</code></td>
+              <td>부등</td>
+            </tr>
+            <tr>
+              <td><code class="code">&lt;</code></td>
+              <td>대소 / 보다 작은</td>
+            </tr>
+            <tr>
+              <td><code class="code">&gt;</code></td>
+              <td>대소 / 보다 큰</td>
+            </tr>
+            <tr>
+              <td><code class="code">&lt;=</code></td>
+              <td>대소 및 동등 / 보다 작거나 같은</td>
+            </tr>
+            <tr>
+              <td><code class="code">&gt;=</code></td>
+              <td>대소 및 동등 / 보다 크거나 같은</td>
+            </tr>
+					</tbody>
+				</table>
+        <h3 class="section_mid_title">논리 연산자</h3>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:20%">
+            <col style="width:80%">
+          </colgroup>
+					<thead>
+						<tr>
+							<th>종류</th>
+							<th>설명</th>
+						</tr>
+					</thead>
+					<tbody>
+            <tr>
+              <td><code class="code">and</code></td>
+              <td>그리고</td>
+            </tr>
+            <tr>
+              <td><code class="code">or</code></td>
+              <td>또는</td>
+            </tr>
+            <tr>
+              <td><code class="code">not</code></td>
+              <td>qnwjd</td>
+            </tr>
+					</tbody>
+				</table>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">재활용</h2>
+        <h3 class="section_mid_title">@mixin</h3>
+        <p class="lead">선언하기(<code class="code">@mixin</code>) 와 사용하기(<code class="code">@include</code>) 두 가지만 기억하면 됩니다.</p>
+        <pre class="line-numbers"><code class="language-scss">
+@mixin centet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &::after {
+    content: "!!";
+  }
+  span.icon {
+    background-color: red;
+  }
+}
+// 기본값을 지정해줄수 있음
+@mixin box($size : 100px, $color: tomato) {
+  width: $size;
+  height: $size;
+  background-color: $color;
+}
+
+.container {
+  @include centet;
+  width: 200px;
+  height: 200px;
+  background-color: orange;
+  .item {
+    width: 100px;
+    height: 100px;
+    background-color: royalblue;
+  }
+}
+
+.box {
+  @include box(200px , red);
+  .item{
+    @include box($color:green);
+  }
+}
+        </code></pre>
+        <h3 class="section_mid_title">@content</h3>
+        <pre class="line-numbers"><code class="language-scss">
+@mixin 믹스인이름() {
+  스타일;
+  @content;
+}
+
+@include 믹스인이름() {
+  // 스타일 블록
+  스타일;
+}
+
+@mixin left-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @content;
+}
+.box {
+  @include left-top {
+    bottom: 0;
+    margin: auto;
+  }
+}
+        </code></pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">함수</h2>
+        <p class="lead">연산된(Computed) 특정 값을 <code class="code">@return</code> 지시어를 통해 반환합니다.</p>
+        <pre class="line-numbers"><code class="language-scss">
+// Functions
+@function 함수이름($매개변수) {
+  @return 값
+}
+함수이름(인수)
+
+@function ratio($size, $ratio){
+  @return $size * $ratio
+}
+
+.box {
+  $width: 100px;
+  width: $width;
+  height: ratio($width, 9/16); // 16:9 비율
+}
+        </code></pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">색상 내장 함수</h2>
+        <pre class="line-numbers"><code class="language-scss">
+background-color: mix($color, red); // 색상 섞기
+background-color: lighten($color, 10%); // 밝은색
+background-color: darken($color, 10%); // 어두운색
+background-color: saturate($color, 40%); // 채도 up
+background-color: desaturate($color, 40%); // 채도 down
+background-color: grayscale($color); // 회색으로 전환
+background-color: invert($color); // 색상 반전
+background-color: rgba($color, .5); // 색상의 투명도를 변경합니다.
+        </code></pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">반복문</h2>
+        <h3 class="section_mid_title">@for</h3>
+        <pre class="line-numbers"><code class="language-scss">
+@for $i from 1 through 10 {
+  .box:nth-child(#{$i}) {
+    width: 100px * $i;
+  }
+}
+        </code></pre>
+        <h3 class="section_mid_title">@each</h3>
+        <pre class="line-numbers"><code class="language-scss">
+@each $변수 in 데이터 {
+  // 반복 내용
+}
+
+// list 
+$list: orange, royalblue, yellow;
+@each $c in $list {
+  .box {
+    color: $c;
+  }
+}
+
+// map
+$map: (
+  o: orange,
+  r: royalblue,
+  y: yellow
+);
+@each $k, $v in $map {
+  .box-#{$k} {
+    color: $v;
+  }
+}
+        </code></pre>
       </div>
       <!-- //doc_section -->
     </div>

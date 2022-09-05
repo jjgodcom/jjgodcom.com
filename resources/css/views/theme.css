@@ -24,7 +24,8 @@
 #main ol li {padding-bottom: 15px; list-style: decimal;}
 #main ul li {padding-bottom: 15px; list-style: disc;}
 #main ol span {font-size: 0.75em; font-weight: 600;}
-#main ul.small li {font-size: 0.7em;}
+#main ul.small li,
+#main ol.small li {font-size: 0.7em;}
 a {color:#428bca; transition: all .5s ease;}
 a:hover {text-decoration: underline;}
 
