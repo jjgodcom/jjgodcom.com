@@ -1,8 +1,3 @@
-$(document).ready(function(){
-    
-
-});
-
 function typing(){
     var tag = document.querySelector(".typing");
     var app = new Hakademy.util.typing(tag, {
