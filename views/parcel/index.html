@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- search engine -->
+  <meta name="author" content="jjgodcom">
+  <meta name="description" content="jjgodcom의 프론트 백앤드 정보 정리 사이트 입니다.">
+  <meta name="keywords" content="웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, jjgodcom, publisher, css3, html, markup, design">
+  <meta name="subject" content="jjgodcom의 프론트 백앤드 정보 정리 사이트 입니다.">
+  <title>JJGODCOM</title>
+
+  <!-- web_font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gaegu:300,400,700" rel="stylesheet">
+  <!-- ico -->
+  <link rel="apple-touch-icon" sizes="57x57" href="../../resources/ico/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../../resources/ico/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../../resources/ico/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../resources/ico/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../../resources/ico/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../../resources/ico/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../../resources/ico/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../../resources/ico/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../resources/ico/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="../../resources/ico/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../resources/ico/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../../resources/ico/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../resources/ico/favicon-16x16.png">
+  <link rel="manifest" href="../../resources/ico/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="../../resources/ico/apple-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <!-- css -->
+  <link rel="stylesheet" href="../../resources/css/global/reset.css">
+  <link rel="stylesheet" href="../../resources/css/views/theme.css">
+  <!-- js -->
+  <script src="../../resources/js/jquery-3.1.0.min.js"></script>
+  <script src="../../resources/js/global.js"></script>
+  <script src="../../resources/js/random_rgba.js"></script>
+  <!-- prism -->
+  <link rel="stylesheet" href="../../resources/css/global/prism.css">
+  <script src="../../resources/js/prism.js"></script>
+
+  <!-- hmlt5 support -->
+	<!--[if lt IE 9]><script src="assets/js/html5shiv.js"></script><![endif]-->
+	
+	<!-- IE6,7 support -->
+	<!--[if lte IE 7]><link rel="stylesheet" href="comm/css/ie7.css" type="text/css" ><![endif]-->
+	<!--[if IE 8]><link rel="stylesheet" href="comm/css/ie8.css" type="text/css" ><![endif]-->
+	
+	<!--[if lte IE 6]>
+	<p style="font-size: 12px; color: #fff; background: #2885b0; padding:5px 0; margin: 0; text-align: center">
+	사용하고 계신 브라우저는 최신 웹 브라우저가 아닙니다. 업그레이드를 하거나 다른 최신 브라우저 사용을 권장합니다.
+	<a href="http://www.microsoft.com/korea/ie" target="_blank" >업그레이드,</a>
+	<a href="http://www.mozilla.or.kr/ko/" target="_blank">파이어폭스,</a> 
+	<a href="http://kr.opera.com/download/" target="_blank">오페라,</a>,
+	<a href="http://support.apple.com/kb/DL1531?viewlocale=ko_KR&locale=ko_KR" target="_blank">사파리,</a>
+	<a href="http://www.google.com/chrome?hl=ko" target="_blank">크롬</a></p>
+	<![endif]-->
+  
+</head>
+<body>
+  <!-- top_nav -->
+  <nav id="top_nav">
+    <div class="container">
+      <a class="logo" href="http://jjgodcom.com/">
+        <img src="../../resources/images/global/logo.png" alt="logo" title="title">
+      </a>
+      <a class="gitHub" target="_blank" href="https://github.com/jjgodcom">GitHub</a>
+    </div>
+  </nav>
+  <!-- //nav -->
+  <!-- header -->
+  <header id="header">
+    <div class="container">
+      <h1>Parcel Reference v1.0</h1>
+      <a href="http://jjgodcom.com/">jjgodcom.com</a>
+    </div>
+  </header>
+  <!-- //header -->
+  <!-- main -->
+  <main id="main">
+    <div class="container">
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">Bunbler 개요</h2>
+        <p class="lead">
+          다양한 기능을 가지고 있는 Package 를 통해서 웹을 개발하는데 정작, 웹 구동에는 HTML, CSS, JS 만 사용이 됩니다. <br>
+          그래서 중간에서 Complie 을 해야되는데 Package 들을 묶어서 한꺼번에 Complie 시키는 것이 Bunlder 의 주요 특징입니다. <br>
+          다양한 Pacakge (예: Vue, React, SASS, TS, Barbel 등) 을 통해서 웹개발 하는데, 필요한 외부 Complier 를 bunlder 에 담아서 연결해줘서 한번에 complie 시킴니다.
+        </p>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">Parcel 특징</h2>
+        <ul>
+          <li>구성 없는 단순한 자동 번들링</li>
+          <li>소/중형 프로젝트 적합</li>
+        </ul>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">프로젝트 생성</h2>
+        <p class="lead">정리 잘된 사이트 (<a href="https://jacobko.info/bundler/Parcel/" target="_blank">참고</a>)</p>
+        <p class="lead">내가올린 기본 Parcel 세팅 (<a href="https://github.com/jjgodcom/parcel-template-basic" target="_blank">gitHub</a>)</p>
+        <pre class="line-numbers"><code class="language-bash">
+npm init -y
+npm install parcel-bundler -D
+
+// dist 폴더에 자동으로 파일 업로드 하는 플러그인
+npm install -D parcel-plugin-static-files-copy
+
+// autoprefixer 플러그인 설치
+npm i -D postcss autoprefixer
+// 만약 에러뜨면 다운그레이드
+$ npm i -D autoprefixer@9
+
+// babel 플러그인 설치
+npm i -D @babel/core @babel/preset-env
+// 오류뜰시
+npm i -D @babel/plugin-transform-runtime
+        </code>
+        </pre>
+        <p><code class="code">package.json</code> 에 추가하기</p>
+        <pre class="line-numbers"><code class="language-js">
+package.json 세팅
+"scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+// static 폴더에 넣으면 자동으로 dist 폴더로 복사함
+// ex) 파비콘
+"staticFiles": {
+    "staticPath": "static"
+  }
+
+// autoprefixer, babel 위해서 세팅 해야함
+  "browerslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+        </code>
+        </pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">autoprefixer</h2>
+        <p class="lead">구형 브라우저에서도 최신의 css 작동할수 있도록 도와주는 플러그인</p>
+        <pre class="line-numbers"><code class="language-bash">
+npm i -D postcss autoprefixer
+// 만약 에러뜨면 다운그레이드
+$ npm i -D autoprefixer@9
+        </code>
+        </pre>
+        <p><code class="code">package.json</code> 에 추가하기</p>
+        <pre class="line-numbers"><code class="language-js">
+// 1% 이상 모든 브라우저 마지막2개 버전까지 지원 한다는 뜻
+"browserslist": [
+    "> 1%", 
+    "last 2 versions"
+  ]
+        </code>
+        </pre>
+        <p>root 경로 <code class="code">.postcssrc.js</code> 에 추가하기</p>
+        <pre class="line-numbers"><code class="language-js">
+// import 불러오기
+// import autoprefixer from 'autoprefixer'
+const autoprefixer = require('autoprefixer');
+
+// export 내보내기
+// export {
+//   plugins: [
+//     autoprefixer
+//   ]
+// }
+module.exports = {
+  plugins: [
+    autoprefixer
+  ]
+}
+        </code>
+        </pre>
+        <p>위에 코드 간략하게</p>
+        <pre class="line-numbers"><code class="language-js">
+module.exports = {
+  // JS 파일을 node 환경에서 외부에서 내보내는 명령어
+  plugins: [require("autoprefixer")],
+};
+        </code>
+        </pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">babel</h2>
+        <p class="lead">구형 브라우저에서도 최신 코드 실행할수 있게 이전버전으로 변환해주는 플러그인</p>
+        <pre class="line-numbers"><code class="language-bash">
+npm i -D @babel/core @babel/preset-env
+// 오류뜰시
+npm i -D @babel/plugin-transform-runtime
+        </code>
+        </pre>
+        <p>root 경로 <code class="code">.babelrc.js</code> 에 추가하기</p>
+        <pre class="line-numbers"><code class="language-js">
+module.exports = {
+  presets: ["@babel/preset-env"],
+  plugins: [["@babel/plugin-transform-runtime"]], 
+};
+        </code>
+        </pre>
+        <p><code class="code">package.json</code> 에 추가하기</p>
+        <pre class="line-numbers"><code class="language-js">
+"browerslist": [
+  "> 1%",
+  "last 2 versions"
+]
+        </code>
+        </pre>
+      </div>
+      <!-- //doc_section -->
+    </div>
+  </main>
+  <!-- //main -->
+  <!-- footer -->
+  <footer id="footer">
+    <div class="copyright">
+      <div>Full-stack development</div>
+      <div>JJGODCOM</div> 
+    </div>
+  </footer>
+  <!-- //footer -->
+</body>
+</html>
