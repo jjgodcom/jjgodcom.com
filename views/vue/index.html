@@ -105,7 +105,42 @@ npm run dev
         </pre>
       </div>
       <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">문법</h2>
+        <h3 class="section_mid_title">조건문</h3>
+        <pre class="line-numbers"><code class="language-html">
+&lt;!-- vue if문 --&gt;
+&lt;div v-if="count &gt; 4"&gt;
+  4보다 큽니다!
+&lt;/div&gt;
+        </code></pre>
+        <h3 class="section_mid_title">for문</h3>
+        <pre class="line-numbers"><code class="language-html">
+&lt;!-- vue for문 --&gt;
+&lt;ul&gt;
+  &lt;Fruit&gt; 
+    v-for="fruit in fruits"
+    :key="fruit"&gt;
+    {{ fruit }}
+  &lt;/Fruit&gt;
+&lt;/ul&gt;
+        </code></pre>
+        <h3 class="section_mid_title">클릭이벤트</h3>
+        <pre class="line-numbers"><code class="language-html">
+&lt;!-- vue click 이벤트 --&gt;
+&lt;h1 @click="increase"&gt;
+  {{ count }}
+&lt;/h1&gt;
+        </code></pre>
+      </div>
+      <!-- //doc_section -->
 
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">문법</h2>
+      </div>
+      <!-- //doc_section -->
       <!-- doc_section -->
       <div class="doc_section">
         <h2 class="section_title">타이틀h2</h2>
