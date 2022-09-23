@@ -683,12 +683,116 @@ export default {
         </code></pre>
       </div>
       <!-- //doc_section -->
-
       <!-- doc_section -->
       <div class="doc_section">
-        <h2 class="section_title">문법</h2>
-        <h3 class="section_mid_title">조건문</h3>
+        <h2 class="section_title">컴포지션 API</h2>
+        <p class="lead"><a href="https://v3.ko.vuejs.org/guide/composition-api-introduction.html#%E1%84%8F%E1%85%A5%E1%86%B7%E1%84%91%E1%85%A9%E1%84%8C%E1%85%B5%E1%84%89%E1%85%A7%E1%86%AB-api%E1%84%80%E1%85%A1-%E1%84%91%E1%85%B5%E1%86%AF%E1%84%8B%E1%85%AD%E1%84%92%E1%85%A1%E1%86%AB-%E1%84%8B%E1%85%B5%E1%84%8B%E1%85%B2" target="_blank">공식 문서</a></p>
+        <img class="custom_img" src="../../resources/images/views/vue/composition.png" alt="composition" title="composition">
+        <p>두개는 같은 코드지만 컴포지션 API를 이용하면 비슷한 코드끼리 묶어서 정리 가능 가독성 올라감</p>
+        <h3 class="section_mid_title">반응성(ref)</h3>
+        <p><code class="code">setup(){}</code>은 그냥 사용하면 반응성을 제공 안합니다.</p>
+        <p>그래서 <code class="code">import { ref } from 'vue'</code>를 사용해야 반응성을 제공 합니다.</p>
+        <pre class="line-numbers"><code class="language-js">
+import { ref } from 'vue'
+
+export default {
+  setup(){
+    let count = ref(0);
+
+    return{
+      count
+    }
+  }
+}
+        </code></pre>
+        <iframe height="300" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.io/jjgodcom1/embed/GRdMjWN?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href="https://codepen.io/jjgodcom1/pen/GRdMjWN">
+          Untitled</a> by jjgodcom (<a href="https://codepen.io/jjgodcom1">@jjgodcom1</a>)
+          on <a href="https://codepen.io">CodePen</a>.
+        </iframe>
+        <h3 class="section_mid_title">기본 옵션과 라이프 사이클</h3>
+        <ul class="small">
+          <li><code class="code">computed</code> : 계산되는 내용 작성할때</li>
+          <li><code class="code">watch</code> : 값이 변경될떄 console.log()로 확인가능</li>
+          <li><code class="code">created</code> : 컴포넌트가 실행된 직후에 실행됨, <code class="code">setup</code> 내부 어디서든지 사용하면 됨</li>
+          <li><code class="code">onMounted(mounted)</code> : HTML과 컴포넌트가 연결된 직후에 실행됨, 컴포지션 API에서는 <code class="code">onMounted</code> 으로 사용됨</li>
+        </ul>
+        <iframe height="300" style="width: 100%;" scrolling="no" title="컴포지션API - 기본 옵션과 라이프 사이클" src="https://codepen.io/jjgodcom1/embed/VwxMzgm?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href="https://codepen.io/jjgodcom1/pen/VwxMzgm">
+          컴포지션API - 기본 옵션과 라이프 사이클</a> by jjgodcom (<a href="https://codepen.io/jjgodcom1">@jjgodcom1</a>)
+          on <a href="https://codepen.io">CodePen</a>.
+        </iframe>
+        <h3 class="section_mid_title">props, context</h3>
+        <p>아직 emits 쪽은 이해를 못함</p>
+        <p>App.vue</p>
         <pre class="line-numbers"><code class="language-html">
+&lt;template&gt;
+  &lt;MyBtn 
+    class="jjgodcom"
+    style="color:red;"
+    color="#ff0000"
+    @hello="log"&gt;
+    Apple
+  &lt;/MyBtn&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import MyBtn from '~/components/MyBtn'
+
+export default {
+  components:{
+    MyBtn
+  },
+  methods:{
+    log(){
+      console.log('Hello World!')
+    }
+  }
+}
+&lt;/script&gt;
+        </code></pre>
+        <p>MyBtn.vue</p>
+        <pre class="line-numbers"><code class="language-html">
+&lt;template&gt;
+  &lt;div 
+    v-bind="$attrs"
+    class="btn"
+    @click="hello"&gt;
+    &lt;slot&gt;&lt;/slot&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import { onMounted } from 'vue';
+
+export default {
+  inheritAttrs:false,
+  props:{
+    color:{
+      type: String,
+      default:'gray'
+    }
+  },
+  emits:['hello'],
+  setup(props, context){
+
+    function hello(){
+      context.emit('hello')
+    }
+
+    onMounted(()=&gt;{
+      console.log('setup props');
+      console.log(props.color);
+      console.log('setup context');
+      console.log(context.attrs);
+    })
+
+    return{
+      hello
+    }
+  }
+}
+&lt;/script&gt;
         </code></pre>
       </div>
       <!-- //doc_section -->
@@ -696,6 +800,9 @@ export default {
       <!-- doc_section -->
       <div class="doc_section">
         <h2 class="section_title">문법</h2>
+        <h3 class="section_mid_title">조건문</h3>
+        <pre class="line-numbers"><code class="language-html">
+        </code></pre>
       </div>
       <!-- //doc_section -->
       <!-- doc_section -->
