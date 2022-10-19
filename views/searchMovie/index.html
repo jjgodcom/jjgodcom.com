@@ -104,12 +104,19 @@ npm i vue@next
 #4 실행
 npm run dev
         </code></pre>
+        <h3 class="section_mid_title">폴더 구조?</h3>
       </div>
       <!-- //doc_section -->
       <!-- doc_section -->
       <div class="doc_section">
         <h2 class="section_title">Vue Router 구성</h2>
         <p class="lead">페이지를 구분하기 위해 사용하는 기술을 Router 라고 합니다.</p>
+        <ul class="small">
+          <li><code class="code">&lt;RouterView&gt;</code> : 페이지가 출력(랜더링)되는 영역 컴포넌트</li>
+          <li><code class="code">&lt;RouterLink&gt;</code> : 페이지 이동을 위한 링크 컴포넌트 </li>
+          <li><code class="code">$route</code> : 페이지 정보를 가지는 객체</li>
+          <li><code class="code">$router</code> : 페이지 조작을 위한 객체</li>
+        </ul>
         <p class="lead"><a href="https://router.vuejs.org/installation.html">공식 문서</a></p>
         <pre class="line-numbers"><code class="language-bash">
 # Vue Router 설치
@@ -289,6 +296,165 @@ export default createRouter({
         <h3 class="section_mid_title">Logo 및 Google Fonts</h3>
         <p><a href="https://github.com/jjgodcom/vue-movie-app/commit/f2df8685c39ab4fdd7dd32d6d7b4e6599eab8681" target="_blank">수정사항(Git)</a></p>
         <p>구글 폰트 세팅함</p>
+        <h3 class="section_mid_title">Headline</h3>
+        <p><a href="https://github.com/jjgodcom/vue-movie-app/commit/e5530d1814a058c86d85af7759cd203016d3eef3" target="_blank">수정사항(Git)</a></p>
+        <ul class="small">
+          <li>Headline.vue 생성함</li>
+        </ul>
+        <h3 class="section_mid_title">Search - 필터</h3>
+        <p><a href="https://github.com/jjgodcom/vue-movie-app/commit/a75fd465e190033f85ede03a9af396fc52ebfb16" target="_blank">수정사항(Git)</a></p>
+        <ul class="small">
+          <li>Search.vue 생성</li>
+          <li>Home.vue 에 Search.vue 연결함</li>
+          <li>배열로 데이터 정리해서 v-for사용해서 select 태그 뿌림</li>
+        </ul>
+        <h3 class="section_mid_title">Search - 버튼</h3>
+        <p><a href="https://github.com/jjgodcom/vue-movie-app/commit/e27b609f804e61a17e8ba5d17f2af85b1a1d025a" target="_blank">수정사항(Git)</a></p>
+        <ul class="small">
+          <li><a href="https://www.omdbapi.com/" target="_blank">omdbapi</a> 여기있는 By Search 옵션으로 검색엔진 제작</li>
+          <li>axios를 사용하여 비동기 통신함</li>
+        </ul>
+        <pre class="line-numbers"><code class="language-bash">
+# axios 설치
+# http 요철 날리는 플러그인?
+npm i axios 
+        </code></pre>
+        <h3 class="section_mid_title">Vuex - 세팅</h3>
+        <p><a href="https://github.com/jjgodcom/vue-movie-app/commit/5ab8be9f0aabd9b94befbe8963944b435cc4546c" target="_blank">수정사항(Git)</a></p>
+        <p>데이터를 집중 관리 할수있는 장소를 만드는거라고 생각하면됨</p>
+        <p>프로젝트 내부 어떤곳이든 전달 가능</p>
+        <pre class="line-numbers"><code class="language-bash">
+npm i vuex@next
+        </code></pre>
+        <ul class="small">
+          <li><code class="code">namespaced</code> : 하나의 스토어에서 모듈화 될수 있다는 옵션</li>
+          <li><code class="code">state</code> : 실제로 취급하는 data</li>
+          <li><code class="code">getters</code> : 계산된 상태 computed랑 비슷</li>
+          <li><code class="code">mutations</code> : store 에서 데이터의 수정은 mutations에서만 가능</li>
+          <li><code class="code">actions</code> : 비동기로 동작</li>
+        </ul>
+        <div class="callout">
+          <code class="code">mutations</code> 을 실행할때는 <code class="code">.commit()</code> 메소드를,<br>
+          <code class="code">actions</code> 을 실행할때는 <code class="code">.dispatch()</code> 메소드를 사용합니다.
+        </div>
+        <p><code class="code">main.js</code> 에 코드 추가하기</p>
+        <pre class="line-numbers"><code class="language-js">
+import router from './routes/index.js'
+
+.use(router)
+        </code></pre>
+        <p><code class="code">store > index.js</code> 생성하기</p>
+        <pre class="line-numbers"><code class="language-js">
+import {createStore} from 'vuex'
+import movie from './movie'
+import about from './about'
+
+
+export default createStore({
+  modules:{
+    movie,
+    about
+  }
+})
+        </code></pre>
+        <h3 class="section_mid_title">영화 검색</h3>
+        <p><a href="https://github.com/jjgodcom/vue-movie-app/commit/3410df112e47e791c6c170d5e67a39caf8b0bc31" target="_blank">수정사항(Git)</a></p>
+        <p>결론은 <code class="code">this.$store.state.movie.movies</code> 에 배열로 저장해서 사용</p>
+        <h3 class="section_mid_title">영화 검색 추가 요청</h3>
+        <p><a href="https://github.com/jjgodcom/vue-movie-app/commit/22d32db6ce69213377a0b2b8a27ecb005606ee2b" target="_blank">수정사항(Git)</a></p>
+        <p>검색시  출력되는 개수 기능 추가함</p>
+        <h3 class="section_mid_title">영화 목록에서 ID 중복 제거</h3>
+        <p><a href="https://github.com/jjgodcom/vue-movie-app/commit/22d32db6ce69213377a0b2b8a27ecb005606ee2b" target="_blank">수정사항(Git)</a></p>
+        <p>lodash의 <code class="code">_.uniqBy()</code> 를 사용해 중복을 제거함</p>
+        <pre class="line-numbers"><code class="language-bash">
+#lodash 설치
+npm i lodash
+        </code></pre>
+        <h3 class="section_mid_title">영화 검색 코드 리팩토링</h3>
+        <p><a href="https://github.com/jjgodcom/vue-movie-app/commit/13778167c46dfcc676ebb5acf9ec68bb7a22a787" target="_blank">수정사항(Git)</a></p>
+        <p>코드 리팩토링 함</p>
+        <h3 class="section_mid_title">영화 아이템 - 기본 출력</h3>
+        <p><a href="https://github.com/jjgodcom/vue-movie-app/commit/ae30af03da3d5c203f409c7b2de5dc4ecd14f674" target="_blank">수정사항(Git)</a></p>
+        <p>영화 아이템 리스트 나오는곳 레이아웃 제작함</p>
+        <h3 class="section_mid_title">영화 아이템 - 텍스트 말줄임 표시와 배경 흐림 처리</h3>
+        <p><a href="https://github.com/jjgodcom/vue-movie-app/commit/23f4f10531c028c4c0cc6e2d72cd7f96f26876e0" target="_blank">수정사항(Git)</a></p>
+        <p>텍스트 ... 처리와 배경 흐림 마우스 오버 효과 추가함</p>
+        <h3 class="section_mid_title">Container 너비 사용자 지정</h3>
+        <p><a href="https://github.com/jjgodcom/vue-movie-app/commit/830106dda7f9d829ac2f29fe808af3e56a494403" target="_blank">수정사항(Git)</a></p>
+        <p>부트스트랩 container 크기를 커스텀함</p>
+        <h3 class="section_mid_title">에러 메시지 출력과 로딩 애니메이션</h3>
+        <p><a href="https://github.com/jjgodcom/vue-movie-app/commit/2d3a7ac7d4be5fb98fd51f329bbf41b65e59c686" target="_blank">수정사항(Git)</a></p>
+        <p>부트스트랩 spinner 사용해서 로딩 생성함</p>
+        <h3 class="section_mid_title">footer</h3>
+        <p><a href="https://github.com/jjgodcom/vue-movie-app/commit/b28bc628f952e63d2fe843a20f70c391f108c736" target="_blank">수정사항(Git)</a></p>
+        <p>전체 페이지에 footer 추가함</p>
+        <h3 class="section_mid_title">단일 영화 상세 정보 가져오기</h3>
+        <p><a href="https://github.com/jjgodcom/vue-movie-app/commit/b28bc628f952e63d2fe843a20f70c391f108c736" target="_blank">수정사항(Git)</a></p>
+        <p>고유 id값으로 영화 상세정보 받아오기 함</p>
+        <h3 class="section_mid_title">스켈레톤 UI</h3>
+        <p><a href="https://github.com/jjgodcom/vue-movie-app/commit/b28bc628f952e63d2fe843a20f70c391f108c736" target="_blank">수정사항(Git)</a></p>
+        <p>movie 페이지 접근시 데이터 불러오기전에 잠깐 보여주는 스켈레톤 UI라는걸 제작함</p>
+        <h3 class="section_mid_title">Loader</h3>
+        <p><a href="https://github.com/jjgodcom/vue-movie-app/commit/c325bd364f141e404e811a8462e0ceb63da50cd8" target="_blank">수정사항(Git)</a></p>
+        <p>로딩을 컴포넌트에 등록해서 쓰기 편하게 제작함</p>
+        <h3 class="section_mid_title">영화 상세 페이지 정리</h3>
+        <p><a href="https://github.com/jjgodcom/vue-movie-app/commit/b26ded1f29a2cd0d1af8f60c981bb7d56627b70e" target="_blank">수정사항(Git)</a></p>
+        <p>theMovie에 저장된 데이터로 뿌려줌</p>
+        <h3 class="section_mid_title">Ratings 데이터 출력</h3>
+        <p><a href="https://github.com/jjgodcom/vue-movie-app/commit/ba0efdc21853851f50e856babdef5b3ba13c58f1" target="_blank">수정사항(Git)</a></p>
+        <p>평점 부분 이미지+데이터 뿌림</p>
+        <h3 class="section_mid_title">높은 해상도 포스터로 변경</h3>
+        <p><a href="https://github.com/jjgodcom/vue-movie-app/commit/d3259037b47ed4da32f0263aff53a800554936ab" target="_blank">수정사항(Git)</a></p>
+        <p>이미지 주소 뒤를 <code class="code">.replace()</code>로 변경하여 고화질 이미지 뿌림</p>
+        <h3 class="section_mid_title">Vuex 플러그인(이미지로드 이벤트)</h3>
+        <p><a href="https://github.com/jjgodcom/vue-movie-app/commit/dbd4a032bcffd081a21a74dd6fbf5b0940a5f3cb" target="_blank">수정사항(Git)</a></p>
+        <p>커스텀 플러그인 생성함 (이미지 불러올때 로딩되는 이펙트)</p>
+        <h3 class="section_mid_title">영화 포스터 없는경우 예외처리</h3>
+        <p><a href="https://github.com/jjgodcom/vue-movie-app/commit/4a57d947de707fcb21f4307c76033fac50abdb85" target="_blank">수정사항(Git)</a></p>
+        <p>영화 이미지가 없을경우 예외처리 추가함</p>
+        <h3 class="section_mid_title">Nav 경로 일치 및 활성화</h3>
+        <p><a href="https://github.com/jjgodcom/vue-movie-app/commit/cee138775ff70aeffe88f77ad483bae594da8f98" target="_blank">수정사항(Git)</a></p>
+        <p>메인페이지에서 포스터 클릭시 상세페이지 이동 연결 작업함</p>
+        <h3 class="section_mid_title">About 페이지 생성</h3>
+        <p><a href="https://github.com/jjgodcom/vue-movie-app/commit/2a996fc1c68b610e102bcc2100fb7a1ce13b32f9" target="_blank">수정사항(Git)</a></p>
+        <p>vuex 를 활용해서 store에 저장해서 꺼내오는식으로 페이지 생성함</p>
+        <h3 class="section_mid_title">404 페이지 추가</h3>
+        <p><a href="https://github.com/jjgodcom/vue-movie-app/commit/ea8e0b7713388b2e160790f588c2c4b7ae194cb9" target="_blank">수정사항(Git)</a></p>
+        <p>내가 설정한 페이지 아닐경우 404페이지로 접근하게 함</p>
+        <h3 class="section_mid_title">부트스트랩으로 반응형 추가하기</h3>
+        <p><a href="https://github.com/jjgodcom/vue-movie-app/commit/a0cd278ed50027810a4818efaad150eaba180767" target="_blank">수정사항(Git)</a></p>
+        <p>부트스트랩 이용해서 반응형 추가함</p>
+        <h3 class="section_mid_title">sass-loader 옵션 추가하기</h3>
+        <p><a href="https://github.com/jjgodcom/vue-movie-app/commit/43d4643c36ef8efc283cf5a89be05834565a5f98" target="_blank">수정사항(Git)</a></p>
+        <p><code class="code">webpack.config.js</code> 에 수정하기</p>
+        <pre class="line-numbers"><code class="language-js">
+{
+  test: /\.s?css$/,
+  use: [
+    // 순서 중요!
+    'vue-style-loader',
+    'style-loader',
+    'css-loader',
+    'postcss-loader',
+    {
+      loader:'sass-loader',
+      options:{
+        additionalData:`@import "~/scss/main";`
+      }
+    }
+  ]
+},
+        </code></pre>
+        <p>이걸 설정하면 scss 선언한곳에 무조건 main.scss 파일 불러와짐</p>
+        <h3 class="section_mid_title">페이지 전환시 스크롤 위치 복구</h3>
+        <p><a href="https://github.com/jjgodcom/vue-movie-app/commit/15bbaefdbed840fc7e0d8dcf955a8eb6605d0a9e" target="_blank">수정사항(Git)</a></p>
+        <p><code class="code">routes > index.js</code> 에 추가하기</p>
+        <pre class="line-numbers"><code class="language-js">
+scrollBehavior(){
+  return { top:0 }
+},
+        </code></pre>
+        위에 옵션 추가하면 페이지 이동시 항상 최상단으로 이동함
       </div>
       <!-- //doc_section -->
 
