@@ -27,9 +27,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="../../resources/ico/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="../../resources/ico/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../../resources/ico/favicon-16x16.png">
-  <link rel="manifest" href="/manifest.json">
+  <link rel="manifest" href="../../resources/ico/manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="msapplication-TileImage" content="../../resources/ico/apple-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
   <!-- css -->
   <link rel="stylesheet" href="../../resources/css/global/reset.css">
@@ -39,8 +39,8 @@
   <script src="../../resources/js/global.js"></script>
   <script src="../../resources/js/random_rgba.js"></script>
   <!-- prism -->
-  <link rel="stylesheet" href="../../resources/css/global/prism.css">
-  <script src="../../resources/js/prism.js"></script>
+  <link rel="stylesheet" href="../../resources/css/global/prism2.css">
+  <script src="../../resources/js/prism2.js"></script>
 
   <!-- hmlt5 support -->
 	<!--[if lt IE 9]><script src="assets/js/html5shiv.js"></script><![endif]-->
@@ -101,6 +101,7 @@
           <li><code class="code">favicon.ico</code> : 64 x 64 (px) 또는 32 x 32 또는 16 x 16</li>
           <li><code class="code">favicon.png</code> : 500 x 500 (px)</li>
           <li><a href="https://iconifier.net/" target="_blank">iconifier.net</a> 여기서 간편하게 제작 가능</li>
+          <li><a href="https://www.icoconverter.com/" target="_blank">icoconverter</a> 여기서 간편하게 제작 가능</li>
         </ul>
         <pre class="line-numbers"><code class="language-html">
 &lt;!-- ico --&gt;
@@ -226,6 +227,43 @@ body {
       <!-- //doc_section -->
       <!-- doc_section -->
       <div class="doc_section">
+        <h2 class="section_title">BootStrap</h2>
+        <p class="lead"><a href="https://getbootstrap.com/docs/5.2/getting-started/introduction/" target="_blank">부트스트랩</a> (5.0버전 사용하기)</p>
+        <h3 class="section_mid_title">CDN 프로젝트 생성</h3>
+        <pre class="line-numbers"><code class="language-html">
+&lt;!-- css --&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"&gt;
+
+&lt;!-- js --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+        </code></pre>
+        <h3 class="section_mid_title">NPM 프로젝트 생성</h3>
+        <pre class="line-numbers"><code class="language-bash">
+npm init -y
+npm install parcel-bundler -D
+npm install bootstrap@5.0.0
+
+package.json 수정
+"scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  npm run dev 끝
+        </code></pre>
+        <p>main.scss</p>
+        <pre class="line-numbers"><code class="language-scss">
+// css 파일 연결
+@import "../node_modules/bootstrap/scss/bootstrap.scss"
+        </code></pre>
+        <p>main.js</p>
+        <pre class="line-numbers"><code class="language-js">
+// bootstrap js파일 연결
+import bootstrap from 'bootstrap/dist/js/bootstrap.bundle';
+        </code></pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
         <h2 class="section_title">Lodash</h2>
         <p class="lead"><a href="https://lodash.com/" target="_blank">Lodash</a>는 다양한 유틸리티 기능을 제공하는 자바스크립트 라이브러리입니다.</p>
         <ul class="small">
@@ -243,6 +281,56 @@ body {
 &lt;/script&gt;
         </code>
         </pre>
+        <h3 class="section_mid_title">uniq</h3>
+        <ul class="small">
+          <li><code class="code">_.uniqBy()</code> : 중복이 발생한 배열에서 쓰면 중복 제거후 배열 생성</li>
+          <li><code class="code">_.unionBy()</code> : 배열을 합치기 전이라면 인수로 적용후 새로운 배열로 생성</li>
+        </ul>
+        <pre><code class="line-numbers language-js">
+import _ from 'lodash'; // From 'node_modules'
+
+const usersA = [
+  { userId : "1" , name: "JJGODCOM"},
+  { userId : "2" , name: "Neo"},
+];
+const usersB = [
+  { userId : "1" , name: "JJGODCOM"},
+  { userId : "3" , name: "Amy"},
+];
+// 배열이 합쳐져 있고 중복값이 있을때 좋음
+const usersC = usersA.concat(usersB);
+console.log("concat", usersC);
+console.log("uniqBy", _.uniqBy(usersC, "userId"));
+
+// _.unionBy : 배열이 여러개일때 사용
+const usersD = _.unionBy(usersA, usersB, "userId");
+console.log("unionBy", usersD);
+        </code></pre>
+        <h3 class="section_mid_title">find</h3>
+        <ul class="small">
+          <li><code class="code">_.find()</code> : 배열에서 원하는 객체 찾기</li>
+          <li><code class="code">_.findIndex()</code> : 배열 index번호 찾기</li>
+          <li><code class="code">_.remove()</code> : `_.remove` :  배열에서 원하는 객체 삭제</li>
+        </ul>
+        <pre><code class="line-numbers language-js">
+import _ from 'lodash'; // From 'node_modules'
+
+const users = [
+  { userId : "1" , name: "JJGODCOM"},
+  { userId : "2" , name: "Neo"},
+  { userId : "3" , name: "Amy"},
+  { userId : "4" , name: "Evan"},
+  { userId : "5" , name: "Lewis"},
+];
+
+const foundUser = _.find(users, {name:"Amy"});
+const foundUserIndex = _.findIndex(users, {name:"Amy"});
+console.log(foundUser);
+console.log(foundUserIndex);
+
+_.remove(users, {name:"JJGODCOM"});
+console.log(users);
+        </code></pre>
       </div>
       <!-- //doc_section -->
       <!-- doc_section -->
@@ -430,6 +518,47 @@ function onYouTubePlayerAPIReady() {
       <!-- //doc_section -->
       <!-- doc_section -->
       <div class="doc_section">
+        <h2 class="section_title">OMDB API</h2>
+        <p class="lead"><a href="https://www.omdbapi.com/" target="_blank">OMDB API</a> 는 오픈 무비 데이터베이스 입니다.</p>
+        <h3 class="section_mid_title">axios</h3>
+        <p>OMDB API를 사용하기 위해서는 편리한 axios 사용을 합니당</p>
+        <p>터미널에서 <code class="code">npm i axios</code> 설치</p>
+        <pre class="line-numbers"><code class="language-css">
+import axios from "axios";
+
+function fetchMovies() {
+  axios
+    .get("https://www.omdbapi.com/?apikey=7035c60c&s=frozen")
+    .then(res => {
+      console.log(res);
+      const h1El = document.querySelector("h1");
+      const imgEl = document.querySelector("img");
+      h1El.textContent = res.data.Search[0].Title;
+      imgEl.src = res.data.Search[0].Poster;
+    });
+}
+fetchMovies();
+        </code>
+        </pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">node.js 배포</h2>
+        <a href="https://dreaming5developer.tistory.com/344" target="_blank">여기 보고 참고</a>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">약속</h2>
+        <ul>
+          <li>html 태그 네이밍 : <code class="code">menu-logo</code></li>
+          <li>js 네이밍 : 카멜케이스로 <code class="code">foundUser</code></li>
+        </ul>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
         <h2 class="section_title">유용한 CSS</h2>
         <h3 class="section_mid_title">16:9 비율</h3>
         <pre class="line-numbers"><code class="language-css">
@@ -444,6 +573,15 @@ padding-top : 56.25%
 transform:translateX(-50%); // left: 50%;
 transform:translateY(-50%); // top: 50%;
 transform:translate(-50%,-50%); // top: 50%; left: 50%;
+        </code>
+        </pre>
+        <h3 class="section_mid_title">텍스트 ... 처리</h3>
+        <pre class="line-numbers"><code class="language-css">
+.ellipsis{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
         </code>
         </pre>
       </div>

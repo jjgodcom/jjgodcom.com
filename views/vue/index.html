@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- search engine -->
+  <meta name="author" content="jjgodcom">
+  <meta name="description" content="jjgodcom의 프론트 백앤드 정보 정리 사이트 입니다.">
+  <meta name="keywords" content="웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, jjgodcom, publisher, css3, html, markup, design">
+  <meta name="subject" content="jjgodcom의 프론트 백앤드 정보 정리 사이트 입니다.">
+  <title>JJGODCOM</title>
+
+  <!-- web_font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gaegu:300,400,700" rel="stylesheet">
+  <!-- ico -->
+  <link rel="apple-touch-icon" sizes="57x57" href="../../resources/ico/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../../resources/ico/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../../resources/ico/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../resources/ico/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../../resources/ico/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../../resources/ico/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../../resources/ico/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../../resources/ico/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../resources/ico/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="../../resources/ico/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../resources/ico/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../../resources/ico/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../resources/ico/favicon-16x16.png">
+  <link rel="manifest" href="../../resources/ico/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="../../resources/ico/apple-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <!-- css -->
+  <link rel="stylesheet" href="../../resources/css/global/reset.css">
+  <link rel="stylesheet" href="../../resources/css/views/theme.css">
+  <!-- js -->
+  <script src="../../resources/js/jquery-3.1.0.min.js"></script>
+  <script src="../../resources/js/global.js"></script>
+  <script src="../../resources/js/random_rgba.js"></script>
+  <!-- prism -->
+  <link rel="stylesheet" href="../../resources/css/global/prism2.css">
+  <script src="../../resources/js/prism2.js"></script>
+
+  <!-- hmlt5 support -->
+	<!--[if lt IE 9]><script src="assets/js/html5shiv.js"></script><![endif]-->
+	
+	<!-- IE6,7 support -->
+	<!--[if lte IE 7]><link rel="stylesheet" href="comm/css/ie7.css" type="text/css" ><![endif]-->
+	<!--[if IE 8]><link rel="stylesheet" href="comm/css/ie8.css" type="text/css" ><![endif]-->
+	
+	<!--[if lte IE 6]>
+	<p style="font-size: 12px; color: #fff; background: #2885b0; padding:5px 0; margin: 0; text-align: center">
+	사용하고 계신 브라우저는 최신 웹 브라우저가 아닙니다. 업그레이드를 하거나 다른 최신 브라우저 사용을 권장합니다.
+	<a href="http://www.microsoft.com/korea/ie" target="_blank" >업그레이드,</a>
+	<a href="http://www.mozilla.or.kr/ko/" target="_blank">파이어폭스,</a> 
+	<a href="http://kr.opera.com/download/" target="_blank">오페라,</a>,
+	<a href="http://support.apple.com/kb/DL1531?viewlocale=ko_KR&locale=ko_KR" target="_blank">사파리,</a>
+	<a href="http://www.google.com/chrome?hl=ko" target="_blank">크롬</a></p>
+	<![endif]-->
+  
+</head>
+<body>
+  <!-- top_nav -->
+  <nav id="top_nav">
+    <div class="container">
+      <a class="logo" href="http://jjgodcom.com/">
+        <img src="../../resources/images/global/logo.png" alt="logo" title="title">
+      </a>
+      <a class="gitHub" target="_blank" href="https://github.com/jjgodcom">GitHub</a>
+    </div>
+  </nav>
+  <!-- //nav -->
+  <!-- header -->
+  <header id="header">
+    <div class="container">
+      <h1>Vue.js Reference v1.0</h1>
+      <a href="http://jjgodcom.com/">jjgodcom.com</a>
+    </div>
+  </header>
+  <!-- //header -->
+  <!-- main -->
+  <main id="main">
+    <div class="container">
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">npx로 설치하기</h2>
+        <pre class="line-numbers"><code class="language-bash">
+# https://github.com/ParkYoungWoong/vue3-webpack-template
+# 폴더는 저기 링크가서 다운받기
+# npx degit '폴더링크' vue3-test
+
+#1 폴더 변경
+cd Desktop
+
+#2 프로젝트 복사
+npx degit ParkYoungWoong/vue3-webpack-template#eslint vue3-test 
+
+#3 설치
+npm i vue@next
+
+#4 실행
+npm run dev
+        </code>
+        </pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">공식 홈페이지</h2>
+        <p class="lead"><a href="https://v3.ko.vuejs.org/guide/installation.html" target="_blank">바로가기</a></p>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">인스턴스와 라이프사이클</h2>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:20%">
+            <col style="width:80%">
+          </colgroup>
+					<thead>
+						<tr>
+							<th>인스턴스</th>
+							<th>설명</th>
+						</tr>
+					</thead>
+					<tbody>
+            <tr>
+              <td><code class="code">created()</code></td>
+              <td>컴포넌트가 생성된 직후에 실행됨</td>
+            </tr>
+            <tr>
+              <td><code class="code">mounted()</code></td>
+              <td>화면에 출력이 되고나서 실행됨<br>(화면에 그려진 내용 조회할때 사용)</td>
+            </tr>
+					</tbody>
+				</table>
+        <iframe height="300" style="width: 100%;" scrolling="no" title="인스턴스와 라이프사이클" src="https://codepen.io/jjgodcom1/embed/JjvRBXE?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href="https://codepen.io/jjgodcom1/pen/JjvRBXE">
+          인스턴스와 라이프사이클</a> by jjgodcom (<a href="https://codepen.io/jjgodcom1">@jjgodcom1</a>)
+          on <a href="https://codepen.io">CodePen</a>.
+        </iframe>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">보간법</h2>
+        <h3 class="section_mid_title">문자열</h3>
+        <p>데이터 바인딩의 가장 기본 형태는 “Mustache”(이중 중괄호 구문)<code class="code">{{ }}</code> 사용한 문자열 보간법(text interpolation)입니다.</p>
+        <pre class="line-numbers"><code class="language-html">
+&lt;span&gt;메시지: {{ msg }}&lt;/span&gt;
+        </code></pre>
+        <p><code class="code">v-once</code> 디렉티브 를 사용하여 데이터가 변경되어도 갱신되지 않는 일회성 보간을 수행할 수 있습니다.</p>
+        <pre class="line-numbers"><code class="language-html">
+&lt;span v-once&gt;결코 변하지 않을 것입니다: {{ msg }}&lt;/span&gt;
+        </code></pre>
+        <h3 class="section_mid_title">원시 HTML</h3>
+        <p>실제 HTML을 출력하려면 <code class="code">v-html</code>디렉티브를 사용해야 합니다.</p>
+        <iframe height="300" style="width: 100%;" scrolling="no" title="원시 HTML" src="https://codepen.io/jjgodcom1/embed/NWMRBwZ?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href="https://codepen.io/jjgodcom1/pen/NWMRBwZ">
+          원시 HTML</a> by jjgodcom (<a href="https://codepen.io/jjgodcom1">@jjgodcom1</a>)
+          on <a href="https://codepen.io">CodePen</a>.
+        </iframe>
+        <h3 class="section_mid_title">속성</h3>
+        <p>Mustaches(이중 중괄호 구문)는 HTML 속성에 사용할 수 없습니다. 대신 <code class="code">v-bind</code>를 사용하세요.</p>
+        <pre class="line-numbers"><code class="language-html">
+&lt;div v-bind:id="dynamicId"&gt;&lt;/div&gt;
+&lt;!-- 조건 생성할 경우 --&gt;
+&lt;button v-bind:disabled="true"&gt;Button&lt;/button&gt;
+        </code></pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">약어</h2>
+        <h3 class="section_mid_title">v-bind 약어</h3>
+        <pre class="line-numbers"><code class="language-html">
+&lt;!-- 전체 문법 --&gt;
+&lt;a v-bind:href="url"&gt; ... &lt;/a&gt;
+
+&lt;!-- 약어 --&gt;
+&lt;a :href="url"&gt; ... &lt;/a&gt;
+
+&lt;!-- 동적 전달인자와 함께 쓴 약어 --&gt;
+&lt;a :[key]="url"&gt; ... &lt;/a&gt;
+        </code></pre>
+        <h3 class="section_mid_title">v-on 약어</h3>
+        <pre class="line-numbers"><code class="language-html">
+&lt;!-- 전체 문법 --&gt;
+&lt;a v-on:click="doSomething"&gt; ... &lt;/a&gt;
+
+&lt;!-- 약어 --&gt;
+&lt;a @click="doSomething"&gt; ... &lt;/a&gt;
+
+&lt;!-- 동적 전달인자와 함께 쓴 약어 --&gt;
+&lt;a @[event]="doSomething"&gt; ... &lt;/a&gt;
+        </code></pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">Computed</h2>
+        <p class="lead">Computed 속성은 기본적으로 getter 이지만, 필요할 때엔 setter 도 제공할 수 있습니다.</p>
+        <iframe height="300" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.io/jjgodcom1/embed/VwxKBNG?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href="https://codepen.io/jjgodcom1/pen/VwxKBNG">
+          Untitled</a> by jjgodcom (<a href="https://codepen.io/jjgodcom1">@jjgodcom1</a>)
+          on <a href="https://codepen.io">CodePen</a>.
+        </iframe>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">Watch</h2>
+        <p class="lead">특정한 데이터들을 감시하는 용도</p>
+        <iframe height="300" style="width: 100%;" scrolling="no" title="Watch " src="https://codepen.io/jjgodcom1/embed/MWGjBNJ?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href="https://codepen.io/jjgodcom1/pen/MWGjBNJ">
+          Watch </a> by jjgodcom (<a href="https://codepen.io/jjgodcom1">@jjgodcom1</a>)
+          on <a href="https://codepen.io">CodePen</a>.
+        </iframe>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">클래스와 스타일 바인딩</h2>
+        <h3 class="section_mid_title">HTML 클래스 바인딩</h3>
+        <p><code class="code">v-bind:class</code>에 객체를 전달하여 클래스를 동적으로 전환할 수 있습니다.</p>
+        <iframe height="300" style="width: 100%;" scrolling="no" title="HTML 클래스 바인딩" src="https://codepen.io/jjgodcom1/embed/wvjzYKe?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href="https://codepen.io/jjgodcom1/pen/wvjzYKe">
+          HTML 클래스 바인딩</a> by jjgodcom (<a href="https://codepen.io/jjgodcom1">@jjgodcom1</a>)
+          on <a href="https://codepen.io">CodePen</a>.
+        </iframe>
+        <h3 class="section_mid_title">인라인 스타일 바인딩</h3>
+        <p>CSS 속성 이름에는 카멜 케이스(camelCase) 또는 케밥 케이스(kebab-case, 케밥 케이스와 함께 따옴표 사용)를 사용할 수 있습니다.</p>
+        <iframe height="300" style="width: 100%;" scrolling="no" title="인라인 스타일 바인딩" src="https://codepen.io/jjgodcom1/embed/ZEopqzj?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href="https://codepen.io/jjgodcom1/pen/ZEopqzj">
+          인라인 스타일 바인딩</a> by jjgodcom (<a href="https://codepen.io/jjgodcom1">@jjgodcom1</a>)
+          on <a href="https://codepen.io">CodePen</a>.
+        </iframe>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">조건부 렌더링</h2>
+        <iframe height="300" style="width: 100%;" scrolling="no" title="조건부 렌더링" src="https://codepen.io/jjgodcom1/embed/QWrKJJw?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href="https://codepen.io/jjgodcom1/pen/QWrKJJw">
+          조건부 렌더링</a> by jjgodcom (<a href="https://codepen.io/jjgodcom1">@jjgodcom1</a>)
+          on <a href="https://codepen.io">CodePen</a>.
+        </iframe>
+        <h3 class="section_mid_title">v-if, v-else-if, v-else</h3>
+        <p><code class="code">v-if</code>는 조건에 따라 블록을 렌더링할 때 사용합니다.</p>
+        <p>블록은 디렉티브의 표현식이 true 값을 반환할 때만 렌더링됩니다.</p>
+        <pre class="line-numbers"><code class="language-html">
+&lt;h1 v-if="isShow"&gt;Hello?!&lt;/h1&gt;
+&lt;h1 v-else-if="count &gt; 3"&gt;3이상&lt;/h1&gt;
+&lt;h1 v-else&gt;Good&lt;/h1&gt;
+        </code></pre>
+        <h3 class="section_mid_title">v-show</h3>
+        <p><code class="code">v-show</code>는 단순히 엘리먼트의 CSS display 속성만을 전환합니다</p>
+        <pre class="line-numbers"><code class="language-html">
+&lt;h1 v-show="ok"&gt;Hello!&lt;/h1&gt;
+        </code></pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">리스트 렌더링</h2>
+        <p class="lead"><code class="code">v-for</code>디렉티브는 <code class="code">item in items</code>형태로 특별한 문법이 필요합니다.</p>
+        <pre class="line-numbers"><code class="language-html">
+&lt;ul&gt;
+  &lt;li
+    v-for="fruit in fruits"
+    :key="fruit"&gt;
+    {{fruit}}
+  &lt;/li&gt;
+&lt;/ul&gt;
+          </code></pre>
+          <iframe height="300" style="width: 100%;" scrolling="no" title="리스트 렌더링" src="https://codepen.io/jjgodcom1/embed/GRdjPGJ?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+            See the Pen <a href="https://codepen.io/jjgodcom1/pen/GRdjPGJ">
+            리스트 렌더링</a> by jjgodcom (<a href="https://codepen.io/jjgodcom1">@jjgodcom1</a>)
+            on <a href="https://codepen.io">CodePen</a>.
+          </iframe>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">이벤트 핸들링</h2>
+        <p class="lead">
+          <code class="code">v-on:click="methodName"</code>나 줄여서
+          <code class="code">@click="methodName"</code> 으로 사용합니다.
+        </p>
+        <pre class="line-numbers"><code class="language-html">
+&lt;button @click="demo"&gt;test&lt;/button&gt;
+        </code></pre>
+        <iframe height="300" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.io/jjgodcom1/embed/BaxLMpd?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href="https://codepen.io/jjgodcom1/pen/BaxLMpd">
+          Untitled</a> by jjgodcom (<a href="https://codepen.io/jjgodcom1">@jjgodcom1</a>)
+          on <a href="https://codepen.io">CodePen</a>.
+        </iframe>
+        <h3 class="section_mid_title">이벤트 수식어</h3>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:20%">
+            <col style="width:80%">
+          </colgroup>
+					<thead>
+						<tr>
+							<th>종류</th>
+							<th>설명</th>
+						</tr>
+					</thead>
+					<tbody>
+            <tr>
+              <td><code class="code">.prevent</code></td>
+              <td>기본 동작(기능) 방지 Ex) a태그 링크이동 막기</td>
+            </tr>
+            <tr>
+              <td><code class="code">.stop</code></td>
+              <td>이벤트 버블링 방지 (자식 > 부모)</td>
+            </tr>
+            <tr>
+              <td><code class="code">.capture</code></td>
+              <td>이벤트 캡쳐링 방치 (부모 > 자식)</td>
+            </tr>
+            <tr>
+              <td><code class="code">.self</code></td>
+              <td>자신이 노출 되어 있는 부분만 클릭시 동작</td>
+            </tr>
+            <tr>
+              <td><code class="code">.once</code></td>
+              <td>특정 이벤트가 발생했을때 단 한번만 실행됨</td>
+            </tr>
+            <tr>
+              <td><code class="code">.passive</code></td>
+              <td>독립적으로 연산?함 Ex) 휠에 스크롤 이벤트 렉걸리는거 부담 덜어줌</td>
+            </tr>
+					</tbody>
+				</table>
+        <iframe height="300" style="width: 100%;" scrolling="no" title="이벤트 수식어" src="https://codepen.io/jjgodcom1/embed/wvjzZrM?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href="https://codepen.io/jjgodcom1/pen/wvjzZrM">
+          이벤트 수식어</a> by jjgodcom (<a href="https://codepen.io/jjgodcom1">@jjgodcom1</a>)
+          on <a href="https://codepen.io">CodePen</a>.
+        </iframe>
+        <h3 class="section_mid_title">키 수식어</h3>
+        <p>Vue는 가장흔히 사용되는 키에서 명령어를 제공합니다.</p>
+        <p>
+          <code class="code">.enter</code>,
+          <code class="code">.tab</code>,
+          <code class="code">.delete</code>,
+          <code class="code">.space</code>,
+          <code class="code">.up</code>,
+          <code class="code">.down</code>,
+          <code class="code">.left</code>,
+          <code class="code">.right</code>
+        </p>
+        <pre class="line-numbers"><code class="language-html">
+&lt;input type="text" @keydown="handler"&gt;
+        </code></pre>
+        <iframe height="300" style="width: 100%;" scrolling="no" title="이벤트 키 수식어" src="https://codepen.io/jjgodcom1/embed/WNJGmEB?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href="https://codepen.io/jjgodcom1/pen/WNJGmEB">
+          이벤트 키 수식어</a> by jjgodcom (<a href="https://codepen.io/jjgodcom1">@jjgodcom1</a>)
+          on <a href="https://codepen.io">CodePen</a>.
+        </iframe>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">폼 인력 바인딩</h2>
+        <p><code class="code">v-model</code>디렉티브를 사용하여 input, textarea, select 요소들에 양방향 데이터 바인딩을 생성할 수 있습니다.</p>
+        <pre class="line-numbers"><code class="language-html">
+&lt;input type="text" v-model="msg"&gt;
+        </code></pre>
+        <iframe height="300" style="width: 100%;" scrolling="no" title="폼 입력 바인딩" src="https://codepen.io/jjgodcom1/embed/BaxpzOq?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href="https://codepen.io/jjgodcom1/pen/BaxpzOq">
+          폼 입력 바인딩</a> by jjgodcom (<a href="https://codepen.io/jjgodcom1">@jjgodcom1</a>)
+          on <a href="https://codepen.io">CodePen</a>.
+        </iframe>
+        <h3 class="section_mid_title">v-model 수식어</h3>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:20%">
+            <col style="width:80%">
+          </colgroup>
+					<thead>
+						<tr>
+							<th>종류</th>
+							<th>설명</th>
+						</tr>
+					</thead>
+					<tbody>
+            <tr>
+              <td><code class="code">v-model.lazy</code></td>
+              <td>포커스가 아웃될때 데이터가 갱신됨</td>
+            </tr>
+            <tr>
+              <td><code class="code">v-model.number</code></td>
+              <td>사용자 입력이 자동으로 숫자로 형변환 됨</td>
+            </tr>
+            <tr>
+              <td><code class="code">v-model.trim</code></td>
+              <td>사용자가 입력한 내용에서 자동으로 앞뒤 공백을 제거</td>
+            </tr>
+					</tbody>
+				</table>
+        <iframe height="300" style="width: 100%;" scrolling="no" title="v-model 수식어" src="https://codepen.io/jjgodcom1/embed/PoemaLP?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href="https://codepen.io/jjgodcom1/pen/PoemaLP">
+          v-model 수식어</a> by jjgodcom (<a href="https://codepen.io/jjgodcom1">@jjgodcom1</a>)
+          on <a href="https://codepen.io">CodePen</a>.
+        </iframe>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">컴포넌트</h2>
+        <h3 class="section_mid_title">컴포넌트 이름 대소문자 규칙</h3>
+        <p>파스칼케이스로 정의하기</p>
+        <div class="callout">
+          첫글자는 대문자<br>
+          MyComponentName,<br>
+          MtBtn 등등
+        </div>
+        <h3 class="section_mid_title">Props , Slot을 이용하여 데이터 전달하기</h3>
+        <p>요약 : 자식 컴포넌트에서 prop속성으로 각각 속성 정의 가능, <code class="code">slot</code> 태그로 HTML 삽입 가능</p>
+        <p>App.vue</p>
+        <pre class="line-numbers"><code class="language-html">
+&lt;template&gt;
+  &lt;MyBtn color="royalblue"/&gt;
+  &lt;MyBtn :color="color"/&gt;
+  &lt;MyBtn large/&gt;
+  &lt;MyBtn color="royalblue" large/&gt;
+  &lt;MyBtn&gt;
+    &lt;span style="color:red"&gt;Banana&lt;/span&gt;
+  &lt;/MyBtn&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import MyBtn from '~/components/MyBtn'
+
+export default {
+  components:{
+    MyBtn
+  },
+  data(){
+    return{
+      color:'#000'
+    }
+  }
+}
+&lt;/script&gt;
+        </code></pre>
+        <p>MyBtn.vue</p>
+        <pre class="line-numbers"><code class="language-html">
+&lt;template&gt;
+  &lt;div
+    :class="{large}"
+    :style="{backgroundColor: color}"
+    class="btn"&gt;
+    &lt;slot&gt;&lt;/slot&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  props:{
+    color:{
+      type: String,
+      default: 'gray'
+    },
+    large: {
+      type: Boolean,
+      default: false
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style lang="scss" scoped&gt;
+  .btn {
+    display: inline-block;
+    margin: 4px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+    &.large {
+      font-size: 20px;
+      padding: 10px 20px;
+    }
+  }
+&lt;/style&gt;
+        </code></pre>
+        <h3 class="section_mid_title">상속 활용하기</h3>
+        <p>요약: <code class="code">v-bind="$attrs"</code> 와 <code class="code">inheritAttrs: false</code> 를 사용하여 자식한테 활용하기</p>
+        <p>App.vue</p>
+        <pre class="line-numbers"><code class="language-html">
+&lt;template&gt;
+  &lt;MyBtn&gt; 
+    class="jjgodcom"
+    style="color:red"&gt;
+    Banana
+  &lt;/MyBtn&gt;
+&lt;/template&gt;
+
+&lt;script&gt;&gt;
+import MyBtn from '~/components/MyBtn'
+
+export default {
+  components:{
+    MyBtn
+  }
+}
+&lt;/script&gt;
+        </code></pre>
+        <p>MyBtn.vue</p>
+        <pre class="line-numbers"><code class="language-html">
+&lt;template&gt;
+  &lt;div class="btn"&gt;
+    &lt;slot&gt;&lt;/slot&gt;
+  &lt;/div&gt;
+  &lt;h1&gt; 
+    :class="$attrs.class"
+    :style="$attrs.style"&gt;
+    aa
+  &lt;/h1&gt;
+  &lt;!-- 한번에 적용하기 --&gt;
+  &lt;h1&gt; 
+    v-bind="$attrs"&gt;
+    aa
+  &lt;/h1&gt;
+&lt;/template&gt;
+
+&lt;script&gt;&gt;
+export default {
+  inheritAttrs: false, // 속성 상속 받지 않는 코드
+  created(){
+    console.log(this.$attrs)
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt; lang="scss" scoped&gt;
+  .btn {
+    display: inline-block;
+    margin: 4px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+  }
+&lt;/style&gt;
+        </code></pre>
+        <h3 class="section_mid_title">slot 활용하기</h3>
+        <p><code class="code">v-slot</code> 은 <code class="code">template</code>에만 사용할 수 있음</p>
+        <p>App.vue</p>
+        <pre class="line-numbers"><code class="language-html">
+&lt;template&gt;
+&lt;h1&gt;slot 컨텐츠 방법&lt;/h1&gt;
+&lt;MyBtn&gt;
+  &lt;template v-slot:icon&gt;
+    &lt;span&gt;(B)&lt;/span&gt;
+  &lt;/template&gt;
+  &lt;template v-slot:text&gt;
+    &lt;span&gt;Banana&lt;/span&gt;
+  &lt;/template&gt;
+&lt;/MyBtn&gt;
+&lt;!-- 약어로 #을 사용함 --&gt;
+&lt;h1&gt;slot 컨텐츠 약어로 작성하기&lt;/h1&gt;
+&lt;MyBtn&gt;
+  &lt;template #icon&gt;
+    &lt;span&gt;(B)&lt;/span&gt;
+  &lt;/template&gt;
+  &lt;template #text&gt;
+    &lt;span&gt;Banana&lt;/span&gt;
+  &lt;/template&gt;
+&lt;/MyBtn&gt;
+&lt;/template&gt;
+        </code></pre>
+        <p>MyBtn.vue</p>
+        <pre class="line-numbers"><code class="language-html">
+&lt;template&gt;
+  &lt;div class="btn"&gt;
+    &lt;slot name="icon"&gt;&lt;/slot&gt;
+    &lt;slot name="text"&gt;&lt;/slot&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+        </code></pre>
+        <h3 class="section_mid_title">Provide / inject</h3>
+        <ul class="small">
+          <li><code class="code">provide(){return}</code> : 부모 컴포넌트는 데이터 제공을 위해 사용</li>
+          <li><code class="code">inject:[배열]</code> : 자식 요소는 데이터 사용을 위해 사용</li>
+          <li><code class="code">provide</code>는 반응성을 제공 안하기때문에 반응성 작업을 위해 <code class="code">computed()</code>옵션을 사용합니다.</li>
+        </ul>
+        <p>App.vue</p>
+        <pre class="line-numbers"><code class="language-html">
+&lt;template&gt;
+  &lt;button&gt; @click="message = 'Good?'"&gt;Click&lt;/button&gt;
+  &lt;h1&gt;App : {{message}}&lt;/h1&gt;
+  &lt;Parent&gt;&lt;/Parent&gt;
+&lt;/template&gt;
+
+&lt;script&gt;&gt;
+import Parent from '~/components/Parent'
+import {computed} from 'vue' // 핵심코드
+
+export default {
+  components:{
+    Parent
+  },
+  data(){
+    return{
+      message:'Hello!'
+    }
+  },
+  provide(){
+    return{
+      msg: computed(()=&gt;this.message) // 핵심코드
+    }
+  }
+}
+&lt;/script&gt;
+        </code></pre>
+        <p>Parent.vue</p>
+        <pre class="line-numbers"><code class="language-html">
+&lt;template&gt;
+  &lt;Child&gt;&lt;/Child&gt;
+&lt;/template&gt;
+
+&lt;script&gt;&gt;
+import Child from '~/components/Child'
+
+export default {
+  components:{
+    Child
+  }
+}
+&lt;/script&gt;
+        </code></pre>
+        <p>Child.vue</p>
+        <pre class="line-numbers"><code class="language-html">
+&lt;template&gt;
+  &lt;div&gt;Child : {{msg.value}}&lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;&gt;
+export default {
+  inject: ['msg'] // 배열로 받아야함
+}
+&lt;/script&gt;
+        </code></pre>
+        <h3 class="section_mid_title">refs</h3>
+        <p><code class="code">ref</code>속성을 이용해 레퍼런스 ID를 자식 컴포넌트나 HTML 요소에 부여함으로써 직접 접근할 수 있습니다.</p>
+        <p>App.vue</p>
+        <pre class="line-numbers"><code class="language-html">
+&lt;template&gt;
+  &lt;h1 ref="hello"&gt;Hello!&lt;/h1&gt;
+  &lt;Hello ref="asd"&gt;&lt;/Hello&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import Hello from "./components/Hello.vue";
+
+export default {
+    mounted() {
+        console.log(this.$refs.hello);
+        console.log(this.$refs.hello.textContent);
+        // Hello.vue 에 ref="good" 에 접근하는 방법
+        console.log(this.$refs.asd.$refs.good);
+    },
+    components: {
+      Hello
+    }
+}
+&lt;/script&gt;
+        </code></pre>
+        <p>Hello.vue</p>
+        <pre class="line-numbers"><code class="language-html">
+&lt;template&gt;
+  &lt;h1&gt;~&lt;/h1&gt;
+  &lt;h1 ref="good"&gt;!&lt;/h1&gt;
+&lt;/template&gt;
+        </code></pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">컴포지션 API</h2>
+        <p class="lead"><a href="https://v3.ko.vuejs.org/guide/composition-api-introduction.html#%E1%84%8F%E1%85%A5%E1%86%B7%E1%84%91%E1%85%A9%E1%84%8C%E1%85%B5%E1%84%89%E1%85%A7%E1%86%AB-api%E1%84%80%E1%85%A1-%E1%84%91%E1%85%B5%E1%86%AF%E1%84%8B%E1%85%AD%E1%84%92%E1%85%A1%E1%86%AB-%E1%84%8B%E1%85%B5%E1%84%8B%E1%85%B2" target="_blank">공식 문서</a></p>
+        <img class="custom_img" src="../../resources/images/views/vue/composition.png" alt="composition" title="composition">
+        <p>두개는 같은 코드지만 컴포지션 API를 이용하면 비슷한 코드끼리 묶어서 정리 가능 가독성 올라감</p>
+        <h3 class="section_mid_title">반응성(ref)</h3>
+        <p><code class="code">setup(){}</code>은 그냥 사용하면 반응성을 제공 안합니다.</p>
+        <p>그래서 <code class="code">import { ref } from 'vue'</code>를 사용해야 반응성을 제공 합니다.</p>
+        <pre class="line-numbers"><code class="language-js">
+import { ref } from 'vue'
+
+export default {
+  setup(){
+    let count = ref(0);
+
+    return{
+      count
+    }
+  }
+}
+        </code></pre>
+        <iframe height="300" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.io/jjgodcom1/embed/GRdMjWN?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href="https://codepen.io/jjgodcom1/pen/GRdMjWN">
+          Untitled</a> by jjgodcom (<a href="https://codepen.io/jjgodcom1">@jjgodcom1</a>)
+          on <a href="https://codepen.io">CodePen</a>.
+        </iframe>
+        <h3 class="section_mid_title">기본 옵션과 라이프 사이클</h3>
+        <ul class="small">
+          <li><code class="code">computed</code> : 계산되는 내용 작성할때</li>
+          <li><code class="code">watch</code> : 값이 변경될떄 console.log()로 확인가능</li>
+          <li><code class="code">created</code> : 컴포넌트가 실행된 직후에 실행됨, <code class="code">setup</code> 내부 어디서든지 사용하면 됨</li>
+          <li><code class="code">onMounted(mounted)</code> : HTML과 컴포넌트가 연결된 직후에 실행됨, 컴포지션 API에서는 <code class="code">onMounted</code> 으로 사용됨</li>
+        </ul>
+        <iframe height="300" style="width: 100%;" scrolling="no" title="컴포지션API - 기본 옵션과 라이프 사이클" src="https://codepen.io/jjgodcom1/embed/VwxMzgm?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+          See the Pen <a href="https://codepen.io/jjgodcom1/pen/VwxMzgm">
+          컴포지션API - 기본 옵션과 라이프 사이클</a> by jjgodcom (<a href="https://codepen.io/jjgodcom1">@jjgodcom1</a>)
+          on <a href="https://codepen.io">CodePen</a>.
+        </iframe>
+        <h3 class="section_mid_title">props, context</h3>
+        <p>아직 emits 쪽은 이해를 못함</p>
+        <p>App.vue</p>
+        <pre class="line-numbers"><code class="language-html">
+&lt;template&gt;
+  &lt;MyBtn 
+    class="jjgodcom"
+    style="color:red;"
+    color="#ff0000"
+    @hello="log"&gt;
+    Apple
+  &lt;/MyBtn&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import MyBtn from '~/components/MyBtn'
+
+export default {
+  components:{
+    MyBtn
+  },
+  methods:{
+    log(){
+      console.log('Hello World!')
+    }
+  }
+}
+&lt;/script&gt;
+        </code></pre>
+        <p>MyBtn.vue</p>
+        <pre class="line-numbers"><code class="language-html">
+&lt;template&gt;
+  &lt;div 
+    v-bind="$attrs"
+    class="btn"
+    @click="hello"&gt;
+    &lt;slot&gt;&lt;/slot&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import { onMounted } from 'vue';
+
+export default {
+  inheritAttrs:false,
+  props:{
+    color:{
+      type: String,
+      default:'gray'
+    }
+  },
+  emits:['hello'],
+  setup(props, context){
+
+    function hello(){
+      context.emit('hello')
+    }
+
+    onMounted(()=&gt;{
+      console.log('setup props');
+      console.log(props.color);
+      console.log('setup context');
+      console.log(context.attrs);
+    })
+
+    return{
+      hello
+    }
+  }
+}
+&lt;/script&gt;
+        </code></pre>
+      </div>
+      <!-- //doc_section -->
+
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">문법</h2>
+        <h3 class="section_mid_title">조건문</h3>
+        <pre class="line-numbers"><code class="language-html">
+        </code></pre>
+      </div>
+      <!-- //doc_section -->
+      <!-- doc_section -->
+      <div class="doc_section">
+        <h2 class="section_title">타이틀h2</h2>
+        <h3 class="section_mid_title">h3</h3>
+        <p class="lead">타이틀 설명</p>
+        <p>그냥 설명</p>
+        <ul class="small">
+          <li>글머리</li>
+        </ul>
+        <div class="callout">
+          콜아웃
+        </div>
+        <img class="custom_img" src="" alt="" >
+        <pre class="line-numbers"><code class="language-html">
+&lt;!DOCTYPE html&gt; : 문서(페이지) HTML 버전을 지정
+        </code></pre>
+        <table class="table table-bordered table-striped">
+					<colgroup>
+            <col style="width:20%">
+            <col style="width:80%">
+          </colgroup>
+					<thead>
+						<tr>
+							<th>종류</th>
+							<th>설명</th>
+						</tr>
+					</thead>
+					<tbody>
+            <tr>
+              <td><code class="code"></code></td>
+              <td></td>
+            </tr>
+            tr>(td>code.code)+td
+					</tbody>
+				</table>
+      </div>
+      <!-- //doc_section -->
+      
+
+    </div>
+  </main>
+  <!-- //main -->
+  <!-- footer -->
+  <footer id="footer">
+    <div class="copyright">
+      <div>Full-stack development</div>
+      <div>JJGODCOM</div> 
+    </div>
+  </footer>
+  <!-- //footer -->
+</body>
+</html>
