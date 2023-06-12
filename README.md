@@ -4,7 +4,6 @@
 
 개발하면서 자주 사용하는 자료들을 모아둔 블로그 겸 포트폴리오 사이트입니다.
 
-사이트 썸네일
 ![JJGODCOM](https://github.com/jjgodcom/jjgodcom.com/blob/master/resources/images/global/thumbnail.png)
 
 
